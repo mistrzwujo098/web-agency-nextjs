@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Web Agency - Agencja Tworzenia Stron
 
-## Getting Started
+Nowoczesna strona internetowa dla agencji tworzenia stron dla lokalnych firm, zbudowana z Next.js 15, TypeScript i najnowszymi technologiami.
 
-First, run the development server:
+## 🚀 Funkcje
+
+- **Wielojęzyczność** - Wsparcie dla języka polskiego i angielskiego
+- **Najlepsze SEO** - Zoptymalizowana pod kątem wyszukiwarek
+- **Szybkie ładowanie** - Next.js 15 z Turbopack
+- **Responsywny design** - Działa na wszystkich urządzeniach
+- **Animacje** - Płynne animacje z Framer Motion
+- **Exit Intent Popup** - Zwiększa konwersję
+- **Analytics** - Integracja z Vercel Analytics
+
+## 🛠️ Technologie
+
+- **Next.js 15** - Framework React z App Router
+- **TypeScript** - Typowanie statyczne
+- **Tailwind CSS** - Utility-first CSS
+- **Framer Motion** - Animacje
+- **next-intl** - Internacjonalizacja
+- **React Hook Form + Zod** - Formularze i walidacja
+- **Radix UI** - Komponenty dostępne
+- **Vercel Analytics** - Analityka
+
+## 📦 Instalacja
 
 ```bash
+# Klonowanie repozytorium
+git clone [your-repo-url]
+cd web-agency
+
+# Instalacja zależności
+npm install
+
+# Uruchomienie serwera deweloperskiego
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Otwórz [http://localhost:3000/pl](http://localhost:3000/pl) dla polskiej wersji lub [http://localhost:3000/en](http://localhost:3000/en) dla angielskiej.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌍 Struktura projektu
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── [locale]/
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   └── metadata.ts
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── robots.ts
+│   └── sitemap.ts
+├── components/
+│   ├── sections/
+│   │   ├── hero.tsx
+│   │   ├── trust-section.tsx
+│   │   ├── education-section.tsx
+│   │   ├── testimonials-section.tsx
+│   │   ├── pricing-section.tsx
+│   │   ├── portfolio-section.tsx
+│   │   ├── guarantee-section.tsx
+│   │   ├── team-section.tsx
+│   │   ├── faq-section.tsx
+│   │   └── final-cta-section.tsx
+│   ├── ui/
+│   │   └── button.tsx
+│   ├── analytics.tsx
+│   ├── exit-intent-popup.tsx
+│   └── language-switcher.tsx
+├── i18n/
+│   ├── config.ts
+│   ├── request.ts
+│   └── messages/
+│       ├── pl.json
+│       └── en.json
+└── lib/
+    └── utils.ts
+```
 
-## Learn More
+## 🎨 Customizacja
 
-To learn more about Next.js, take a look at the following resources:
+### Kolory
+Kolory można dostosować w pliku `src/app/globals.css` modyfikując zmienne CSS.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Treści
+Treści strony są przechowywane w plikach:
+- `src/i18n/messages/pl.json` - treści polskie
+- `src/i18n/messages/en.json` - treści angielskie
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Komponenty
+Każda sekcja strony jest osobnym komponentem w folderze `src/components/sections/`.
 
-## Deploy on Vercel
+## 📱 Responsywność
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Strona jest w pełni responsywna i dostosowana do:
+- Telefonów (< 640px)
+- Tabletów (640px - 1024px)
+- Desktopów (> 1024px)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔍 SEO
+
+- Dynamiczne meta tagi dla każdego języka
+- Sitemap.xml generowany automatycznie
+- Robots.txt
+- Open Graph tags
+- Twitter Cards
+- Manifest.json dla PWA
+
+## 🚀 Deployment
+
+Projekt jest gotowy do wdrożenia na Vercel:
+
+```bash
+# Build produkcyjny
+npm run build
+
+# Uruchomienie wersji produkcyjnej
+npm start
+```
+
+## 📊 Performance
+
+- Optymalizacja obrazów z Next.js Image
+- Lazy loading komponentów
+- Minimalizacja bundle size
+- Turbopack dla szybszego developmentu
+
+## 🔧 Komendy
+
+```bash
+npm run dev      # Uruchomienie serwera deweloperskiego
+npm run build    # Build produkcyjny
+npm start        # Uruchomienie wersji produkcyjnej
+npm run lint     # Linting kodu
+```
+
+## 📝 TODO
+
+- [ ] Dodać rzeczywiste obrazy portfolio
+- [ ] Dodać rzeczywiste loga klientów
+- [ ] Dodać integrację z systemem CRM
+- [ ] Dodać formularz kontaktowy z wysyłaniem emaili
+- [ ] Dodać więcej animacji przy przewijaniu
+- [ ] Zaimplementować blog
+
+## 📄 Licencja
+
+MIT

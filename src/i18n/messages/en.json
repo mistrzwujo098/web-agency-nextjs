@@ -1,0 +1,135 @@
+{
+  "hero": {
+    "title": "Your website loses 97% of visitors. We'll show you exactly why – for free.",
+    "subtitle": "We've audited 237 websites. Average result? Companies lose 12-47 leads monthly due to basic UX mistakes. Check your loss in 48h.",
+    "cta_primary": "GET YOUR FREE AUDIT",
+    "cta_secondary": "See sample report →",
+    "testimonial": "\"They showed me I was losing 34 leads/month. After implementation +42% conversion\" - Anna K., CEO"
+  },
+  "trust": {
+    "title": "Why 237 companies trust us",
+    "stats": {
+      "revenue": {
+        "value": "$635K",
+        "label": "additional revenue for clients in 2024"
+      },
+      "time": {
+        "value": "14 days",
+        "label": "average implementation time"
+      },
+      "retention": {
+        "value": "92%",
+        "label": "of clients extend cooperation"
+      }
+    }
+  },
+  "education": {
+    "title": "3 reasons why your website doesn't generate leads:",
+    "reasons": [
+      {
+        "title": "Takes 5.7 seconds to load",
+        "subtitle": "(industry average)",
+        "description": "68% of users leave before loading completes"
+      },
+      {
+        "title": "Has 17 distracting elements",
+        "description": "Hick's Law: more options = fewer decisions"
+      },
+      {
+        "title": "No social proof",
+        "description": "88% of buyers read reviews before contacting"
+      }
+    ],
+    "cta": "DOWNLOAD 21 MISTAKES CHECKLIST (PDF)"
+  },
+  "testimonials": {
+    "title": "What clients say after 30 days:",
+    "cta": "See all testimonials"
+  },
+  "pricing": {
+    "title": "Start with what's safe:",
+    "plans": [
+      {
+        "name": "Free Audit",
+        "price": "$0",
+        "features": [
+          "Video analysis of 12 critical points",
+          "Competitor benchmark",
+          "Priority fix roadmap"
+        ],
+        "cta": "GET AUDIT"
+      },
+      {
+        "name": "A/B Test Mini",
+        "price": "$249",
+        "badge": "Most Popular",
+        "features": [
+          "1 high-impact change",
+          "14-day test period",
+          "Results report"
+        ],
+        "cta": "Start Test"
+      },
+      {
+        "name": "Full Redesign",
+        "price": "$1,249",
+        "features": [
+          "Complete rebuild",
+          "+30% leads guarantee",
+          "90-day support"
+        ],
+        "cta": "For Ambitious"
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Last 5 implementations:",
+    "cta": "See all 48 projects →"
+  },
+  "guarantee": {
+    "title": "Zero risk. Literally.",
+    "features": [
+      {
+        "title": "Free audit",
+        "description": "pay only for implementation"
+      },
+      {
+        "title": "Pay after results",
+        "description": "50% deposit, 50% after results"
+      },
+      {
+        "title": "+30% guarantee",
+        "description": "or 100% money back"
+      },
+      {
+        "title": "Monthly test",
+        "description": "no commitment today"
+      }
+    ]
+  },
+  "team": {
+    "title": "We stand behind our work with face and name",
+    "story": "After 8 years in agencies we noticed...",
+    "cta": "Read more →"
+  },
+  "faq": {
+    "title": "First, answers to your doubts:"
+  },
+  "finalCta": {
+    "title": "The decision is yours. The facts are here:",
+    "facts": [
+      "Average website loses 23-71 leads monthly",
+      "Lead acquisition cost drops by 43% on average",
+      "ROI in 6-12 weeks"
+    ],
+    "primary": "GET FREE AUDIT",
+    "secondary": "HAVE QUESTIONS - CALL",
+    "ps": "We do max 8 audits per month. Currently 3 spots left for July."
+  },
+  "popup": {
+    "title": "Wait! Before you leave...",
+    "subtitle": "Download our \"Lost Leads Calculator\"",
+    "description": "Check how much you're losing monthly in 2 minutes.",
+    "cta": "SEND CALCULATOR"
+  }
+}

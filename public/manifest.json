@@ -1,0 +1,21 @@
+{
+  "name": "Agencja Tworzenia Stron - Zwiększ Konwersję",
+  "short_name": "Web Agency",
+  "description": "Tworzymy strony internetowe dla lokalnych firm. Gwarancja +30% leadów lub zwrot pieniędzy.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

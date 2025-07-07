@@ -1,0 +1,135 @@
+{
+  "hero": {
+    "title": "Twoja strona traci 97% odwiedzających. Pokażemy Ci dokładnie dlaczego – za darmo.",
+    "subtitle": "Przeprowadziliśmy 237 audytów stron. Średni wynik? Firmy tracą 12-47 leadów miesięcznie przez podstawowe błędy UX. Sprawdź swoją stratę w 48h.",
+    "cta_primary": "SPRAWDŹ SWOJĄ STRATĘ (DARMOWY AUDYT)",
+    "cta_secondary": "Zobacz przykładowy raport →",
+    "testimonial": "\"Pokazali mi, że tracę 34 leady/msc. Po wdrożeniu +42% konwersji\" - Anna K., CEO"
+  },
+  "trust": {
+    "title": "Dlaczego 237 firm nam zaufało?",
+    "stats": {
+      "revenue": {
+        "value": "2,7 mln zł",
+        "label": "dodatkowych przychodów dla klientów w 2024"
+      },
+      "time": {
+        "value": "14 dni",
+        "label": "średni czas wdrożenia"
+      },
+      "retention": {
+        "value": "92%",
+        "label": "klientów przedłuża współpracę"
+      }
+    }
+  },
+  "education": {
+    "title": "3 powody, dla których Twoja strona nie generuje leadów:",
+    "reasons": [
+      {
+        "title": "Ładuje się 5,7 sekund",
+        "subtitle": "(śr. w Polsce)",
+        "description": "68% użytkowników odchodzi przed załadowaniem"
+      },
+      {
+        "title": "Ma 17 elementów rozpraszających",
+        "description": "Zasada Hicka: więcej opcji = mniej decyzji"
+      },
+      {
+        "title": "Nie ma dowodów społecznych",
+        "description": "88% kupujących czyta opinie przed kontaktem"
+      }
+    ],
+    "cta": "POBIERZ CHECKLIST 21 BŁĘDÓW (PDF)"
+  },
+  "testimonials": {
+    "title": "Co mówią klienci po 30 dniach:",
+    "cta": "Zobacz wszystkie opinie"
+  },
+  "pricing": {
+    "title": "Zacznij od tego, co bezpieczne:",
+    "plans": [
+      {
+        "name": "Darmowy Audyt",
+        "price": "0 zł",
+        "features": [
+          "Video-analiza 12 punktów krytycznych",
+          "Benchmark konkurencji",
+          "Plan naprawczy z priorytetami"
+        ],
+        "cta": "ZAMÓW AUDYT"
+      },
+      {
+        "name": "Test A/B Mini",
+        "price": "990 zł",
+        "badge": "Najpopularniejsze",
+        "features": [
+          "1 zmiana o największym potencjale",
+          "Test przez 14 dni",
+          "Raport z wynikami"
+        ],
+        "cta": "Zacznij test"
+      },
+      {
+        "name": "Pełny Redesign",
+        "price": "4900 zł",
+        "features": [
+          "Kompletna przebudowa",
+          "Gwarancja +30% leadów",
+          "Wsparcie 90 dni"
+        ],
+        "cta": "Dla ambitnych"
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Ostatnie 5 wdrożeń:",
+    "cta": "Zobacz wszystkie 48 projektów →"
+  },
+  "guarantee": {
+    "title": "Zero ryzyka. Dosłownie.",
+    "features": [
+      {
+        "title": "Audyt gratis",
+        "description": "płacisz tylko za wdrożenie"
+      },
+      {
+        "title": "Płatność po efektach",
+        "description": "50% zaliczki, 50% po wynikach"
+      },
+      {
+        "title": "Gwarancja +30%",
+        "description": "lub zwrot 100% kosztów"
+      },
+      {
+        "title": "Miesięczny test",
+        "description": "nie musisz decydować dziś"
+      }
+    ]
+  },
+  "team": {
+    "title": "Stoimy za naszą pracą twarzą i nazwiskiem",
+    "story": "Po 8 latach w agencjach zauważyliśmy...",
+    "cta": "Czytaj więcej →"
+  },
+  "faq": {
+    "title": "Najpierw odpowiedzi na Twoje wątpliwości:"
+  },
+  "finalCta": {
+    "title": "Decyzja należy do Ciebie. Fakty masz tutaj:",
+    "facts": [
+      "Średnia strona traci 23-71 leadów miesięcznie",
+      "Koszt pozyskania leadu spada średnio o 43%",
+      "ROI w 6-12 tygodni"
+    ],
+    "primary": "CHCĘ DARMOWY AUDYT",
+    "secondary": "MAM PYTANIA - ZADZWOŃ",
+    "ps": "Robimy max 8 audytów miesięcznie. Obecnie zostało 3 miejsca na lipiec."
+  },
+  "popup": {
+    "title": "Moment! Zanim wyjdziesz...",
+    "subtitle": "Pobierz nasz \"Kalkulator Straconych Leadów\"",
+    "description": "Sprawdź ile tracisz miesięcznie w 2 minuty.",
+    "cta": "WYŚLIJ KALKULATOR"
+  }
+}
