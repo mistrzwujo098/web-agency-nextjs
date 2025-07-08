@@ -9,7 +9,9 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [],
     unoptimized: true
-  }
+  },
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
+  trailingSlash: true
 };
  
 export default withNextIntl(nextConfig);
