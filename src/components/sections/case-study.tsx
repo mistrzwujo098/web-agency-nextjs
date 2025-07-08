@@ -204,7 +204,7 @@ export function CaseStudy() {
                     </li>
                     <li className="flex items-start">
                       <ArrowUp className="w-4 h-4 text-green-400 mr-2 mt-0.5" />
-                      <span>Responsywny design z czasem ładowania < 2s</span>
+                      <span>Responsywny design z czasem ładowania poniżej 2s</span>
                     </li>
                   </ul>
                 </div>

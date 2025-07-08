@@ -107,7 +107,7 @@ export function ProcessTimeline() {
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill())
     }
-  }, [])
+  }, [steps])
 
   return (
     <section className="py-16 md:py-24 bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900 relative overflow-hidden">

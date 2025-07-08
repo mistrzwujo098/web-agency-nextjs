@@ -220,7 +220,7 @@ export function InteractiveQuiz() {
         ease: 'power2.out'
       })
     }
-  }, [currentQuestion])
+  }, [currentQuestion, questions.length])
 
   const totalScore = answers.reduce((sum, score) => sum + score, 0)
   const result = getResult(totalScore)
