@@ -142,13 +142,13 @@ export function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="tel:+48123456789" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
+              <a href="https://wa.me/48662508780" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
                 <Phone className="w-5 h-5 text-purple-500" />
-                <span>+48 123 456 789</span>
+                <span>+48 662 508 780</span>
               </a>
-              <a href="mailto:kontakt@webcraftai.pl" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
+              <a href="mailto:kontakt@kacperczaczyk.com" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
                 <Mail className="w-5 h-5 text-purple-500" />
-                <span>kontakt@webcraftai.pl</span>
+                <span>kontakt@kacperczaczyk.com</span>
               </a>
               <div className="flex items-start gap-3 text-gray-400">
                 <MapPin className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />

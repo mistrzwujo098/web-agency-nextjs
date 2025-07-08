@@ -124,23 +124,23 @@ export function ContactForm() {
               </h3>
               
               <div className="space-y-4">
-                <a href="tel:+48123456789" className="flex items-start gap-4 group">
+                <a href="https://wa.me/48662508780" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group">
                   <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-purple-500/30 transition-colors">
                     <Phone className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Zadzwoń do nas</p>
-                    <p className="text-white font-medium">+48 123 456 789</p>
+                    <p className="text-gray-400 text-sm">Zadzwoń do nas (WhatsApp)</p>
+                    <p className="text-white font-medium">+48 662 508 780</p>
                   </div>
                 </a>
                 
-                <a href="mailto:kontakt@webcraftai.pl" className="flex items-start gap-4 group">
+                <a href="mailto:kontakt@kacperczaczyk.com" className="flex items-start gap-4 group">
                   <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500/30 transition-colors">
                     <Mail className="w-6 h-6 text-blue-400" />
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm">Napisz do nas</p>
-                    <p className="text-white font-medium">kontakt@webcraftai.pl</p>
+                    <p className="text-white font-medium">kontakt@kacperczaczyk.com</p>
                   </div>
                 </a>
                 

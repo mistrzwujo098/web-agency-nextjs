@@ -7,9 +7,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { LanguageSwitcher } from '@/components/language-switcher'
+import { useParams } from 'next/navigation'
 
 export function Header() {
   const t = useTranslations('navigation')
+  const params = useParams()
+  const locale = params.locale as string
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
@@ -22,7 +25,7 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navigation = [
+  const navigation = locale === 'pl' ? [
     { name: 'Start', href: '#hero' },
     { 
       name: 'Usługi', 
@@ -34,11 +37,50 @@ export function Header() {
         { name: 'Marketing automation', href: '#automation' }
       ]
     },
+    { 
+      name: 'Darmowe materiały', 
+      href: '#',
+      submenu: [
+        { name: '10 błędów które kosztują klientów', href: `/${locale}/download/10-bledow-poradnik` },
+        { name: '50 elementów zwiększających sprzedaż', href: `/${locale}/download/50-elementow-checklist` },
+        { name: 'Automatyzacja marketingu - przewodnik', href: `/${locale}/download/marketing-automation-guide` },
+        { name: 'Checklist przed startem strony', href: `/${locale}/download/website-launch-checklist` },
+        { name: 'Kalkulator ROI', href: `/${locale}/download/roi-calculator` }
+      ]
+    },
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'O nas', href: '#about' },
     { name: 'Cennik', href: '#pricing' },
     { name: 'Blog', href: '/blog' },
     { name: 'Kontakt', href: '#contact' }
+  ] : [
+    { name: 'Home', href: '#hero' },
+    { 
+      name: 'Services', 
+      href: '#services',
+      submenu: [
+        { name: 'Web Development', href: '#web-development' },
+        { name: 'E-commerce', href: '#ecommerce' },
+        { name: 'SEO Optimization', href: '#seo' },
+        { name: 'Marketing Automation', href: '#automation' }
+      ]
+    },
+    { 
+      name: 'Free Resources', 
+      href: '#',
+      submenu: [
+        { name: '10 Mistakes That Cost You Customers', href: `/${locale}/download/10-bledow-poradnik` },
+        { name: '50 Elements That Increase Sales', href: `/${locale}/download/50-elementow-checklist` },
+        { name: 'Marketing Automation Guide', href: `/${locale}/download/marketing-automation-guide` },
+        { name: 'Website Launch Checklist', href: `/${locale}/download/website-launch-checklist` },
+        { name: 'ROI Calculator', href: `/${locale}/download/roi-calculator` }
+      ]
+    },
+    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'About', href: '#about' },
+    { name: 'Pricing', href: '#pricing' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '#contact' }
   ]
 
   return (
@@ -113,11 +155,13 @@ export function Header() {
           <div className="flex items-center gap-4">
             {/* Phone Number - Desktop Only */}
             <a
-              href="tel:+48123456789"
+              href="https://wa.me/48662508780"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden lg:flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span className="text-sm">+48 123 456 789</span>
+              <span className="text-sm">+48 662 508 780</span>
             </a>
 
             {/* Language Switcher */}
@@ -129,7 +173,7 @@ export function Header() {
             <Button
               className="hidden sm:inline-flex bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              Darmowa konsultacja
+              {locale === 'pl' ? 'Darmowa konsultacja' : 'Free consultation'}
             </Button>
 
             {/* Mobile Menu Toggle */}
@@ -209,11 +253,13 @@ export function Header() {
                 {/* Mobile CTAs */}
                 <div className="pt-4 border-t border-white/10 space-y-3">
                   <a
-                    href="tel:+48123456789"
+                    href="https://wa.me/48662508780"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-200"
                   >
                     <Phone className="w-4 h-4" />
-                    <span>+48 123 456 789</span>
+                    <span>+48 662 508 780</span>
                   </a>
                   
                   <div className="px-4">
@@ -222,7 +268,7 @@ export function Header() {
                   
                   <div className="px-4">
                     <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg">
-                      Darmowa konsultacja
+                      {locale === 'pl' ? 'Darmowa konsultacja' : 'Free consultation'}
                     </Button>
                   </div>
                 </div>
