@@ -45,62 +45,62 @@ export function InteractiveQuiz() {
   const questions: QuizQuestion[] = [
     {
       id: 'age',
-      question: 'Kiedy ostatnio aktualizowałeś swoją stronę?',
+      question: t('questions.age.question'),
       options: [
-        { text: 'W tym roku', points: 3 },
-        { text: '1-2 lata temu', points: 2 },
-        { text: '3-5 lat temu', points: 1 },
-        { text: 'Ponad 5 lat temu', points: 0 }
+        { text: t('questions.age.options.thisYear'), points: 3 },
+        { text: t('questions.age.options.oneTwo'), points: 2 },
+        { text: t('questions.age.options.threeFive'), points: 1 },
+        { text: t('questions.age.options.moreThanFive'), points: 0 }
       ]
     },
     {
       id: 'mobile',
-      question: 'Jak Twoja strona wyświetla się na telefonie?',
+      question: t('questions.mobile.question'),
       options: [
-        { text: 'Idealnie responsywna', points: 3 },
-        { text: 'Działa, ale nie jest idealna', points: 2 },
-        { text: 'Trzeba zoomować i przewijać', points: 1 },
-        { text: 'Nie wiem / Źle', points: 0 }
+        { text: t('questions.mobile.options.perfect'), points: 3 },
+        { text: t('questions.mobile.options.works'), points: 2 },
+        { text: t('questions.mobile.options.needsZoom'), points: 1 },
+        { text: t('questions.mobile.options.dontKnow'), points: 0 }
       ]
     },
     {
       id: 'speed',
-      question: 'Jak szybko ładuje się Twoja strona?',
+      question: t('questions.speed.question'),
       options: [
-        { text: 'Poniżej 3 sekund', points: 3 },
-        { text: '3-5 sekund', points: 2 },
-        { text: '5-10 sekund', points: 1 },
-        { text: 'Ponad 10 sekund', points: 0 }
+        { text: t('questions.speed.options.underThree'), points: 3 },
+        { text: t('questions.speed.options.threeFive'), points: 2 },
+        { text: t('questions.speed.options.fiveTen'), points: 1 },
+        { text: t('questions.speed.options.overTen'), points: 0 }
       ]
     },
     {
       id: 'conversion',
-      question: 'Ile osób kontaktuje się z Tobą przez stronę?',
+      question: t('questions.conversion.question'),
       options: [
-        { text: 'Ponad 10 miesięcznie', points: 3 },
-        { text: '5-10 miesięcznie', points: 2 },
-        { text: '1-5 miesięcznie', points: 1 },
-        { text: 'Prawie nikt', points: 0 }
+        { text: t('questions.conversion.options.overTen'), points: 3 },
+        { text: t('questions.conversion.options.fiveTen'), points: 2 },
+        { text: t('questions.conversion.options.oneFive'), points: 1 },
+        { text: t('questions.conversion.options.almostNone'), points: 0 }
       ]
     },
     {
       id: 'seo',
-      question: 'Czy łatwo znaleźć Twoją stronę w Google?',
+      question: t('questions.seo.question'),
       options: [
-        { text: 'Tak, jestem na pierwszej stronie', points: 3 },
-        { text: 'Jestem na 2-3 stronie', points: 2 },
-        { text: 'Trudno ją znaleźć', points: 1 },
-        { text: 'Nie wiem', points: 0 }
+        { text: t('questions.seo.options.firstPage'), points: 3 },
+        { text: t('questions.seo.options.secondThird'), points: 2 },
+        { text: t('questions.seo.options.hard'), points: 1 },
+        { text: t('questions.seo.options.dontKnow'), points: 0 }
       ]
     },
     {
       id: 'content',
-      question: 'Jak często aktualizujesz treści na stronie?',
+      question: t('questions.content.question'),
       options: [
-        { text: 'Co tydzień', points: 3 },
-        { text: 'Co miesiąc', points: 2 },
-        { text: 'Kilka razy w roku', points: 1 },
-        { text: 'Prawie nigdy', points: 0 }
+        { text: t('questions.content.options.weekly'), points: 3 },
+        { text: t('questions.content.options.monthly'), points: 2 },
+        { text: t('questions.content.options.fewTimes'), points: 1 },
+        { text: t('questions.content.options.almostNever'), points: 0 }
       ]
     }
   ]
@@ -109,43 +109,25 @@ export function InteractiveQuiz() {
     if (score >= 15) {
       return {
         score,
-        title: 'Gratulacje! Twoja strona jest w dobrej formie',
-        description: 'Twoja strona spełnia większość współczesnych standardów. Warto jednak regularnie ją optymalizować, aby utrzymać przewagę nad konkurencją.',
-        recommendations: [
-          'Kontynuuj regularne aktualizacje treści',
-          'Monitoruj wydajność i pozycje SEO',
-          'Rozważ dodanie nowych funkcjonalności',
-          'Przeprowadź testy A/B dla lepszej konwersji'
-        ],
+        title: t('results.excellent.title'),
+        description: t('results.excellent.description'),
+        recommendations: t.raw('results.excellent.recommendations') as string[],
         urgency: 'low'
       }
     } else if (score >= 8) {
       return {
         score,
-        title: 'Twoja strona wymaga optymalizacji',
-        description: 'Twoja strona ma potencjał, ale potrzebuje kilku usprawnień, aby lepiej przyciągać klientów i konwertować.',
-        recommendations: [
-          'Popraw szybkość ładowania strony',
-          'Zoptymalizuj stronę pod kątem urządzeń mobilnych',
-          'Zaktualizuj treści i dodaj blog',
-          'Wdróż strategię SEO',
-          'Dodaj wyraźne CTA (wezwania do działania)'
-        ],
+        title: t('results.good.title'),
+        description: t('results.good.description'),
+        recommendations: t.raw('results.good.recommendations') as string[],
         urgency: 'medium'
       }
     } else {
       return {
         score,
-        title: 'Twoja strona pilnie potrzebuje modernizacji!',
-        description: 'Twoja strona może tracić nawet 70% potencjalnych klientów. Czas na kompleksową przebudowę, aby nie oddawać klientów konkurencji.',
-        recommendations: [
-          'Kompletny redesign z myślą o UX',
-          'Wdrożenie responsywnego designu',
-          'Optymalizacja szybkości ładowania',
-          'Kompleksowa strategia SEO',
-          'System zarządzania treścią (CMS)',
-          'Integracja z mediami społecznościowymi'
-        ],
+        title: t('results.poor.title'),
+        description: t('results.poor.description'),
+        recommendations: t.raw('results.poor.recommendations') as string[],
         urgency: 'high'
       }
     }
@@ -250,10 +232,10 @@ export function InteractiveQuiz() {
             <HelpCircle className="w-10 h-10 text-white" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">Sprawdź kondycję swojej strony</span>
+            <span className="text-gradient">{t('title')}</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
-            Odpowiedz na 6 krótkich pytań i otrzymaj spersonalizowaną analizę
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -270,7 +252,7 @@ export function InteractiveQuiz() {
               {/* Progress Bar */}
               <div className="mb-8">
                 <div className="flex justify-between text-sm text-gray-300 mb-2">
-                  <span>Pytanie {currentQuestion + 1} z {questions.length}</span>
+                  <span>{t('progress.question')} {currentQuestion + 1} {t('progress.of')} {questions.length}</span>
                   <span>{Math.round(((currentQuestion + 1) / questions.length) * 100)}%</span>
                 </div>
                 <div className="h-2 bg-white/20 rounded-full overflow-hidden">
@@ -317,7 +299,7 @@ export function InteractiveQuiz() {
                   onClick={() => handleAnswer(3)}
                   className="text-gray-400 hover:text-gray-300 text-sm transition-colors"
                 >
-                  Pomiń pytanie →
+                  {t('skipQuestion')}
                 </button>
               </div>
             </motion.div>
@@ -348,7 +330,7 @@ export function InteractiveQuiz() {
                 <h3 className="text-2xl font-bold text-white mb-2">{result.title}</h3>
                 <div className="flex items-center justify-center gap-2 mb-4">
                   <span className="text-3xl font-bold text-purple-400">{totalScore}</span>
-                  <span className="text-gray-300">/ {questions.length * 3} punktów</span>
+                  <span className="text-gray-300">/ {questions.length * 3} {t('results.score')}</span>
                 </div>
                 <p className="text-gray-300 max-w-2xl mx-auto">{result.description}</p>
               </div>
@@ -356,7 +338,7 @@ export function InteractiveQuiz() {
               {/* Score Visualization */}
               <div className="mb-8">
                 <div className="flex justify-between mb-2">
-                  <span className="text-sm text-gray-300">Wynik ogólny</span>
+                  <span className="text-sm text-gray-300">{t('results.overallScore')}</span>
                   <span className="text-sm text-white font-semibold">
                     {Math.round((totalScore / (questions.length * 3)) * 100)}%
                   </span>
@@ -381,7 +363,7 @@ export function InteractiveQuiz() {
               <div className="mb-8">
                 <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
                   <Sparkles className="w-5 h-5 mr-2 text-purple-400" />
-                  Nasze rekomendacje:
+                  {t('results.recommendations')}
                 </h4>
                 <ul className="space-y-2">
                   {result.recommendations.map((rec, index) => (
@@ -411,7 +393,7 @@ export function InteractiveQuiz() {
                     }
                   }}
                 >
-                  Otrzymaj bezpłatną konsultację
+                  {t('results.cta.consultation')}
                 </Button>
                 <Button
                   variant="outline"
@@ -419,7 +401,7 @@ export function InteractiveQuiz() {
                   onClick={resetQuiz}
                   className="flex-1 border-white/20 text-white hover:bg-white/10"
                 >
-                  Wypełnij quiz ponownie
+                  {t('results.cta.retake')}
                 </Button>
               </div>
             </motion.div>

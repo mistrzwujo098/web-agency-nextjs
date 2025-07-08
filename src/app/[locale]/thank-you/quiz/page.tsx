@@ -153,7 +153,7 @@ export default function QuizThankYouPage() {
             <p className="text-gray-400 text-sm mb-4">
               Umów się na 30-minutową rozmowę z naszym ekspertem
             </p>
-            <Link href="/book-consultation">
+            <Link href="#contact">
               <Button variant="outline" size="sm" className="w-full">
                 Zarezerwuj termin
               </Button>

@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { CheckCircle, ArrowRight, Download, Mail, Calendar } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -9,6 +9,8 @@ import Link from 'next/link'
 
 export default function ContactThankYouPage() {
   const router = useRouter()
+  const params = useParams()
+  const locale = params.locale as string
   const [timeLeft, setTimeLeft] = useState(10)
 
   useEffect(() => {
@@ -138,12 +140,12 @@ export default function ContactThankYouPage() {
           transition={{ delay: 0.9 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <Link href="/blog">
+          <Link href={`/${locale}/resources/10-bledow-poradnik`}>
             <Button variant="outline" className="w-full sm:w-auto">
-              Przeczytaj nasz blog
+              Pobierz darmowy poradnik
             </Button>
           </Link>
-          <Link href="/portfolio">
+          <Link href="#portfolio">
             <Button variant="outline" className="w-full sm:w-auto">
               Zobacz nasze realizacje
             </Button>

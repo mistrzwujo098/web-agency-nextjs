@@ -7,25 +7,27 @@ import { motion } from 'framer-motion'
 export function PortfolioSection() {
   const t = useTranslations('portfolio')
 
-  // Placeholder dane - w prawdziwej aplikacji byłyby pobierane z API
   const projects = [
     {
-      name: 'HairClinic',
-      improvement: '+67% konwersji',
+      name: 'AIZEN Platform',
+      improvement: '+73% konwersji',
       icon: TrendingUp,
-      image: '/api/placeholder/400/300',
+      image: '/images/portfolio/aizen-website.png',
+      description: 'Platforma edukacyjna z zaawansowaną automatyzacją'
     },
     {
-      name: 'TechSoft',
-      improvement: '-2.1s czasu ładowania',
+      name: 'E-commerce Fashion',
+      improvement: '+54% sprzedaży',
+      icon: TrendingUp,
+      image: '/images/portfolio/sp11.webp',
+      description: 'Sklep internetowy z optymalizacją konwersji'
+    },
+    {
+      name: 'Analytics Dashboard',
+      improvement: '-3.2s czasu ładowania',
       icon: Clock,
-      image: '/api/placeholder/400/300',
-    },
-    {
-      name: 'MedCenter',
-      improvement: '+124 leady/msc',
-      icon: Users,
-      image: '/api/placeholder/400/300',
+      image: '/images/portfolio/sp10.webp',
+      description: 'Panel analityczny z real-time data'
     },
   ]
 
@@ -54,17 +56,21 @@ export function PortfolioSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
             >
-              {/* Placeholder dla obrazka */}
-              <div className="w-full h-48 bg-gray-200 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-gray-400">Przed/Po</span>
-                </div>
+              <div className="w-full h-48 bg-gray-200 relative overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.name}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
               
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {project.name}
                 </h3>
+                <p className="text-gray-600 text-sm mb-3">
+                  {project.description}
+                </p>
                 <div className="flex items-center text-green-600">
                   <project.icon className="h-5 w-5 mr-2" />
                   <span className="font-medium">{project.improvement}</span>

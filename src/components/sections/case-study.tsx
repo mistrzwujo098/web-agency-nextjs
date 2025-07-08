@@ -30,19 +30,20 @@ export function CaseStudy() {
   const countUpRefs = useRef<(HTMLSpanElement | null)[]>([])
 
   const caseStudyData = {
-    client: 'Restauracja "Smaki Warszawy"',
-    industry: 'Gastronomia',
-    challenge: 'Niska widoczność online, brak rezerwacji przez stronę, przestarzały design',
-    solution: 'Kompletna przebudowa strony z systemem rezerwacji online i optymalizacją SEO',
-    timeline: '14 dni',
+    client: 'E-commerce Fashion Store',
+    industry: 'E-commerce / Moda',
+    challenge: 'Niska konwersja, wolna strona, brak optymalizacji mobilnej',
+    solution: 'Kompletna przebudowa na nowoczesny stack, optymalizacja UX/UI i SEO',
+    timeline: '21 dni',
     results: {
-      traffic: { before: 1200, after: 4800, change: 300 },
-      conversion: { before: 0.8, after: 3.2, change: 300 },
-      revenue: { before: 12000, after: 48000, change: 300 },
-      mobileTraffic: { before: 35, after: 75, change: 114 },
-      pageSpeed: { before: 6.2, after: 1.8, change: -71 },
-      searchRanking: { before: 47, after: 3, change: -94 }
-    }
+      traffic: { before: 3200, after: 12800, change: 300 },
+      conversion: { before: 1.2, after: 3.8, change: 217 },
+      revenue: { before: 4500, after: 54000, change: 1100 },
+      mobileTraffic: { before: 45, after: 82, change: 82 },
+      pageSpeed: { before: 5.8, after: 1.4, change: -76 },
+      searchRanking: { before: 28, after: 2, change: -93 }
+    },
+    chartImage: '/images/results/sales-growth-chart.png'
   }
 
   useEffect(() => {
@@ -317,8 +318,20 @@ export function CaseStudy() {
                 </motion.div>
               </div>
 
+              {/* Sales Chart */}
+              <div className="mt-8 mb-8">
+                <h5 className="text-lg font-semibold text-white mb-4">Wzrost sprzedaży w czasie</h5>
+                <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                  <img 
+                    src={caseStudyData.chartImage} 
+                    alt="Wykres wzrostu sprzedaży"
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
+              </div>
+
               {/* Visual Progress Bar */}
-              <div className="mt-8 space-y-4">
+              <div className="space-y-4">
                 <div>
                   <div className="flex justify-between text-sm mb-2">
                     <span className="text-gray-300">Wzrost ruchu organicznego</span>
@@ -363,16 +376,16 @@ export function CaseStudy() {
               <div className="max-w-3xl mx-auto">
                 <div className="mb-6">
                   <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-3xl font-bold text-white">MS</span>
+                    <span className="text-3xl font-bold text-white">AK</span>
                   </div>
-                  <h4 className="text-xl font-semibold text-white">Marek Skoczylas</h4>
-                  <p className="text-gray-300">Właściciel, Restauracja "Smaki Warszawy"</p>
+                  <h4 className="text-xl font-semibold text-white">Anna Kowalska</h4>
+                  <p className="text-gray-300">CEO, Fashion Store</p>
                 </div>
                 <blockquote className="text-lg text-gray-300 italic leading-relaxed mb-8">
-                  "Współpraca przekroczyła nasze najśmielsze oczekiwania. W ciągu 3 miesięcy liczba rezerwacji online wzrosła o 400%, 
-                  a przychody z kanału online stanowią teraz 35% całkowitych przychodów restauracji. Najlepsze jest to, że strona 
-                  praktycznie obsługuje się sama - klienci mogą zarezerwować stolik 24/7, a my otrzymujemy automatyczne powiadomienia. 
-                  To była najlepsza inwestycja w rozwój naszego biznesu."
+                  "Profesjonalizm na najwyższym poziomie. W ciągu 3 miesięcy sprzedaż online wzrosła o 1100%! 
+                  Nowa strona ładuje się błyskawicznie, wygląda świetnie na każdym urządzeniu, a system zarządzania 
+                  jest intuicyjny. Najważniejsze - konwersja wzrosła z 1.2% do 3.8%. Klienci chwalą łatwość zakupów. 
+                  ROI zwrócił się już po 6 tygodniach. Polecam każdemu, kto myśli poważnie o e-commerce."
                 </blockquote>
                 <div className="flex flex-wrap justify-center gap-6 text-center">
                   <div>

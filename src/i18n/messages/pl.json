@@ -1,10 +1,10 @@
 {
   "hero": {
-    "title": "Gubisz 70% klientów. Wiem gdzie.",
-    "subtitle": "Sprawdziłem 237 stron lokalnych firm. Większość traci 12-47 leadów miesięcznie przez głupie błędy. Pokażę ci które - za darmo.",
-    "cta_primary": "Sprawdź gdzie gubisz kasę",
+    "title": "Gubisz 70% klientów. Wiem, gdzie.",
+    "subtitle": "Sprawdziłem 237 stron lokalnych firm. Większość traci 12-47 leadów miesięcznie przez głupie błędy. Pokażę ci, które - za darmo.",
+    "cta_primary": "Sprawdź, gdzie gubisz kasę",
     "cta_secondary": "Zobacz przykład analizy →",
-    "testimonial": "\"Myślałam że mam dobrą stronę. Okazało się że tracę 34 leady miesięcznie. Teraz mam +42% konwersji\" - Anna, salon kosmetyczny"
+    "testimonial": "\"Myślałam, że mam dobrą stronę. Okazało się, że tracę 34 leady miesięcznie. Teraz mam +42% konwersji\" - Anna, salon kosmetyczny"
   },
   "trust": {
     "title": "Liczby nie kłamią:",
@@ -24,7 +24,7 @@
     }
   },
   "education": {
-    "title": "3 rzeczy które psują ci biznes:",
+    "title": "3 rzeczy, które psują ci biznes:",
     "reasons": [
       {
         "title": "Strona mularska",
@@ -33,7 +33,7 @@
       },
       {
         "title": "Chaos na stronie",
-        "description": "17 przycisków = klient nie wie co kliknąć"
+        "description": "17 przycisków = klient nie wie, co kliknąć"
       },
       {
         "title": "Zero opinii",
@@ -50,16 +50,52 @@
     "title": "Co zrobiłem w tym miesiącu:",
     "cta": "Zobacz wszystkie →"
   },
+  "leadMagnets": {
+    "title": "Weź darmowe materiały. Bez ściemy.",
+    "subtitle": "Pobrane już 19 874 razy. Średni wynik po wdrożeniu: +34% leadów.",
+    "downloadButton": "Pobierz →",
+    "downloads": "pobrań",
+    "footer": {
+      "title": "Specjalnie dla Ciebie:",
+      "subtitle": "Komplet materiałów wartych 497 zł. Za darmo."
+    },
+    "items": [
+      {
+        "title": "10 błędów = -70% klientów",
+        "description": "Zobacz, które błędy kosztują Cię najwięcej"
+      },
+      {
+        "title": "50 elementów, które sprzedają",
+        "description": "Checklist do analizy swojej strony"
+      },
+      {
+        "title": "Bądź #1 w Google lokalnie",
+        "description": "Wyprzedź konkurencję w swojej okolicy"
+      },
+      {
+        "title": "Automatyzacja = +28% sprzedaży",
+        "description": "Niech strona sprzedaje 24/7"
+      },
+      {
+        "title": "87 rzeczy przed startem",
+        "description": "Żeby nie było wpadki, jak u konkurencji"
+      },
+      {
+        "title": "Policz ROI swojej strony",
+        "description": "Zobacz, ile tracisz miesięcznie"
+      }
+    ]
+  },
   "guarantee": {
-    "title": "Bojesz się że cię oszukam? Spokojnie:",
+    "title": "Bojesz się, że cię oszukam? Spokojnie:",
     "features": [
       {
         "title": "Audyt za darmo",
-        "description": "płacisz dopiero jak zobaczysz plan"
+        "description": "płacisz dopiero, jak zobaczysz plan"
       },
       {
         "title": "Połowa po efektach",
-        "description": "50% na start, 50% jak zadziała"
+        "description": "50% na start, 50%, jak zadziała"
       },
       {
         "title": "+30% albo zwrot",
@@ -80,7 +116,7 @@
     "title": "Pewnie się zastanawiasz:"
   },
   "finalCta": {
-    "title": "No to co? Sprawdzamy gdzie ci ucieka kasa?",
+    "title": "No, to co? Sprawdzamy, gdzie ci ucieka kasa?",
     "facts": [
       "Średnio znajduję 23-71 straconych leadów/msc",
       "Koszt leada spada o ~43%",
@@ -93,11 +129,11 @@
   "popup": {
     "title": "Czekaj!",
     "subtitle": "Weź kalkulator strat",
-    "description": "Policzysz ile tracisz w 2 minuty.",
+    "description": "Policzysz, ile tracisz w 2 minuty.",
     "cta": "Wyślij mi"
   },
   "navigation": {
-    "home": "Home",
+    "home": "Strona główna",
     "services": "Co robię",
     "portfolio": "Moje projekty",
     "about": "O mnie",
@@ -105,18 +141,22 @@
     "blog": "Blog",
     "contact": "Pogadajmy",
     "resources": "Darmowe materiały",
-    "cta": "Sprawdź gdzie gubisz kasę",
+    "reports": "Raporty",
+    "cta": "Sprawdź, gdzie gubisz kasę",
     "submenu": {
       "webDevelopment": "Strony www",
       "ecommerce": "Sklepy online",
       "seo": "SEO lokalne",
       "automation": "Automatyzacja",
-      "10mistakes": "10 błędów które kosztują klientów",
-      "50elements": "50 elementów zwiększających sprzedaż",
+      "10mistakes": "10 błędów, które kosztują klientów",
+      "50elements": "50 elementów, które zwiększają sprzedaż",
       "localSeo": "Jak być #1 w Google lokalnie",
       "marketingAutomation": "Automatyzacja marketingu - przewodnik",
       "launchChecklist": "Checklist przed startem strony",
-      "roiCalculator": "Kalkulator ROI"
+      "roiCalculator": "Kalkulator ROI",
+      "report10mistakes": "Raport: 10 błędów strony",
+      "reportMarketing": "Raport: Marketing na autopilocie",
+      "reportSeo": "Raport: SEO lokalne"
     }
   },
   "footer": {
@@ -149,8 +189,8 @@
         "aboutUs": "O nas",
         "portfolio": "Portfolio",
         "contact": "Kontakt",
-        "10mistakes": "10 błędów które kosztują klientów",
-        "50elements": "50 elementów zwiększających sprzedaż",
+        "10mistakes": "10 błędów, które kosztują klientów",
+        "50elements": "50 elementów, które zwiększają sprzedaż",
         "localSeoGuide": "Jak być #1 w Google lokalnie",
         "marketingAutomation": "Automatyzacja marketingu",
         "launchChecklist": "Checklist przed startem strony",
@@ -182,7 +222,7 @@
       "phone": "Telefon (opcjonalnie)",
       "company": "Firma (opcjonalnie)",
       "service": "W czym pomóc?",
-      "message": "Napisz o co chodzi",
+      "message": "Napisz, o co chodzi",
       "submit": "Wyślij",
       "submitting": "Wysyłam...",
       "privacy": "Przeczytałem politykę prywatności",
@@ -230,7 +270,7 @@
   "notFound": {
     "title": "404",
     "subtitle": "Nie znaleziono strony",
-    "description": "Przepraszamy, ale strona której szukasz nie istnieje lub została przeniesiona.",
+    "description": "Przepraszamy, ale strona, której szukasz, nie istnieje lub została przeniesiona.",
     "backButton": "Wróć do strony głównej",
     "contactButton": "Skontaktuj się z nami",
     "popularPages": "Popularne strony:",
@@ -244,6 +284,8 @@
   "roiCalculator": {
     "title": "Kalkulator ROI",
     "subtitle": "Oblicz zwrot z inwestycji dla nowej strony internetowej",
+    "sectionTitle": "Kalkulator ROI",
+    "sectionSubtitle": "Zobacz, ile możesz zyskać z profesjonalną stroną",
     "tabs": {
       "data": "Dane wejściowe", 
       "results": "Wyniki",
@@ -251,16 +293,24 @@
     },
     "current": {
       "title": "Twoje obecne dane",
+      "titleShort": "Twoje obecne wyniki",
       "visitors": "Miesięczni odwiedzający",
+      "visitorsLabel": "Miesięczna liczba odwiedzin",
       "conversion": "Współczynnik konwersji (%)",
+      "conversionLabel": "Współczynnik konwersji",
       "orderValue": "Średnia wartość zamówienia (zł)",
-      "revenue": "Obecny przychód miesięczny"
+      "orderValueLabel": "Średnia wartość zamówienia",
+      "revenue": "Obecny przychód miesięczny",
+      "currentSituation": "Obecna sytuacja",
+      "leadsPerMonth": "Leady/miesiąc",
+      "revenuePerMonth": "Przychód/miesiąc"
     },
     "improvements": {
       "title": "Oczekiwane ulepszenia",
       "visitorIncrease": "Wzrost ruchu (%)",
       "newConversion": "Nowy współczynnik konwersji (%)",
-      "orderValueIncrease": "Wzrost wartości zamówienia (%)"
+      "orderValueIncrease": "Wzrost wartości zamówienia (%)",
+      "afterOptimization": "Po optymalizacji (+30% konwersji)"
     },
     "costs": {
       "title": "Koszty początkowe",
@@ -286,6 +336,9 @@
       "roi12months": "ROI po 12 miesiącach",
       "roi24months": "ROI po 24 miesiącach",
       "months": "miesięcy",
+      "yourPotentialProfit": "Twój potencjalny zysk",
+      "additionalRevenueMonth": "Dodatkowy przychód/miesiąc",
+      "additionalRevenueYear": "Dodatkowy przychód/rok",
       "chart": {
         "title": "Porównanie przychodów",
         "current": "Obecny",
@@ -297,10 +350,11 @@
       "download": "Pobierz raport",
       "print": "Drukuj",
       "share": "Udostępnij"
-    }
+    },
+    "cta": "Chcę zwiększyć swoje przychody"
   },
   "conversionChecklist": {
-    "title": "50 elementów zwiększających konwersję",
+    "title": "50 elementów, które zwiększają konwersję",
     "subtitle": "Sprawdź swoją stronę punkt po punkcie",
     "back": "Powrót",
     "reset": "Resetuj",
@@ -606,7 +660,7 @@
           "author": "Michał, pizzeria w Gdańsku"
         },
         {
-          "text": "Strona ładowała się 8 sekund. Nie wiedziałam że to problem. Teraz 2 sek i +30% wizyt.",
+          "text": "Strona ładowała się 8 sekund. Nie wiedziałam, że to problem. Teraz 2 sek i +30% wizyt.",
           "author": "Anna, salon kosmetyczny Mokotów"
         },
         {
@@ -698,7 +752,7 @@
       "realExample": "Rzeczywisty przykład:",
       "proofItWorks": "Dowód że działa:",
       "problem": "Problem",
-      "symptoms": "Objawy (sprawdź czy masz)",
+      "symptoms": "Objawy (sprawdź, czy masz)",
       "solution": "Rozwiązanie",
       "howItWorks": "Jak to działa:",
       "automaticFeatures": "Automatyczne funkcje:",
@@ -816,7 +870,7 @@
         "8": {
           "title": "Słabe lub brak wezwań do działania (CTA)",
           "impact": "-90% konwersji",
-          "problem": "Klient nie wie co ma zrobić. \"Skontaktuj się\" to za mało. 90% stron ma słabe lub niewidoczne CTA.",
+          "problem": "Klient nie wie, co ma zrobić. \"Skontaktuj się\" to za mało. 90% stron ma słabe lub niewidoczne CTA.",
           "symptoms": [
             "Małe, szare przyciski",
             "Ogólnikowe teksty \"Więcej\", \"Dalej\"",
@@ -829,7 +883,7 @@
         "9": {
           "title": "Brak informacji kontaktowych",
           "impact": "-95% wiarygodności",
-          "problem": "Brak adresu, NIP, godzin otwarcia = klient myśli że to oszustwo. 95% sprawdza te dane przed kontaktem.",
+          "problem": "Brak adresu, NIP, godzin otwarcia = klient myśli, że to oszustwo. 95% sprawdza te dane przed kontaktem.",
           "symptoms": [
             "Tylko formularz kontaktowy",
             "Brak fizycznego adresu",
@@ -842,7 +896,7 @@
         "10": {
           "title": "Brak optymalizacji lokalnego SEO",
           "impact": "-89% widoczności",
-          "problem": "Nie pokazujesz się gdy ktoś szuka \"mechanik Warszawa\" czy \"fryzjer koło mnie\". Tracisz 89% lokalnych klientów.",
+          "problem": "Nie pokazujesz się, gdy ktoś szuka \"mechanik Warszawa\" czy \"fryzjer koło mnie\". Tracisz 89% lokalnych klientów.",
           "symptoms": [
             "Brak nazwy miasta w tytułach",
             "Brak strony Google Moja Firma",
@@ -1072,7 +1126,7 @@
     },
     "localSeo": {
       "title": "Zdominuj Google w Swoim Mieście: Proste SEO dla Lokalnych Firm",
-      "subtitle": "8 kroków, które sprawią, że Twoja firma będzie #1 gdy ktoś szuka usług w Twojej okolicy. Bez technicznego bełkotu.",
+      "subtitle": "8 kroków, które sprawią, że Twoja firma będzie #1, gdy ktoś szuka usług w Twojej okolicy. Bez technicznego bełkotu.",
       "impactStats": {
         "title": "🎯 Co zyskasz stosując ten przewodnik:",
         "stats": [
@@ -1145,7 +1199,7 @@
             "W opisach zdjęć (alt): \"Salon fryzjerski Mokotów wnętrze\"",
             "W meta description: zachęcający opis z lokalizacją"
           ],
-          "proTip": "Stwórz osobne podstrony dla każdej dzielnicy/miasta które obsługujesz. Każda to szansa na wysoką pozycję.",
+          "proTip": "Stwórz osobne podstrony dla każdej dzielnicy/miasta, które obsługujesz. Każda to szansa na wysoką pozycję.",
           "realExample": "Hydraulik z Gdańska: Stworzył 15 podstron dla dzielnic. Ruch wzrósł o 89% w 3 miesiące. Dominuje w każdej dzielnicy."
         },
         "4": {
@@ -1213,17 +1267,17 @@
             "Cennik usług (priceRange)",
             "FAQ - często zadawane pytania"
           ],
-          "proTip": "Użyj Google Structured Data Testing Tool do sprawdzenia czy Schema działa. Błędy = Google ignoruje Twój kod.",
+          "proTip": "Użyj Google Structured Data Testing Tool do sprawdzenia, czy Schema działa. Błędy = Google ignoruje Twój kod.",
           "realExample": "Prawnik z Katowic: Dodał pełne Schema LocalBusiness + FAQ. CTR w wynikach wzrósł o 32%, pozycja o 3 miejsca w górę."
         },
         "8": {
           "title": "Treść Lokalna - Pokaż, że Znasz Okolicę",
           "importance": "Wysoka",
           "impact": "+124% ruchu długiego ogona",
-          "description": "Google sprawdza czy naprawdę znasz i obsługujesz daną okolicę. Treści lokalne to dowód, że jesteś ekspertem w swojej dzielnicy.",
+          "description": "Google sprawdza, czy naprawdę znasz i obsługujesz daną okolicę. Treści lokalne to dowód, że jesteś ekspertem w swojej dzielnicy.",
           "howTo": "Pomysły na treści lokalne:",
           "steps": [
-            "Przewodniki po dzielnicach które obsługujesz",
+            "Przewodniki po dzielnicach, które obsługujesz",
             "Case studies lokalnych klientów",
             "Współpraca z lokalnymi firmami",
             "Wydarzenia w okolicy związane z branżą",
@@ -1316,6 +1370,113 @@
         ],
         "button": "Zamów darmowy audyt lokalnego SEO",
         "note": "Pokażemy Ci dokładnie gdzie jesteś teraz i jak dostać się na szczyt"
+      }
+    }
+  },
+  "quiz": {
+    "title": "Sprawdź kondycję swojej strony",
+    "subtitle": "Odpowiedz na 6 krótkich pytań i otrzymaj spersonalizowaną analizę",
+    "progress": {
+      "question": "Pytanie",
+      "of": "z"
+    },
+    "skipQuestion": "Pomiń pytanie →",
+    "questions": {
+      "age": {
+        "question": "Kiedy ostatnio aktualizowałeś swoją stronę?",
+        "options": {
+          "thisYear": "W tym roku",
+          "oneTwo": "1-2 lata temu",
+          "threeFive": "3-5 lat temu", 
+          "moreThanFive": "Ponad 5 lat temu"
+        }
+      },
+      "mobile": {
+        "question": "Jak Twoja strona wyświetla się na telefonie?",
+        "options": {
+          "perfect": "Idealnie responsywna",
+          "works": "Działa, ale nie jest idealna",
+          "needsZoom": "Trzeba zoomować i przewijać",
+          "dontKnow": "Nie wiem / Źle"
+        }
+      },
+      "speed": {
+        "question": "Jak szybko ładuje się Twoja strona?",
+        "options": {
+          "underThree": "Poniżej 3 sekund",
+          "threeFive": "3-5 sekund",
+          "fiveTen": "5-10 sekund",
+          "overTen": "Ponad 10 sekund"
+        }
+      },
+      "conversion": {
+        "question": "Ile osób kontaktuje się z Tobą przez stronę?",
+        "options": {
+          "overTen": "Ponad 10 miesięcznie",
+          "fiveTen": "5-10 miesięcznie",
+          "oneFive": "1-5 miesięcznie",
+          "almostNone": "Prawie nikt"
+        }
+      },
+      "seo": {
+        "question": "Czy łatwo znaleźć Twoją stronę w Google?",
+        "options": {
+          "firstPage": "Tak, jestem na pierwszej stronie",
+          "secondThird": "Jestem na 2-3 stronie",
+          "hard": "Trudno ją znaleźć",
+          "dontKnow": "Nie wiem"
+        }
+      },
+      "content": {
+        "question": "Jak często aktualizujesz treści na stronie?",
+        "options": {
+          "weekly": "Co tydzień",
+          "monthly": "Co miesiąc",
+          "fewTimes": "Kilka razy w roku",
+          "almostNever": "Prawie nigdy"
+        }
+      }
+    },
+    "results": {
+      "score": "punktów",
+      "overallScore": "Wynik ogólny",
+      "recommendations": "Nasze rekomendacje:",
+      "cta": {
+        "consultation": "Otrzymaj bezpłatną konsultację",
+        "retake": "Wypełnij quiz ponownie"
+      },
+      "excellent": {
+        "title": "Gratulacje! Twoja strona jest w dobrej formie",
+        "description": "Twoja strona spełnia większość współczesnych standardów. Warto jednak regularnie ją optymalizować, aby utrzymać przewagę nad konkurencją.",
+        "recommendations": [
+          "Kontynuuj regularne aktualizacje treści",
+          "Monitoruj wydajność i pozycje SEO",
+          "Rozważ dodanie nowych funkcjonalności",
+          "Przeprowadź testy A/B dla lepszej konwersji"
+        ]
+      },
+      "good": {
+        "title": "Twoja strona wymaga optymalizacji",
+        "description": "Twoja strona ma potencjał, ale potrzebuje kilku usprawnień, aby lepiej przyciągać klientów i konwertować.",
+        "recommendations": [
+          "Popraw szybkość ładowania strony",
+          "Zoptymalizuj stronę pod kątem urządzeń mobilnych",
+          "Zaktualizuj treści i dodaj blog",
+          "Wdróż strategię SEO",
+          "Dodaj wyraźne CTA (wezwania do działania)"
+        ]
+      },
+      "poor": {
+        "title": "Twoja strona pilnie potrzebuje modernizacji!",
+        "description": "Twoja strona może tracić nawet 70% potencjalnych klientów. Czas na kompleksową przebudowę, aby nie oddawać klientów konkurencji.",
+        "recommendations": [
+          "Kompletny redesign z myślą o UX",
+          "Wdrożenie responsywnego designu",
+          "Optymalizacja szybkości ładowania",
+          "Kompleksowa strategia SEO",
+          "System zarządzania treścią (CMS)",
+          "Integracja z mediami społecznościowymi"
+        ]
       }
     }
   }

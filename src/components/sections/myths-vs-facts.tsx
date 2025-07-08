@@ -177,7 +177,7 @@ export function MythsVsFacts() {
           className="mt-12 text-center"
         >
           <p className="text-xl text-gray-300 mb-6">
-            Nie pozwól, aby mity kosztowały Cię klientów
+            Nie pozwól, by mity kosztowały Cię klientów
           </p>
           <button 
             className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-6 rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-2xl text-lg border border-purple-400/20"

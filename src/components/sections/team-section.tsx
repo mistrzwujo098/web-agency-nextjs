@@ -9,20 +9,11 @@ export function TeamSection() {
 
   const team = [
     {
-      name: 'Jan Nowak',
-      role: '12 lat w UX, ex-Google',
-      image: '/api/placeholder/200/200',
-    },
-    {
-      name: 'Anna Wiśniewska',
-      role: 'Copywriter, 340+ landing pages',
-      image: '/api/placeholder/200/200',
-    },
-    {
-      name: 'Piotr Lewandowski',
-      role: 'Dev, Core Web Vitals ninja',
-      image: '/api/placeholder/200/200',
-    },
+      name: 'Kacper Czaczyk',
+      role: 'CEO & Lead Developer',
+      image: '/images/author/kacper-czaczyk.webp',
+      description: 'Specjalista od CRO i tworzenia stron, które sprzedają'
+    }
   ]
 
   return (
@@ -40,7 +31,7 @@ export function TeamSection() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="max-w-2xl mx-auto mb-12">
           {team.map((member, index) => (
             <motion.div
               key={index}
@@ -50,16 +41,22 @@ export function TeamSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="text-center"
             >
-              {/* Placeholder dla zdjęcia */}
-              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-400">Zdjęcie</span>
+              <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl">
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               
-              <h3 className="text-xl font-semibold text-gray-900 mb-1">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
                 {member.name}
               </h3>
-              <p className="text-gray-600">
+              <p className="text-lg text-gray-600 mb-3">
                 {member.role}
+              </p>
+              <p className="text-gray-500 max-w-md mx-auto">
+                {member.description}
               </p>
             </motion.div>
           ))}

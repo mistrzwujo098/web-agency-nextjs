@@ -5,7 +5,6 @@ import { LeadMagnetsSection } from '@/components/sections/lead-magnets-section'
 import { ROICalculator } from '@/components/sections/roi-calculator'
 import { BeforeAfterComparison } from '@/components/sections/before-after-comparison'
 import { ProcessTimeline } from '@/components/sections/process-timeline'
-import { TestimonialsSection } from '@/components/sections/testimonials-section'
 import { CaseStudy } from '@/components/sections/case-study'
 import { MythsVsFacts } from '@/components/sections/myths-vs-facts'
 import { PortfolioSection } from '@/components/sections/portfolio-section'
@@ -26,16 +25,15 @@ export default function Home() {
       <Hero />
       <TrustSection />
       <EducationSection />
-      <LeadMagnetsSection />
-      <ROICalculator />
-      <BeforeAfterComparison />
-      <ProcessTimeline />
-      <TestimonialsSection />
       <MythsVsFacts />
+      <BeforeAfterComparison />
       <CaseStudy />
+      <InteractiveQuiz />
+      <ROICalculator />
+      <ProcessTimeline />
       <PortfolioSection />
       <GuaranteeSection />
-      <InteractiveQuiz />
+      <LeadMagnetsSection />
       <TeamSection />
       <FAQSection />
       <ContactForm />

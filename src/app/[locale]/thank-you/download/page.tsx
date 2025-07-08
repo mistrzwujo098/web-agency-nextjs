@@ -208,7 +208,7 @@ export default function DownloadThankYouPage() {
           <p className="text-2xl font-bold text-orange-400 mb-4">
             20% zniżki na audyt strony
           </p>
-          <Link href="/free-analysis?discount=DOWNLOAD20">
+          <Link href="#contact">
             <Button className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700">
               Skorzystaj z oferty
             </Button>

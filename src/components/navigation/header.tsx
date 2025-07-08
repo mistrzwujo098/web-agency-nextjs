@@ -45,7 +45,16 @@ export function Header() {
         { name: t('submenu.localSeo'), href: `/${locale}/download/seo-local-guide` },
         { name: t('submenu.marketingAutomation'), href: `/${locale}/download/marketing-automation-guide` },
         { name: t('submenu.launchChecklist'), href: `/${locale}/download/website-launch-checklist` },
-        { name: t('submenu.roiCalculator'), href: `/${locale}/tools/roi-calculator` }
+        { name: t('submenu.roiCalculator'), href: `/${locale}/download/roi-calculator` }
+      ]
+    },
+    {
+      name: t('reports'),
+      href: '#',
+      submenu: [
+        { name: t('submenu.report10mistakes'), href: `/${locale}/reports/10-bledow-strony` },
+        { name: t('submenu.reportMarketing'), href: `/${locale}/reports/marketing-autopilot` },
+        { name: t('submenu.reportSeo'), href: `/${locale}/reports/seo-lokalny` }
       ]
     },
     { name: t('portfolio'), href: '#portfolio' },

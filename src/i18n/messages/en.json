@@ -50,6 +50,42 @@
     "title": "What I did this month:",
     "cta": "See all →"
   },
+  "leadMagnets": {
+    "title": "Get free resources. No BS.",
+    "subtitle": "Downloaded 19,874 times. Average result after implementation: +34% leads.",
+    "downloadButton": "Download →",
+    "downloads": "downloads",
+    "footer": {
+      "title": "Specially for you:",
+      "subtitle": "Complete materials worth $120. For free."
+    },
+    "items": [
+      {
+        "title": "10 mistakes = -70% customers",
+        "description": "See which mistakes cost you the most"
+      },
+      {
+        "title": "50 elements that sell",
+        "description": "Checklist to analyze your website"
+      },
+      {
+        "title": "Be #1 on Google locally",
+        "description": "Beat competition in your area"
+      },
+      {
+        "title": "Automation = +28% sales",
+        "description": "Let your site sell 24/7"
+      },
+      {
+        "title": "87 things before launch",
+        "description": "So you don't embarrass yourself"
+      },
+      {
+        "title": "Calculate your website ROI",
+        "description": "See how much you lose monthly"
+      }
+    ]
+  },
   "guarantee": {
     "title": "Afraid I'll scam you? Relax:",
     "features": [
@@ -105,6 +141,7 @@
     "blog": "Blog",
     "contact": "Let's talk",
     "resources": "Free stuff",
+    "reports": "Reports",
     "cta": "Check where you lose money",
     "submenu": {
       "webDevelopment": "Web Development",
@@ -116,7 +153,10 @@
       "localSeo": "How to be #1 on Google locally",
       "marketingAutomation": "Marketing Automation Guide",
       "launchChecklist": "Website Launch Checklist",
-      "roiCalculator": "ROI Calculator"
+      "roiCalculator": "ROI Calculator",
+      "report10mistakes": "Report: 10 Website Mistakes",
+      "reportMarketing": "Report: Marketing on Autopilot", 
+      "reportSeo": "Report: Local SEO"
     }
   },
   "footer": {
@@ -244,6 +284,8 @@
   "roiCalculator": {
     "title": "ROI Calculator",
     "subtitle": "Calculate return on investment for your new website",
+    "sectionTitle": "ROI Calculator",
+    "sectionSubtitle": "See how much you can gain with a professional website",
     "tabs": {
       "data": "Input Data",
       "results": "Results", 
@@ -251,16 +293,24 @@
     },
     "current": {
       "title": "Your current data",
+      "titleShort": "Your current results",
       "visitors": "Monthly visitors",
+      "visitorsLabel": "Monthly visits",
       "conversion": "Conversion rate (%)",
+      "conversionLabel": "Conversion rate",
       "orderValue": "Average order value ($)",
-      "revenue": "Current monthly revenue"
+      "orderValueLabel": "Average order value",
+      "revenue": "Current monthly revenue",
+      "currentSituation": "Current situation",
+      "leadsPerMonth": "Leads/month",
+      "revenuePerMonth": "Revenue/month"
     },
     "improvements": {
       "title": "Expected improvements",
       "visitorIncrease": "Traffic increase (%)",
       "newConversion": "New conversion rate (%)",
-      "orderValueIncrease": "Order value increase (%)"
+      "orderValueIncrease": "Order value increase (%)",
+      "afterOptimization": "After optimization (+30% conversion)"
     },
     "costs": {
       "title": "Initial costs",
@@ -286,6 +336,9 @@
       "roi12months": "ROI after 12 months",
       "roi24months": "ROI after 24 months",
       "months": "months",
+      "yourPotentialProfit": "Your potential profit",
+      "additionalRevenueMonth": "Additional revenue/month",
+      "additionalRevenueYear": "Additional revenue/year",
       "chart": {
         "title": "Revenue comparison",
         "current": "Current",
@@ -297,7 +350,8 @@
       "download": "Download report",
       "print": "Print",
       "share": "Share"
-    }
+    },
+    "cta": "I want to increase my revenue"
   },
   "conversionChecklist": {
     "title": "50 Website Elements That Increase Conversions",
@@ -1316,6 +1370,113 @@
         ],
         "button": "Get Free Local SEO Audit",
         "note": "We'll show you exactly where you are now and how to get to the top"
+      }
+    }
+  },
+  "quiz": {
+    "title": "Check your website's condition",
+    "subtitle": "Answer 6 quick questions and get a personalized analysis",
+    "progress": {
+      "question": "Question",
+      "of": "of"
+    },
+    "skipQuestion": "Skip question →",
+    "questions": {
+      "age": {
+        "question": "When did you last update your website?",
+        "options": {
+          "thisYear": "This year",
+          "oneTwo": "1-2 years ago",
+          "threeFive": "3-5 years ago",
+          "moreThanFive": "Over 5 years ago"
+        }
+      },
+      "mobile": {
+        "question": "How does your website display on mobile?",
+        "options": {
+          "perfect": "Perfectly responsive",
+          "works": "Works, but not perfect",
+          "needsZoom": "Need to zoom and scroll",
+          "dontKnow": "Don't know / Poor"
+        }
+      },
+      "speed": {
+        "question": "How fast does your website load?",
+        "options": {
+          "underThree": "Under 3 seconds",
+          "threeFive": "3-5 seconds",
+          "fiveTen": "5-10 seconds",
+          "overTen": "Over 10 seconds"
+        }
+      },
+      "conversion": {
+        "question": "How many people contact you through your website?",
+        "options": {
+          "overTen": "Over 10 monthly",
+          "fiveTen": "5-10 monthly",
+          "oneFive": "1-5 monthly",
+          "almostNone": "Almost none"
+        }
+      },
+      "seo": {
+        "question": "Is it easy to find your website on Google?",
+        "options": {
+          "firstPage": "Yes, I'm on the first page",
+          "secondThird": "I'm on page 2-3",
+          "hard": "Hard to find",
+          "dontKnow": "Don't know"
+        }
+      },
+      "content": {
+        "question": "How often do you update content on your website?",
+        "options": {
+          "weekly": "Weekly",
+          "monthly": "Monthly",
+          "fewTimes": "Few times a year",
+          "almostNever": "Almost never"
+        }
+      }
+    },
+    "results": {
+      "score": "points",
+      "overallScore": "Overall score",
+      "recommendations": "Our recommendations:",
+      "cta": {
+        "consultation": "Get free consultation",
+        "retake": "Retake quiz"
+      },
+      "excellent": {
+        "title": "Congratulations! Your website is in good shape",
+        "description": "Your website meets most modern standards. However, it's worth regularly optimizing it to maintain your competitive advantage.",
+        "recommendations": [
+          "Continue regular content updates",
+          "Monitor performance and SEO rankings",
+          "Consider adding new features",
+          "Run A/B tests for better conversion"
+        ]
+      },
+      "good": {
+        "title": "Your website needs optimization",
+        "description": "Your website has potential, but needs several improvements to better attract and convert customers.",
+        "recommendations": [
+          "Improve page loading speed",
+          "Optimize for mobile devices",
+          "Update content and add a blog",
+          "Implement SEO strategy",
+          "Add clear CTAs (calls to action)"
+        ]
+      },
+      "poor": {
+        "title": "Your website urgently needs modernization!",
+        "description": "Your website may be losing up to 70% of potential customers. Time for a complete rebuild to stop giving customers to competitors.",
+        "recommendations": [
+          "Complete redesign with UX in mind",
+          "Implement responsive design",
+          "Optimize loading speed",
+          "Comprehensive SEO strategy",
+          "Content management system (CMS)",
+          "Social media integration"
+        ]
       }
     }
   }

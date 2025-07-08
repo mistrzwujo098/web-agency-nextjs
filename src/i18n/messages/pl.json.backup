@@ -1,0 +1,1376 @@
+{
+  "hero": {
+    "title": "Gubisz 70% klientów. Wiem, gdzie.",
+    "subtitle": "Sprawdziłem 237 stron lokalnych firm. Większość traci 12-47 leadów miesięcznie przez głupie błędy. Pokażę ci, które - za darmo.",
+    "cta_primary": "Sprawdź, gdzie gubisz kasę",
+    "cta_secondary": "Zobacz przykład analizy →",
+    "testimonial": "\"Myślałam, że mam dobrą stronę. Okazało się, że tracę 34 leady miesięcznie. Teraz mam +42% konwersji\" - Anna, salon kosmetyczny"
+  },
+  "trust": {
+    "title": "Liczby nie kłamią:",
+    "stats": {
+      "revenue": {
+        "value": "2,7 mln zł",
+        "label": "więcej kasy dla klientów w 2024"
+      },
+      "time": {
+        "value": "14 dni",
+        "label": "i już widzisz efekty"
+      },
+      "retention": {
+        "value": "92%",
+        "label": "zostaje na dłużej"
+      }
+    }
+  },
+  "education": {
+    "title": "3 rzeczy, które psują ci biznes:",
+    "reasons": [
+      {
+        "title": "Strona mularska",
+        "subtitle": "(5,7 sek ładowania)",
+        "description": "Ludzie wychodzą zanim zobaczą co sprzedajesz"
+      },
+      {
+        "title": "Chaos na stronie",
+        "description": "17 przycisków = klient nie wie, co kliknąć"
+      },
+      {
+        "title": "Zero opinii",
+        "description": "88% najpierw czyta recenzje. Ty ich nie masz."
+      }
+    ],
+    "cta": "Weź darmową checklistę błędów"
+  },
+  "testimonials": {
+    "title": "Co mówią po miesiącu:",
+    "cta": "Więcej opinii →"
+  },
+  "portfolio": {
+    "title": "Co zrobiłem w tym miesiącu:",
+    "cta": "Zobacz wszystkie →"
+  },
+  "leadMagnets": {
+    "title": "Weź darmowe materiały. Bez ściemy.",
+    "subtitle": "Pobrane już 19 874 razy. Średni wynik po wdrożeniu: +34% leadów.",
+    "downloadButton": "Pobierz →",
+    "downloads": "pobrań",
+    "footer": {
+      "title": "Specjalnie dla Ciebie:",
+      "subtitle": "Komplet materiałów wartych 497 zł. Za darmo."
+    },
+    "items": [
+      {
+        "title": "10 błędów = -70% klientów",
+        "description": "Zobacz, które błędy kosztują Cię najwięcej"
+      },
+      {
+        "title": "50 elementów, które sprzedają",
+        "description": "Checklist do analizy swojej strony"
+      },
+      {
+        "title": "Bądź #1 w Google lokalnie",
+        "description": "Wyprzedź konkurencję w swojej okolicy"
+      },
+      {
+        "title": "Automatyzacja = +28% sprzedaży",
+        "description": "Niech strona sprzedaje 24/7"
+      },
+      {
+        "title": "87 rzeczy przed startem",
+        "description": "Żeby nie było wpadki, jak u konkurencji"
+      },
+      {
+        "title": "Policz ROI swojej strony",
+        "description": "Zobacz, ile tracisz miesięcznie"
+      }
+    ]
+  },
+  "guarantee": {
+    "title": "Bojesz się, że cię oszukam? Spokojnie:",
+    "features": [
+      {
+        "title": "Audyt za darmo",
+        "description": "płacisz dopiero, jak zobaczysz plan"
+      },
+      {
+        "title": "Połowa po efektach",
+        "description": "50% na start, 50%, jak zadziała"
+      },
+      {
+        "title": "+30% albo zwrot",
+        "description": "nie wyjdzie = oddaję kasę"
+      },
+      {
+        "title": "Miesiąc na decyzję",
+        "description": "testujesz, potem decydujesz"
+      }
+    ]
+  },
+  "team": {
+    "title": "Kim jestem?",
+    "story": "Kacper. 10 lat w branży, widziałem już wszystko. Teraz pomagam lokalnym firmom zatykać dziury w stronach.",
+    "cta": "Więcej o mnie →"
+  },
+  "faq": {
+    "title": "Pewnie się zastanawiasz:"
+  },
+  "finalCta": {
+    "title": "No, to co? Sprawdzamy, gdzie ci ucieka kasa?",
+    "facts": [
+      "Średnio znajduję 23-71 straconych leadów/msc",
+      "Koszt leada spada o ~43%",
+      "Zwrot w 6-12 tygodni"
+    ],
+    "primary": "TAK, SPRAWDŹ MOJĄ STRONĘ",
+    "secondary": "Wolę najpierw pogadać",
+    "ps": "PS. Robię max 8 audytów miesięcznie. Zostały 3 wolne terminy."
+  },
+  "popup": {
+    "title": "Czekaj!",
+    "subtitle": "Weź kalkulator strat",
+    "description": "Policzysz, ile tracisz w 2 minuty.",
+    "cta": "Wyślij mi"
+  },
+  "navigation": {
+    "home": "Strona główna",
+    "services": "Co robię",
+    "portfolio": "Moje projekty",
+    "about": "O mnie",
+    "pricing": "Ceny",
+    "blog": "Blog",
+    "contact": "Pogadajmy",
+    "resources": "Darmowe materiały",
+    "reports": "Raporty",
+    "cta": "Sprawdź, gdzie gubisz kasę",
+    "submenu": {
+      "webDevelopment": "Strony www",
+      "ecommerce": "Sklepy online",
+      "seo": "SEO lokalne",
+      "automation": "Automatyzacja",
+      "10mistakes": "10 błędów, które kosztują klientów",
+      "50elements": "50 elementów, które zwiększają sprzedaż",
+      "localSeo": "Jak być #1 w Google lokalnie",
+      "marketingAutomation": "Automatyzacja marketingu - przewodnik",
+      "launchChecklist": "Checklist przed startem strony",
+      "roiCalculator": "Kalkulator ROI",
+      "report10mistakes": "Raport: 10 błędów strony",
+      "reportMarketing": "Raport: Marketing na autopilocie",
+      "reportSeo": "Raport: SEO lokalne"
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Chcesz wiedzieć jak nie tracić klientów?",
+      "description": "Co tydzień wysyłam 1 konkretną poradę. Bez spamu.",
+      "placeholder": "Twój email",
+      "button": "Zapisz mnie",
+      "submitting": "Wysyłam...",
+      "disclaimer": "Zero spamu. Wypisujesz się jednym klikiem."
+    },
+    "company": {
+      "description": "Pomagam lokalnym firmom przestać tracić klientów przez słabe strony. Robię to od 10 lat.",
+      "phone": "Dzwoń/WhatsApp",
+      "email": "Napisz",
+      "hours": "Pon-Pt: 9-17",
+      "address": "ul. Innowacyjna 10",
+      "city": "00-001 Warszawa"
+    },
+    "links": {
+      "services": "Usługi",
+      "company": "Firma",
+      "resources": "Materiały",
+      "legal": "Prawne",
+      "items": {
+        "webDevelopment": "Strony www",
+        "ecommerce": "Sklepy online",
+        "seo": "SEO lokalne",
+        "automation": "Automatyzacja",
+        "aboutUs": "O nas",
+        "portfolio": "Portfolio",
+        "contact": "Kontakt",
+        "10mistakes": "10 błędów, które kosztują klientów",
+        "50elements": "50 elementów, które zwiększają sprzedaż",
+        "localSeoGuide": "Jak być #1 w Google lokalnie",
+        "marketingAutomation": "Automatyzacja marketingu",
+        "launchChecklist": "Checklist przed startem strony",
+        "roiCalculator": "Kalkulator ROI"
+      }
+    },
+    "stats": {
+      "satisfaction": "Zadowolonych",
+      "projects": "Zrobionych stron",
+      "conversion": "Średni wzrost",
+      "support": "Wsparcie"
+    },
+    "copyright": "Wszystkie prawa zastrzeżone.",
+    "vat": "NIP",
+    "regon": "REGON"
+  },
+  "services": {
+    "web": "Strony www",
+    "ecommerce": "Sklepy online",
+    "seo": "SEO lokalne",
+    "automation": "Automatyzacja"
+  },
+  "contact": {
+    "title": "Pogadajmy o twojej stronie",
+    "subtitle": "Odpiszę w ciągu 24h. Możesz też dzwonić.",
+    "form": {
+      "name": "Imię i nazwisko",
+      "email": "Email",
+      "phone": "Telefon (opcjonalnie)",
+      "company": "Firma (opcjonalnie)",
+      "service": "W czym pomóc?",
+      "message": "Napisz, o co chodzi",
+      "submit": "Wyślij",
+      "submitting": "Wysyłam...",
+      "privacy": "Przeczytałem politykę prywatności",
+      "required": "* Pola wymagane",
+      "newsletter": "Chcę otrzymywać newsletter",
+      "gdpr": "Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z polityką prywatności w celu odpowiedzi na moje zapytanie.",
+      "messagePlaceholder": "Twoja wiadomość...",
+      "selectService": "Wybierz usługę...",
+      "services": {
+        "website": "Nowa strona internetowa",
+        "redesign": "Przeprojektowanie obecnej strony",
+        "ecommerce": "Sklep internetowy",
+        "seo": "Pozycjonowanie lokalne (SEO)",
+        "audit": "Audyt strony",
+        "other": "Inne"
+      },
+      "successMessage": "Wiadomość została wysłana! Przekierowujemy...",
+      "errorMessage": "Wystąpił błąd. Spróbuj ponownie.",
+      "placeholders": {
+        "name": "Jan Kowalski",
+        "email": "jan@firma.pl",
+        "phone": "+48 123 456 789",
+        "company": "Nazwa Twojej firmy"
+      }
+    },
+    "contactInfo": {
+      "title": "Dane kontaktowe"
+    },
+    "info": {
+      "phone": "Dzwoń/WhatsApp",
+      "email": "Email",
+      "office": "Biuro",
+      "hours": "Kiedy działam"
+    },
+    "benefits": {
+      "title": "Czemu warto?",
+      "items": [
+        "Gwarancja +30% więcej leadów",
+        "Darmowa analiza na start",
+        "Pomoc 24/7 po wdrożeniu",
+        "Żadnych ukrytych kosztów"
+      ]
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Nie znaleziono strony",
+    "description": "Przepraszamy, ale strona, której szukasz, nie istnieje lub została przeniesiona.",
+    "backButton": "Wróć do strony głównej",
+    "contactButton": "Skontaktuj się z nami",
+    "popularPages": "Popularne strony:",
+    "links": {
+      "home": "Strona główna",
+      "resources": "Darmowe materiały",
+      "portfolio": "Portfolio",
+      "contact": "Kontakt"
+    }
+  },
+  "roiCalculator": {
+    "title": "Kalkulator ROI",
+    "subtitle": "Oblicz zwrot z inwestycji dla nowej strony internetowej",
+    "sectionTitle": "Kalkulator ROI",
+    "sectionSubtitle": "Zobacz, ile możesz zyskać z profesjonalną stroną",
+    "tabs": {
+      "data": "Dane wejściowe", 
+      "results": "Wyniki",
+      "chart": "Wykres"
+    },
+    "current": {
+      "title": "Twoje obecne dane",
+      "titleShort": "Twoje obecne wyniki",
+      "visitors": "Miesięczni odwiedzający",
+      "visitorsLabel": "Miesięczna liczba odwiedzin",
+      "conversion": "Współczynnik konwersji (%)",
+      "conversionLabel": "Współczynnik konwersji",
+      "orderValue": "Średnia wartość zamówienia (zł)",
+      "orderValueLabel": "Średnia wartość zamówienia",
+      "revenue": "Obecny przychód miesięczny",
+      "currentSituation": "Obecna sytuacja",
+      "leadsPerMonth": "Leady/miesiąc",
+      "revenuePerMonth": "Przychód/miesiąc"
+    },
+    "improvements": {
+      "title": "Oczekiwane ulepszenia",
+      "visitorIncrease": "Wzrost ruchu (%)",
+      "newConversion": "Nowy współczynnik konwersji (%)",
+      "orderValueIncrease": "Wzrost wartości zamówienia (%)",
+      "afterOptimization": "Po optymalizacji (+30% konwersji)"
+    },
+    "costs": {
+      "title": "Koszty początkowe",
+      "design": "Projekt i UX",
+      "development": "Programowanie",
+      "content": "Treści i copywriting",
+      "media": "Zdjęcia i multimedia",
+      "testing": "Testy i optymalizacja",
+      "other": "Inne koszty",
+      "monthly": "Miesięczne koszty",
+      "hosting": "Hosting i domeny",
+      "maintenance": "Utrzymanie",
+      "marketing": "Marketing i reklamy"
+    },
+    "results": {
+      "title": "Analiza ROI",
+      "currentRevenue": "Obecny przychód miesięczny",
+      "newRevenue": "Nowy przychód miesięczny", 
+      "monthlyIncrease": "Miesięczny wzrost",
+      "totalInitialCost": "Całkowity koszt początkowy",
+      "totalMonthlyCost": "Całkowity koszt miesięczny",
+      "paybackPeriod": "Okres zwrotu",
+      "roi12months": "ROI po 12 miesiącach",
+      "roi24months": "ROI po 24 miesiącach",
+      "months": "miesięcy",
+      "yourPotentialProfit": "Twój potencjalny zysk",
+      "additionalRevenueMonth": "Dodatkowy przychód/miesiąc",
+      "additionalRevenueYear": "Dodatkowy przychód/rok",
+      "chart": {
+        "title": "Porównanie przychodów",
+        "current": "Obecny",
+        "projected": "Prognozowany"
+      }
+    },
+    "buttons": {
+      "calculate": "Przelicz",
+      "download": "Pobierz raport",
+      "print": "Drukuj",
+      "share": "Udostępnij"
+    },
+    "cta": "Chcę zwiększyć swoje przychody"
+  },
+  "conversionChecklist": {
+    "title": "50 elementów, które zwiększają konwersję",
+    "subtitle": "Sprawdź swoją stronę punkt po punkcie",
+    "back": "Powrót",
+    "reset": "Resetuj",
+    "print": "Drukuj",
+    "export": "Eksportuj",
+    "progress": "Postęp",
+    "priorities": {
+      "critical": "Krytyczne",
+      "important": "Ważne",
+      "nice": "Przydatne"
+    },
+    "categories": {
+      "header": "Nagłówek i nawigacja",
+      "homepage": "Strona główna",
+      "content": "Treść i komunikaty",
+      "cta": "Wezwania do działania",
+      "social": "Dowody społeczne",
+      "performance": "Wydajność i SEO"
+    },
+    "items": {
+      "header": {
+        "phone": "Numer telefonu w widocznym miejscu",
+        "hours": "Widoczne godziny otwarcia",
+        "sticky": "Sticky nawigacja przy scrollowaniu",
+        "mobile": "Mobilne menu hamburger",
+        "search": "Funkcja wyszukiwania",
+        "location": "Lokalizacja/adres w nagłówku",
+        "booking": "Przycisk \"Umów się\" lub \"Wycena\"",
+        "chat": "Widget live chat"
+      },
+      "homepage": {
+        "value": "Jasna propozycja wartości above the fold",
+        "hero": "Profesjonalny hero image/video",
+        "area": "Obszar działania jasno określony",
+        "badges": "Widoczne certyfikaty/odznaczenia",
+        "testimonials": "Sekcja opinii klientów",
+        "featured": "Wyróżnione usługi/produkty",
+        "emergency": "Informacja o trybie pilnym/tym samym dniu",
+        "map": "Interaktywna mapa z lokalizacją",
+        "portfolio": "Najnowsze realizacje/portfolio",
+        "offers": "Baner z ofertami specjalnymi/promocjami",
+        "awards": "Logo nagród i wyróżnień",
+        "videoTestimonials": "Wbudowane video testimoniale"
+      },
+      "content": {
+        "headlines": "Nagłówki skupione na korzyściach",
+        "pricing": "Jasne ceny lub ceny \"od\"",
+        "faq": "Sekcja FAQ odpowiadająca na wątpliwości",
+        "usp": "Podkreślona unikalna propozycja sprzedaży",
+        "process": "Sekcja proces/jak to działa",
+        "guarantee": "Informacje o gwarancji",
+        "beforeAfter": "Galerie przed/po",
+        "team": "Sekcja zespół/o nas ze zdjęciami",
+        "caseStudies": "Case studies z wynikami",
+        "terminology": "Słownik branżowy wyjaśniony"
+      },
+      "cta": {
+        "multiple": "Wiele CTA na stronę (3-5)",
+        "contrast": "Kontrastujące kolory przycisków",
+        "actionText": "Tekst przycisków zorientowany na działanie",
+        "sticky": "Pływający/sticky CTA na mobile",
+        "exitIntent": "Exit-intent popup z ofertą",
+        "clickToCall": "Przyciski click-to-call na mobile"
+      },
+      "social": {
+        "reviews": "Wyświetlone gwiazdki z Google/Yelp",
+        "count": "Liczba klientów lub lat działalności",
+        "photos": "Prawdziwe zdjęcia klientów",
+        "associations": "Członkostwo w stowarzyszeniach branżowych",
+        "media": "Wzmianki w mediach lub \"Widziane w\"",
+        "liveFeed": "Feed z mediów społecznościowych na żywo",
+        "partners": "Logo partnerów/dostawców"
+      },
+      "performance": {
+        "speed": "Ładowanie strony poniżej 3 sekund",
+        "mobile": "Responsywny design mobilny",
+        "schema": "Lokalny schema markup",
+        "ssl": "Aktywny certyfikat SSL",
+        "gmb": "Google My Business połączony",
+        "images": "Optymalizacja/kompresja obrazów",
+        "amp": "Strony AMP dla kluczowej treści"
+      }
+    },
+    "results": {
+      "title": "Twój wynik",
+      "excellent": "Świetna robota! Twoja strona jest dobrze zoptymalizowana.",
+      "good": "Niezły wynik, ale jest sporo do poprawy.",
+      "needsWork": "Masz dużo pracy przed sobą, ale to się opłaci!",
+      "needHelp": "Potrzebujesz pomocy? Skontaktuj się"
+    },
+    "info": {
+      "title": "Ta checklist jest oparta na analizie 237 stron lokalnych firm. Elementy oznaczone jako \"Krytyczne\" mają największy wpływ na konwersję.",
+      "subtitle": "Zacznij od czerwonych punktów - to da Ci największy zwrot z inwestycji."
+    }
+  },
+  "websiteLaunch": {
+    "title": "Checklist uruchomienia strony",
+    "subtitle": "Twój kompletny przewodnik do udanego uruchomienia strony",
+    "back": "Powrót",
+    "reset": "Resetuj",
+    "print": "Drukuj",
+    "export": "Eksportuj",
+    "projectInfo": {
+      "title": "Informacje o projekcie",
+      "projectName": "Nazwa projektu:",
+      "client": "Klient/Firma:",
+      "launchDate": "Data uruchomienia:",
+      "projectManager": "Kierownik projektu:",
+      "placeholders": {
+        "projectName": "Wprowadź nazwę projektu",
+        "client": "Wprowadź nazwę klienta lub firmy",
+        "projectManager": "Wprowadź imię kierownika projektu"
+      }
+    },
+    "progress": {
+      "title": "Postęp ogólny"
+    },
+    "priorities": {
+      "title": "Poziomy priorytetów:",
+      "critical": "Krytyczne",
+      "high": "Wysokie",
+      "medium": "Średnie",
+      "low": "Niskie",
+      "descriptions": {
+        "critical": "Musi być ukończone przed premierą",
+        "high": "Ważne dla premiery",
+        "medium": "Zalecane",
+        "low": "Miłe dodatki"
+      }
+    },
+    "table": {
+      "task": "Zadanie",
+      "priority": "Priorytet",
+      "timeline": "Termin",
+      "responsible": "Odpowiedzialny",
+      "notes": "Notatki",
+      "namePlaceholder": "Imię",
+      "notesPlaceholder": "Dodaj notatki..."
+    },
+    "categories": {
+      "technical": "Kontrola techniczna przed startem",
+      "content": "Przegląd treści",
+      "seo": "Konfiguracja SEO",
+      "legal": "Zgodność prawna",
+      "performance": "Testy wydajności",
+      "analytics": "Konfiguracja analityki",
+      "marketing": "Przygotowanie marketingowe",
+      "monitoring": "Monitorowanie po uruchomieniu"
+    },
+    "tasks": {
+      "technical": {
+        "dns": "DNS domeny skonfigurowany poprawnie",
+        "ssl": "Certyfikat SSL zainstalowany i działający",
+        "hosting": "Środowisko hostingowe skonfigurowane",
+        "backup": "System automatycznych kopii zapasowych",
+        "cdn": "CDN skonfigurowane (jeśli dotyczy)",
+        "email": "Konta e-mail skonfigurowane i przetestowane",
+        "database": "Baza danych zoptymalizowana i zindeksowana",
+        "security": "Nagłówki bezpieczeństwa skonfigurowane"
+      },
+      "content": {
+        "spellCheck": "Cała treść sprawdzona pod kątem błędów",
+        "links": "Wszystkie linki przetestowane i działające",
+        "images": "Obrazy zoptymalizowane dla internetu",
+        "altText": "Alt text dodany do wszystkich obrazów",
+        "404": "Strona błędu 404 utworzona",
+        "contact": "Dane kontaktowe dokładne",
+        "forms": "Formularze przetestowane i działające",
+        "placeholder": "Treść zastępcza usunięta"
+      },
+      "seo": {
+        "titles": "Tytuły stron zoptymalizowane",
+        "descriptions": "Meta opisy napisane",
+        "sitemap": "Mapa XML wygenerowana",
+        "robots": "Robots.txt skonfigurowany",
+        "schema": "Schema markup wdrożone",
+        "redirects": "Przekierowania 301 ustawione",
+        "openGraph": "Tagi Open Graph dodane",
+        "canonical": "Canonical URL ustawione"
+      },
+      "legal": {
+        "privacy": "Polityka prywatności utworzona",
+        "terms": "Regulamin utworzony",
+        "cookies": "Baner zgody na cookies wdrożony",
+        "gdpr": "Zgodność z RODO zweryfikowana",
+        "copyright": "Informacje o prawach autorskich dodane",
+        "accessibility": "Oświadczenie o dostępności dodane",
+        "ageVerification": "Weryfikacja wieku (jeśli wymagana)"
+      },
+      "performance": {
+        "speed": "Szybkość strony przetestowana (GTmetrix/PageSpeed)",
+        "mobile": "Responsywność mobilna przetestowana",
+        "browsers": "Testy między przeglądarkami ukończone",
+        "load": "Testy obciążenia wykonane",
+        "caching": "Cachowanie skonfigurowane prawidłowo",
+        "minify": "CSS/JS zminifikowane",
+        "wcag": "Dostępność przetestowana (zgodność WCAG)"
+      },
+      "analytics": {
+        "ga4": "Google Analytics 4 zainstalowane",
+        "gtm": "Google Tag Manager skonfigurowany",
+        "goals": "Cele konwersji skonfigurowane",
+        "ecommerce": "Śledzenie e-commerce skonfigurowane",
+        "searchConsole": "Search Console zweryfikowane",
+        "heatmap": "Narzędzie heatmap zainstalowane (jeśli dotyczy)",
+        "ipFilter": "Filtrowanie IP skonfigurowane"
+      },
+      "marketing": {
+        "social": "Profile mediów społecznościowych zaktualizowane",
+        "announcement": "Ogłoszenie o uruchomieniu przygotowane",
+        "email": "Kampania e-mailowa utworzona",
+        "press": "Komunikat prasowy przygotowany",
+        "content": "Treści na dzień premiery zaplanowane",
+        "gmb": "Google My Business zaktualizowane",
+        "partners": "Partnerzy/interesariusze powiadomieni"
+      },
+      "monitoring": {
+        "uptime": "Monitoring czasu działania aktywowany",
+        "errors": "Logi błędów monitorowane",
+        "analytics": "Dane analityczne zweryfikowane",
+        "forms": "Przesyłanie formularzy przetestowane",
+        "metrics": "Metryki wydajności przejrzane",
+        "feedback": "Opinie użytkowników zebrane",
+        "security": "Skanowanie bezpieczeństwa wykonane",
+        "report": "Raport po premierze utworzony"
+      }
+    },
+    "timeline": {
+      "7daysBefore": "7 dni przed",
+      "5daysBefore": "5 dni przed",
+      "4daysBefore": "4 dni przed",
+      "3daysBefore": "3 dni przed",
+      "2daysBefore": "2 dni przed",
+      "1dayBefore": "1 dzień przed",
+      "launchDay": "Dzień premiery",
+      "daily1week": "Codziennie przez 1 tydzień",
+      "day1post": "Dzień 1 po premierze",
+      "day3post": "Dzień 3 po premierze",
+      "week1post": "Tydzień 1 po premierze",
+      "week2post": "Tydzień 2 po premierze"
+    },
+    "cta": {
+      "title": "Potrzebujesz pomocy przy uruchomieniu strony?",
+      "description": "Pozwól ekspertom WebCraftAI obsłużyć proces tworzenia i uruchomienia Twojej strony od początku do końca.",
+      "button": "Zacznij dzisiaj"
+    }
+  },
+  "downloads": {
+    "mistakes10": {
+      "badge": "DARMOWY PORADNIK",
+      "format": "PDF • 32 strony",
+      "title": "10 błędów, które kosztują Cię klientów",
+      "subtitle": "Odkryj najczęstsze błędy na stronach internetowych lokalnych firm i dowiedz się, jak je naprawić, aby ",
+      "highlight": "zwiększyć konwersję o minimum 30%",
+      "benefits": [
+        {
+          "title": "Konkretne przykłady i rozwiązania",
+          "description": "Każdy błąd opisany z przykładami i gotowymi rozwiązaniami"
+        },
+        {
+          "title": "Checklist do samodzielnej analizy",
+          "description": "Sprawdź swoją stronę punkt po punkcie"
+        },
+        {
+          "title": "Priorytety implementacji",
+          "description": "Dowiedz się, od czego zacząć, aby szybko zobaczyć efekty"
+        }
+      ],
+      "mistakes": [
+        "Brak jasnego przekazu wartości",
+        "Słaba widoczność informacji kontaktowych",
+        "Brak dowodów społecznych",
+        "Niezoptymalizowana wersja mobilna",
+        "Wolne ładowanie strony",
+        "Skomplikowana nawigacja",
+        "Brak wezwań do działania (CTA)",
+        "Nieaktualne treści",
+        "Brak optymalizacji SEO",
+        "Ignorowanie analityki"
+      ],
+      "form": {
+        "title": "Pobierz darmowy poradnik",
+        "emailPlaceholder": "Twój email...",
+        "submitButton": "Pobierz poradnik za darmo",
+        "submitting": "Wysyłanie...",
+        "disclaimer": "Zero spamu. Wypisujesz się jednym klikiem.",
+        "successTitle": "Sprawdź swoją skrzynkę email!",
+        "successMessage": "Wysłaliśmy link do pobrania poradnika"
+      },
+      "content": {
+        "whatInside": "Co znajdziesz w poradniku?",
+        "insideDescription": "Kompleksowy przewodnik po najczęstszych błędach i ich rozwiązaniach",
+        "mistakeDescription": "Szczegółowy opis problemu i gotowe rozwiązanie do wdrożenia"
+      },
+      "stats": [
+        { "value": "32", "label": "strony" },
+        { "value": "10", "label": "błędów" },
+        { "value": "50+", "label": "wskazówek" }
+      ],
+      "testimonials": [
+        {
+          "text": "Naprawiłem 5 rzeczy z listy. Teraz mam 12 telefonów dziennie zamiast 3.",
+          "author": "Michał, pizzeria w Gdańsku"
+        },
+        {
+          "text": "Strona ładowała się 8 sekund. Nie wiedziałam, że to problem. Teraz 2 sek i +30% wizyt.",
+          "author": "Anna, salon kosmetyczny Mokotów"
+        },
+        {
+          "text": "Błąd nr 3 kosztował mnie 2000 zł miesięcznie. Serio.",
+          "author": "Piotr, serwis iPhone Kraków"
+        }
+      ],
+      "socialProof": "Pobrane już 2137 razy",
+      "mockup": {
+        "title": "10 BŁĘDÓW",
+        "subtitle": "które kosztują Cię klientów",
+        "description": "Jak je naprawić i zwiększyć sprzedaż"
+      }
+    },
+    "checklist50": {
+      "badge": "DARMOWA CHECKLIST",
+      "format": "PDF • Do druku",
+      "title": "50 elementów strony, które zwiększają sprzedaż",
+      "subtitle": "Kompletna checklist do analizy swojej strony. Sprawdź punkt po punkcie, co możesz poprawić, aby ",
+      "highlight": "przekształcić więcej odwiedzających w klientów",
+      "categories": [
+        { "name": "Nagłówek i nawigacja", "count": 8, "icon": "🎯" },
+        { "name": "Strona główna", "count": 12, "icon": "🏠" },
+        { "name": "Treść i przekaz", "count": 10, "icon": "📝" },
+        { "name": "Wezwania do działania", "count": 6, "icon": "🎪" },
+        { "name": "Dowody społeczne", "count": 7, "icon": "⭐" },
+        { "name": "Wydajność i SEO", "count": 7, "icon": "🚀" }
+      ],
+      "features": [
+        { "text": "Gotowa do druku" },
+        { "text": "Szybka analiza" },
+        { "text": "Priorytety wdrożenia" },
+        { "text": "Best practices" }
+      ],
+      "form": {
+        "title": "Pobierz checklistę za darmo",
+        "emailPlaceholder": "Twój email...",
+        "submitButton": "Pobierz checklistę (PDF)",
+        "submitting": "Wysyłanie...",
+        "disclaimer": "Raz w tygodniu wysyłam 1 konkretną poradę. Żadnego spamu.",
+        "successTitle": "Checklist wysłana!",
+        "successMessage": "Sprawdź email i pobierz checklistę"
+      },
+      "stats": [
+        { "value": "5312", "label": "pobrań" },
+        { "value": "4.8/5", "label": "ocena" }
+      ],
+      "content": {
+        "howToUse": "Jak korzystać z checklisty?",
+        "steps": [
+          { "number": "1", "title": "Wydrukuj checklistę", "description": "Lub otwórz na ekranie i przejdź punkt po punkcie" },
+          { "number": "2", "title": "Analizuj swoją stronę", "description": "Zaznaczaj elementy, które już masz i te do poprawy" },
+          { "number": "3", "title": "Wdrażaj zmiany", "description": "Zacznij od elementów oznaczonych jako priorytetowe" }
+        ],
+        "sampleItems": [
+          "Logo widoczne w lewym górnym rogu",
+          "Jasny i czytelny nagłówek główny",
+          "Numer telefonu w widocznym miejscu"
+        ],
+        "sampleItemsLabel": "Przykładowe punkty:",
+        "pointsLabel": "punktów"
+      },
+      "cta": {
+        "title": "Potrzebujesz pomocy we wdrożeniu?",
+        "description": "Nasz zespół może przeprowadzić dla Ciebie kompletny audyt i zaproponować plan działania",
+        "button": "Zamów darmową analizę strony"
+      },
+      "mockup": {
+        "title": "Checklist konwersji",
+        "subtitle": "50 kluczowych elementów"
+      },
+      "onlineTool": {
+        "title": "🌐 Użyj narzędzia online",
+        "description": "Interaktywna wersja z automatycznym liczeniem i zapisywaniem postępu",
+        "button": "Otwórz interaktywne narzędzie"
+      },
+      "pdfDownload": {
+        "title": "📄 Lub pobierz PDF do druku"
+      }
+    }
+  },
+  "reports": {
+    "common": {
+      "back": "Powrót",
+      "share": "Udostępnij",
+      "specialReport": "RAPORT SPECJALNY",
+      "automationGuide": "PRZEWODNIK AUTOMATYZACJI",
+      "localSeoGuide": "PRZEWODNIK SEO LOKALNEGO",
+      "realExample": "Rzeczywisty przykład:",
+      "proofItWorks": "Dowód że działa:",
+      "problem": "Problem",
+      "symptoms": "Objawy (sprawdź, czy masz)",
+      "solution": "Rozwiązanie",
+      "howItWorks": "Jak to działa:",
+      "automaticFeatures": "Automatyczne funkcje:",
+      "automaticProcess": "Proces automatyczny:",
+      "contentAutomation": "Automatyzacja treści:",
+      "howItWorksProcess": "Mechanizm działania:",
+      "whatNow": "Co teraz?",
+      "readyFor": "Gotowy na",
+      "needHelp": "Potrzebujesz Pomocy z",
+      "getNow": "Zamów darmową",
+      "setup": "Ustawienie"
+    },
+    "tenMistakes": {
+      "title": "10 Błędów na Stronie, Które Kradną Ci Klientów",
+      "subtitle": "Sprawdziłem 237 stron lokalnych firm. Każda traciła średnio 12-47 klientów miesięcznie przez te same błędy. Oto jak je naprawić.",
+      "lossCalculator": {
+        "title": "Ile tracisz przez te błędy?",
+        "monthly": "Miesięcznie:",
+        "yearly": "Rocznie:",
+        "note": "* Przy średniej wartości klienta 250 PLN i 1000 odwiedzających miesięcznie"
+      },
+      "tableOfContents": "Spis błędów",
+      "mistakes": {
+        "1": {
+          "title": "Brak responsywności mobilnej",
+          "impact": "-67% potencjalnych klientów",
+          "problem": "W 2024 roku 67% lokalnych wyszukiwań pochodzi z urządzeń mobilnych. Jeśli Twoja strona nie działa dobrze na telefonie, tracisz większość klientów zanim zobaczą Twoją ofertę.",
+          "symptoms": [
+            "Tekst za mały do czytania na telefonie",
+            "Przyciski za blisko siebie",
+            "Treść \"ucieka\" poza ekran",
+            "Długie ładowanie na mobilnym internecie"
+          ],
+          "solution": "Zastosuj responsive web design. Testuj stronę na różnych urządzeniach. Użyj Google Mobile-Friendly Test.",
+          "realExample": "Fryzjer z Krakowa stracił 73% ruchu mobilnego przez nieresponsywną stronę. Po naprawie: +156% rezerwacji online w 2 miesiące."
+        },
+        "2": {
+          "title": "Strona ładuje się dłużej niż 3 sekundy",
+          "impact": "-53% konwersji",
+          "problem": "53% użytkowników opuszcza stronę, która ładuje się dłużej niż 3 sekundy. Google też karze wolne strony niższą pozycją.",
+          "symptoms": [
+            "Ładowanie strony głównej > 3 sek",
+            "Duże, nieoptymalizowane zdjęcia",
+            "Za dużo pluginów/skryptów",
+            "Tani hosting współdzielony"
+          ],
+          "solution": "Zoptymalizuj zdjęcia (WebP), włącz cache, usuń zbędne pluginy, rozważ lepszy hosting.",
+          "realExample": "Mechanik z Warszawy przyspieszył stronę z 8s do 2.1s. Efekt: +89% zapytań o wycenę w pierwszy miesiąc."
+        },
+        "3": {
+          "title": "Brak widocznego numeru telefonu",
+          "impact": "-70% połączeń",
+          "problem": "70% klientów lokalnych chce zadzwonić od razu. Jeśli muszą szukać numeru dłużej niż 3 sekundy, dzwonią do konkurencji.",
+          "symptoms": [
+            "Numer tylko w stopce",
+            "Numer jako obrazek (nie klikalny)",
+            "Brak numeru na stronie głównej",
+            "Numer schowany w \"Kontakt\""
+          ],
+          "solution": "Umieść klikalny numer w nagłówku, dodaj przycisk \"Zadzwoń teraz\", użyj sticky header na mobile.",
+          "realExample": "Dentysta z Wrocławia dodał widoczny numer telefonu. Wzrost połączeń o 340% w tydzień."
+        },
+        "4": {
+          "title": "Niejasna propozycja wartości",
+          "impact": "-80% zainteresowania",
+          "problem": "Masz 5 sekund żeby powiedzieć czym się zajmujesz i dlaczego klient ma wybrać Ciebie. 80% stron tego nie robi.",
+          "symptoms": [
+            "Ogólnikowe hasła typu \"Najlepsza jakość\"",
+            "Brak konkretów czym się zajmujesz",
+            "Za dużo branżowego żargonu",
+            "Skupienie na sobie, nie na kliencie"
+          ],
+          "solution": "W pierwszej sekcji odpowiedz: Co robisz? Dla kogo? Jaka jest korzyść? Dlaczego Ty?",
+          "realExample": "Hydraulik zmienił \"Usługi hydrauliczne\" na \"Naprawiam awarię w 60 minut - też w weekend\". +200% wezwań."
+        },
+        "5": {
+          "title": "Brak dowodów społecznych",
+          "impact": "-92% zaufania",
+          "problem": "92% klientów czyta opinie przed wyborem usługi lokalnej. Brak opinii = brak zaufania = brak klientów.",
+          "symptoms": [
+            "Zero opinii na stronie",
+            "Stare opinie (sprzed 2+ lat)",
+            "Same teksty bez zdjęć/nazwisk",
+            "Brak integracji z Google Reviews"
+          ],
+          "solution": "Zbieraj i pokazuj opinie systematycznie. Używaj zdjęć klientów. Integruj Google Reviews.",
+          "realExample": "Salon kosmetyczny dodał sekcję z opiniami Google. Konwersje wzrosły o 127% w miesiąc."
+        },
+        "6": {
+          "title": "Ukryte ceny",
+          "impact": "-84% zapytań",
+          "problem": "84% klientów chce znać przybliżone ceny przed kontaktem. \"Ceny na zapytanie\" = przechodzą do konkurencji.",
+          "symptoms": [
+            "Żadnych cen na stronie",
+            "\"Wycena indywidualna\" wszędzie",
+            "Ceny schowane głęboko w PDF",
+            "Brak przedziałów cenowych"
+          ],
+          "solution": "Podaj przynajmniej przedziały \"od-do\", przykładowe wyceny, pakiety. Transparentność buduje zaufanie.",
+          "realExample": "Warsztat dodał cennik podstawowych usług. Telefony wzrosły o 156% (i mniej pytań o cenę!)."
+        },
+        "7": {
+          "title": "Brak HTTPS (kłódki)",
+          "impact": "-85% zaufania",
+          "problem": "Przeglądarki pokazują \"Połączenie nie jest bezpieczne\". 85% użytkowników nie zostawi danych na takiej stronie.",
+          "symptoms": [
+            "Brak kłódki w pasku adresu",
+            "Ostrzeżenie \"Niebezpieczna strona\"",
+            "http:// zamiast https://",
+            "Formularze bez szyfrowania"
+          ],
+          "solution": "Zainstaluj certyfikat SSL (często za darmo u hostingu). To podstawa w 2024 roku.",
+          "realExample": "Sklep internetowy dodał SSL. Konwersje wzrosły o 43% już pierwszego dnia."
+        },
+        "8": {
+          "title": "Słabe lub brak wezwań do działania (CTA)",
+          "impact": "-90% konwersji",
+          "problem": "Klient nie wie, co ma zrobić. \"Skontaktuj się\" to za mało. 90% stron ma słabe lub niewidoczne CTA.",
+          "symptoms": [
+            "Małe, szare przyciski",
+            "Ogólnikowe teksty \"Więcej\", \"Dalej\"",
+            "CTA tylko na dole strony",
+            "Brak kontrastu kolorów"
+          ],
+          "solution": "Używaj dużych, kontrastowych przycisków. Pisz konkretnie: \"Umów wizytę\", \"Sprawdź cenę\", \"Zadzwoń teraz\".",
+          "realExample": "Gabinet zmienił \"Kontakt\" na \"Umów wizytę w 24h\". Rezerwacje wzrosły o 218%."
+        },
+        "9": {
+          "title": "Brak informacji kontaktowych",
+          "impact": "-95% wiarygodności",
+          "problem": "Brak adresu, NIP, godzin otwarcia = klient myśli, że to oszustwo. 95% sprawdza te dane przed kontaktem.",
+          "symptoms": [
+            "Tylko formularz kontaktowy",
+            "Brak fizycznego adresu",
+            "Brak godzin otwarcia",
+            "Brak danych firmy (NIP/REGON)"
+          ],
+          "solution": "Stwórz pełną stronę kontakt z mapą, godzinami, wszystkimi sposobami kontaktu. Dodaj dane do stopki.",
+          "realExample": "Firma sprzątająca dodała pełne dane kontaktowe. Zapytania wzrosły o 167% w 2 tygodnie."
+        },
+        "10": {
+          "title": "Brak optymalizacji lokalnego SEO",
+          "impact": "-89% widoczności",
+          "problem": "Nie pokazujesz się, gdy ktoś szuka \"mechanik Warszawa\" czy \"fryzjer koło mnie\". Tracisz 89% lokalnych klientów.",
+          "symptoms": [
+            "Brak nazwy miasta w tytułach",
+            "Brak strony Google Moja Firma",
+            "Brak lokalnych słów kluczowych",
+            "Brak Schema markup LocalBusiness"
+          ],
+          "solution": "Dodaj miasto do tytułów, stwórz Google Moja Firma, używaj lokalnych fraz, dodaj Schema markup.",
+          "realExample": "Pizza w Gdańsku zoptymalizowała SEO lokalne. Z 0 do 47 klientów dziennie w 3 miesiące."
+        }
+      },
+      "summary": {
+        "title": "Co teraz?",
+        "description": "Większość firm ma minimum 7 z tych 10 błędów. To oznacza, że tracisz 70-90% potencjalnych klientów.",
+        "lossWarning": "Twoja potencjalna strata: {amount} rocznie",
+        "lossNote": "To pieniądze, które idą do Twojej konkurencji",
+        "stats": [
+          { "value": "30 min", "label": "Tyle zajmuje analiza" },
+          { "value": "+247%", "label": "Średni wzrost leadów" },
+          { "value": "2-4 tyg", "label": "Do pierwszych efektów" }
+        ],
+        "cta": "Zamów darmową analizę swojej strony",
+        "ctaNote": "Otrzymasz spersonalizowany raport z dokładnym planem naprawy"
+      }
+    },
+    "marketingAutopilot": {
+      "title": "Marketing na Autopilocie: Prosty Przewodnik dla Lokalnych Firm",
+      "subtitle": "Jak ustawić marketing raz, a potem tylko zbierać klientów? 6 sprawdzonych systemów, które pracują za Ciebie 24/7.",
+      "keyStats": [
+        { "value": "87%", "label": "mniej pracy" },
+        { "value": "3.5x", "label": "więcej leadów" },
+        { "value": "24/7", "label": "działa non-stop" }
+      ],
+      "whyAutomation": {
+        "title": "Dlaczego automatyzacja?",
+        "description": "Jako właściciel lokalnej firmy, Twój czas jest najcenniejszy. Każda godzina spędzona na powtarzalnych zadaniach marketingowych to godzina stracona - mogłeś obsłużyć klienta, rozwinąć usługę lub po prostu odpocząć.",
+        "quote": "💡 Marketing automatyczny = Pracownik, który nigdy nie śpi, nie choruje i kosztuje grosze"
+      },
+      "systemsTitle": "6 Systemów Automatycznego Marketingu",
+      "systemsSubtitle": "Każdy działa niezależnie. Zacznij od jednego.",
+      "strategies": {
+        "1": {
+          "title": "Email Marketing Automatyczny",
+          "timeToSet": "2-3 godziny",
+          "monthlyTime": "30 minut",
+          "roi": "4200% średni ROI",
+          "description": "System automatycznego email marketingu pracuje 24/7. Wysyła spersonalizowane wiadomości do klientów dokładnie wtedy, gdy są najbardziej skłonni do zakupu.",
+          "steps": [
+            "Klient zostawia email (np. pobierając darmowy poradnik)",
+            "System automatycznie wysyła serię wartościowych emaili",
+            "Buduje zaufanie i relację przez 7-14 dni",
+            "Wysyła ofertę gdy klient jest gotowy"
+          ],
+          "tools": "Narzędzia: ConvertKit, Mailchimp, ActiveCampaign",
+          "realExample": "Salon fryzjerski z Warszawy: Stworzył automatyczną kampanię \"5 sposobów na piękne włosy\". Efekt: 127 nowych klientek w 2 miesiące, zero dodatkowej pracy."
+        },
+        "2": {
+          "title": "Google Moja Firma na Autopilocie",
+          "timeToSet": "1 godzina",
+          "monthlyTime": "15 minut",
+          "roi": "+251% więcej telefonów",
+          "description": "Twój profil Google pracuje jako całodobowy sprzedawca. Pokazuje się ludziom dokładnie wtedy, gdy szukają Twoich usług w okolicy.",
+          "steps": [
+            "Automatyczne odpowiedzi na częste pytania",
+            "Przypomnienia o opiniach dla klientów",
+            "Aktualizacje godzin i świąt",
+            "Posty z ofertami (można zaplanować)"
+          ],
+          "tools": "Narzędzia: Google Business Profile, LocalBusiness+",
+          "realExample": "Mechanik z Krakowa: Ustawił automatyczne odpowiedzi i posty. Wzrost telefonów o 251% bez dodatkowej pracy. Klienci sami rezerwują terminy."
+        },
+        "3": {
+          "title": "Chatbot na Stronie 24/7",
+          "timeToSet": "3-4 godziny",
+          "monthlyTime": "1 godzina",
+          "roi": "+67% konwersji",
+          "description": "Inteligentny chatbot odpowiada na pytania klientów o każdej porze. Zbiera kontakty, umawia spotkania i przekazuje gotowych klientów.",
+          "steps": [
+            "Odpowiada na 80% typowych pytań",
+            "Zbiera dane kontaktowe zainteresowanych",
+            "Umawia spotkania w kalendarzu",
+            "Wysyła powiadomienia o nowych leadach"
+          ],
+          "tools": "Narzędzia: Tidio, Intercom, Drift",
+          "realExample": "Gabinet stomatologiczny: Chatbot obsługuje 73% pytań nocą i w weekendy. 156 nowych pacjentów w 3 miesiące, których inaczej by stracili."
+        },
+        "4": {
+          "title": "Reklamy Remarketingowe",
+          "timeToSet": "2 godziny",
+          "monthlyTime": "30 minut",
+          "roi": "10x niższy koszt konwersji",
+          "description": "System automatycznie pokazuje reklamy osobom, które już odwiedziły Twoją stronę. Przypomina o Tobie gdy są gotowi do zakupu.",
+          "steps": [
+            "Klient odwiedza stronę ale nie kupuje",
+            "System \"zapamiętuje\" go przez piksel",
+            "Pokazuje mu reklamy przez 30 dni",
+            "Wraca i finalizuje zakup"
+          ],
+          "tools": "Narzędzia: Facebook Pixel, Google Ads",
+          "realExample": "Sklep z odzieżą: Ustawił remarketing na Facebooku. Koszt pozyskania klienta spadł z 120 zł do 12 zł. ROI wzrósł o 900%."
+        },
+        "5": {
+          "title": "Content Marketing Automatyczny",
+          "timeToSet": "4-5 godzin",
+          "monthlyTime": "2 godziny",
+          "roi": "3x więcej ruchu",
+          "description": "Raz napisany artykuł pracuje latami. System automatycznie publikuje treści, optymalizuje SEO i przyciąga klientów z Google.",
+          "steps": [
+            "Tworzysz treści raz na miesiąc (batch)",
+            "System publikuje według harmonogramu",
+            "Automatycznie udostępnia w social media",
+            "Mierzy wyniki i sugeruje tematy"
+          ],
+          "tools": "Narzędzia: WordPress, Buffer, Hootsuite",
+          "realExample": "Prawnik z Poznania: Pisze 4 artykuły miesięcznie, publikuje automatycznie. Po roku: 45 000 odwiedzin miesięcznie, 89 nowych klientów."
+        },
+        "6": {
+          "title": "System Poleceń Automatyczny",
+          "timeToSet": "2 godziny",
+          "monthlyTime": "0 minut",
+          "roi": "+43% nowych klientów",
+          "description": "Zadowoleni klienci automatycznie polecają Cię znajomym. System sam wysyła prośby o polecenia i nagradza polecających.",
+          "steps": [
+            "Po 30 dniach system pyta o satysfakcję",
+            "Zadowoleni dostają link polecający",
+            "Za każde polecenie - automatyczna nagroda",
+            "Nowy klient = rabat dla obu stron"
+          ],
+          "tools": "Narzędzia: ReferralCandy, Post Purchase Surveys",
+          "realExample": "Trener personalny: System poleceń przynosi 43% nowych klientów. Średni koszt pozyskania = 0 zł (tylko rabaty dla polecających)."
+        }
+      },
+      "implementationPlan": {
+        "title": "Plan Wdrożenia: Od Zera do Autopilota",
+        "phases": {
+          "1": {
+            "week": "Tydzień 1-2",
+            "title": "Fundament",
+            "tasks": [
+              "Załóż Google Moja Firma",
+              "Zainstaluj piksel remarketingowy",
+              "Wybierz system email marketingu"
+            ]
+          },
+          "2": {
+            "week": "Tydzień 3-4",
+            "title": "Automatyzacja",
+            "tasks": [
+              "Stwórz pierwszą kampanię email",
+              "Ustaw chatbota na stronie",
+              "Skonfiguruj automatyczne posty"
+            ]
+          },
+          "3": {
+            "week": "Miesiąc 2",
+            "title": "Optymalizacja",
+            "tasks": [
+              "Uruchom remarketing",
+              "Zaplanuj content na 3 miesiące",
+              "Włącz system poleceń"
+            ]
+          },
+          "4": {
+            "week": "Miesiąc 3+",
+            "title": "Skalowanie",
+            "tasks": [
+              "Analizuj wyniki i poprawiaj",
+              "Dodawaj nowe automatyzacje",
+              "Reinwestuj zyski w rozwój"
+            ]
+          }
+        }
+      },
+      "roiCalculator": {
+        "title": "Twój Potencjalny Zwrot z Automatyzacji",
+        "withoutAutomation": {
+          "title": "Bez automatyzacji:",
+          "marketingTime": "Czas na marketing/tydzień:",
+          "timeCost": "Koszt czasu (50zł/h):",
+          "leadsMonth": "Leady/miesiąc:",
+          "timeValue": "15-20h",
+          "costValue": "3000-4000 zł",
+          "leadsValue": "10-20"
+        },
+        "withAutomation": {
+          "title": "Z automatyzacją:",
+          "marketingTime": "Czas na marketing/tydzień:",
+          "toolsCost": "Koszt narzędzi:",
+          "leadsMonth": "Leady/miesiąc:",
+          "timeValue": "2-3h",
+          "costValue": "200-500 zł",
+          "leadsValue": "35-70"
+        },
+        "savings": "💰 Oszczędność: 2500-3500 zł/miesiąc + 3.5x więcej klientów"
+      },
+      "commonMistakes": {
+        "title": "⚠️ Najczęstsze Błędy (i jak ich uniknąć)",
+        "mistakes": [
+          {
+            "mistake": "Próba zrobienia wszystkiego naraz",
+            "solution": "Zacznij od jednego systemu. Opanuj go, potem dodaj kolejny."
+          },
+          {
+            "mistake": "Brak personalizacji wiadomości",
+            "solution": "Nawet automatyczne wiadomości muszą brzmieć osobisto. Używaj imion, odniesień lokalnych."
+          },
+          {
+            "mistake": "Ustawił i zapomniał",
+            "solution": "Automatyzacja to nie \"ustawił i zapomniał\". Sprawdzaj wyniki co tydzień, optymalizuj."
+          },
+          {
+            "mistake": "Za dużo automatyzacji",
+            "solution": "Zachowaj ludzki kontakt w kluczowych momentach. Automatyzuj rutynę, nie relacje."
+          }
+        ]
+      },
+      "finalCta": {
+        "title": "Gotowy na Marketing Autopilot?",
+        "description": "Pomożemy Ci ustawić wszystkie systemy w 30 dni. Ty się skupiasz na biznesie, my zajmiemy się automatyzacją.",
+        "stats": [
+          { "value": "30 dni", "label": "Pełne wdrożenie" },
+          { "value": "6 systemów", "label": "Działających 24/7" },
+          { "value": "100%", "label": "Wsparcie i szkolenie" }
+        ],
+        "button": "Zamów darmową konsultację automatyzacji",
+        "note": "Sprawdzimy, które automatyzacje przyniosą Ci największy zwrot"
+      }
+    },
+    "localSeo": {
+      "title": "Zdominuj Google w Swoim Mieście: Proste SEO dla Lokalnych Firm",
+      "subtitle": "8 kroków, które sprawią, że Twoja firma będzie #1, gdy ktoś szuka usług w Twojej okolicy. Bez technicznego bełkotu.",
+      "impactStats": {
+        "title": "🎯 Co zyskasz stosując ten przewodnik:",
+        "stats": [
+          { "value": "3-10x", "label": "więcej telefonów" },
+          { "value": "#1-3", "label": "pozycja w mapach" },
+          { "value": "24/7", "label": "widoczność" },
+          { "value": "0 zł", "label": "koszt reklam" }
+        ]
+      },
+      "whyLocalSeo": {
+        "title": "📊 Fakty o lokalnych wyszukiwaniach (2024):",
+        "facts": [
+          "46% wszystkich wyszukiwań w Google to lokalne zapytania",
+          "76% osób szukających lokalnie odwiedza firmę w ciągu 24h",
+          "88% lokalnych wyszukiwań na telefonie kończy się telefonem lub wizytą",
+          "\"koło mnie\" wzrosło o 500% w ostatnich 2 latach",
+          "93% klientów czyta opinie przed wyborem lokalnej firmy",
+          "TOP 3 w mapach dostaje 75% wszystkich kliknięć"
+        ],
+        "warning": "⚠️ Jeśli nie jesteś w TOP 3 lokalnych wyników, praktycznie nie istniejesz dla klientów"
+      },
+      "stepsTitle": "8 Kroków do Lokalnej Dominacji",
+      "stepsSubtitle": "Rób po kolei. Każdy krok buduje na poprzednim.",
+      "steps": {
+        "1": {
+          "title": "Google Moja Firma - Twoja Wizytówka 24/7",
+          "importance": "Krytyczne",
+          "impact": "+350% widoczności lokalnej",
+          "description": "To pierwsze, co widzą klienci szukając usług w Twojej okolicy. Pojawia się w mapach, wyszukiwaniu i pokazuje wszystkie kluczowe informacje.",
+          "howTo": "Jak zoptymalizować:",
+          "steps": [
+            "Wypełnij KAŻDE pole w profilu (100% kompletności)",
+            "Dodaj minimum 10 wysokiej jakości zdjęć",
+            "Ustaw dokładne godziny otwarcia (także święta)",
+            "Wybierz wszystkie pasujące kategorie działalności",
+            "Napisz opis z lokalnymi słowami kluczowymi",
+            "Dodaj produkty/usługi z cenami"
+          ],
+          "proTip": "Publikuj post w Google Moja Firma co tydzień. Algorytm lubi aktywne profile i pokazuje je wyżej.",
+          "realExample": "Mechanik z Warszawy: Po pełnej optymalizacji GMF wzrost telefonów o 350% w 2 miesiące. Z 3 pozycji w mapach skoczył na 1."
+        },
+        "2": {
+          "title": "Opinie - Twoja Tajna Broń SEO",
+          "importance": "Krytyczne",
+          "impact": "+44% konwersji",
+          "description": "Google uwielbia firmy z dużą ilością pozytywnych opinii. To nie tylko buduje zaufanie - to bezpośrednio wpływa na pozycje w wynikach lokalnych.",
+          "howTo": "System zbierania opinii:",
+          "steps": [
+            "Poproś KAŻDEGO zadowolonego klienta",
+            "Wyślij link do opinii SMS-em 24h po usłudze",
+            "Ułatw proces - bezpośredni link do dodania opinii",
+            "Odpowiadaj na KAŻDĄ opinię w 24h",
+            "Podziękuj za pozytywne, przeproś za negatywne",
+            "Nigdy nie kupuj fałszywych opinii!"
+          ],
+          "proTip": "Cel: minimum 1 nowa opinia tygodniowo. Po roku będziesz miał 50+ opinii i zdominujesz lokalną konkurencję.",
+          "realExample": "Dentysta z Krakowa: System SMS-owy przyniósł 127 opinii w 6 miesięcy. Średnia 4.9/5. Skok z 7 na 2 miejsce w \"dentysta Kraków\"."
+        },
+        "3": {
+          "title": "Słowa Kluczowe Lokalne - Mów Językiem Klienta",
+          "importance": "Wysoka",
+          "impact": "+89% ruchu organicznego",
+          "description": "Ludzie nie szukają \"usług fryzjerskich\" - szukają \"fryzjer Mokotów tanio\" albo \"barber koło metra Wilanowska\". Musisz mówić ich językiem.",
+          "howTo": "Gdzie umieścić słowa kluczowe:",
+          "steps": [
+            "Tytuł strony: [Usługa] [Miasto/Dzielnica] - [Nazwa firmy]",
+            "Nagłówek H1: Najlepszy [usługa] w [miasto/dzielnica]",
+            "W treści: naturalne użycie nazw dzielnic, ulic, punktów orientacyjnych",
+            "W URL: /fryzjer-mokotow lub /mechanik-warszawa-wola",
+            "W opisach zdjęć (alt): \"Salon fryzjerski Mokotów wnętrze\"",
+            "W meta description: zachęcający opis z lokalizacją"
+          ],
+          "proTip": "Stwórz osobne podstrony dla każdej dzielnicy/miasta, które obsługujesz. Każda to szansa na wysoką pozycję.",
+          "realExample": "Hydraulik z Gdańska: Stworzył 15 podstron dla dzielnic. Ruch wzrósł o 89% w 3 miesiące. Dominuje w każdej dzielnicy."
+        },
+        "4": {
+          "title": "NAP - Święta Trójca Lokalnego SEO",
+          "importance": "Wysoka",
+          "impact": "+31% pozycji w mapach",
+          "description": "NAP = Name, Address, Phone. Te 3 dane MUSZĄ być identyczne wszędzie w internecie. Każda niezgodność to sygnał dla Google, że coś jest nie tak.",
+          "howTo": "Jak ujednolicić NAP:",
+          "steps": [
+            "Sprawdź WSZYSTKIE miejsca gdzie jesteś wymieniony",
+            "Popraw dane w katalogach branżowych (Panorama Firm, itp.)",
+            "Usuń duplikaty i stare wpisy",
+            "Używaj DOKŁADNIE tego samego formatu wszędzie",
+            "Dodaj się do 20-30 lokalnych katalogów",
+            "Monitoruj nowe wpisy i poprawiaj na bieżąco"
+          ],
+          "proTip": "Użyj narzędzia Moz Local lub BrightLocal do znalezienia wszystkich niezgodności NAP. To oszczędzi Ci godziny pracy.",
+          "realExample": "Pizzeria w Poznaniu: Poprawiła NAP w 47 miejscach. Skok z 8 na 3 miejsce w mapach Google w 6 tygodni."
+        },
+        "5": {
+          "title": "Lokalne Linki - Buduj Autorytet w Okolicy",
+          "importance": "Średnia",
+          "impact": "+42% autorytetu domeny",
+          "description": "Linki z lokalnych stron są 10x bardziej wartościowe niż z przypadkowych. Google wie, że jesteś prawdziwą, szanowaną firmą w okolicy.",
+          "howTo": "Skąd zdobyć lokalne linki:",
+          "steps": [
+            "Sponsoruj lokalne wydarzenia (link ze strony wydarzenia)",
+            "Współpracuj z innymi lokalnymi firmami (wzajemne polecenia)",
+            "Lokalne media - wyślij ciekawą historię o firmie",
+            "Organizacje branżowe i izby gospodarcze",
+            "Uczelnie/szkoły - staże, współpraca, wykłady",
+            "Blogi lokalne - guest posty, wywiady"
+          ],
+          "proTip": "Zacznij od listy 50 lokalnych stron. Kontaktuj 5 tygodniowo. Po roku będziesz mieć 20-30 świetnych linków.",
+          "realExample": "Warsztat samochodowy z Łodzi: 23 lokalne linki w rok. Autorytet domeny wzrósł z 12 do 34. Ruch +156%."
+        },
+        "6": {
+          "title": "Mobilna Optymalizacja - Priorytet #1",
+          "importance": "Krytyczna",
+          "impact": "-73% jeśli nie masz",
+          "description": "76% lokalnych wyszukiwań to telefony. Jeśli strona nie działa idealnie na mobile, tracisz 3/4 potencjalnych klientów.",
+          "howTo": "Mobilny checklist:",
+          "steps": [
+            "Czas ładowania < 3 sekundy na 3G",
+            "Przyciski minimum 44x44 piksele",
+            "Tekst czytelny bez zoomowania",
+            "Klikalne numery telefonu (tel:)",
+            "Mapy działające na dotyk",
+            "Formularz łatwy do wypełnienia na telefonie"
+          ],
+          "proTip": "Testuj stronę na prawdziwym telefonie, nie tylko w przeglądarce. Poproś 5 osób o znalezienie numeru telefonu - jeśli zajmie im to >5 sekund, masz problem.",
+          "realExample": "Salon kosmetyczny z Wrocławia: Przeprojektował stronę mobile-first. Bounce rate spadł o 67%, konwersje +234%."
+        },
+        "7": {
+          "title": "Schema Markup - Sekretny Kod dla Google",
+          "importance": "Średnia",
+          "impact": "+32% CTR w wynikach",
+          "description": "Schema to sposób na powiedzenie Google dokładnie czym się zajmujesz. Sprawia, że wyniki wyglądają lepiej i przyciągają więcej kliknięć.",
+          "howTo": "Jakie Schema dodać:",
+          "steps": [
+            "LocalBusiness - podstawowe dane firmy",
+            "Godziny otwarcia (openingHours)",
+            "Obszar działania (areaServed)",
+            "Opinie (aggregateRating)",
+            "Cennik usług (priceRange)",
+            "FAQ - często zadawane pytania"
+          ],
+          "proTip": "Użyj Google Structured Data Testing Tool do sprawdzenia, czy Schema działa. Błędy = Google ignoruje Twój kod.",
+          "realExample": "Prawnik z Katowic: Dodał pełne Schema LocalBusiness + FAQ. CTR w wynikach wzrósł o 32%, pozycja o 3 miejsca w górę."
+        },
+        "8": {
+          "title": "Treść Lokalna - Pokaż, że Znasz Okolicę",
+          "importance": "Wysoka",
+          "impact": "+124% ruchu długiego ogona",
+          "description": "Google sprawdza, czy naprawdę znasz i obsługujesz daną okolicę. Treści lokalne to dowód, że jesteś ekspertem w swojej dzielnicy.",
+          "howTo": "Pomysły na treści lokalne:",
+          "steps": [
+            "Przewodniki po dzielnicach, które obsługujesz",
+            "Case studies lokalnych klientów",
+            "Współpraca z lokalnymi firmami",
+            "Wydarzenia w okolicy związane z branżą",
+            "Sezonowe porady (np. \"Przygotuj auto do zimy w Warszawie\")",
+            "Historia firmy i związki z okolicą"
+          ],
+          "proTip": "Każdy artykuł = szansa na pozycję dla frazy \"długiego ogona\" np. \"najlepszy mechanik Żoliborz przy metrze\".",
+          "realExample": "Firma sprzątająca z Gdańska: 24 artykuły o dzielnicach. Ruch z long-tail wzrósł o 124%. 67 nowych fraz w TOP 10."
+        }
+      },
+      "actionPlan": {
+        "title": "📅 Plan Działania na 3 Miesiące",
+        "subtitle": "Dokładny harmonogram wdrożenia. Po 3 miesiącach będziesz w TOP 3.",
+        "months": {
+          "1": {
+            "title": "Miesiąc 1: Fundamenty",
+            "expectedResult": "+50-100% widoczności w mapach",
+            "tasks": [
+              "Załóż i zoptymalizuj Google Moja Firma (100%)",
+              "Popraw NAP we wszystkich katalogach",
+              "Zacznij zbierać opinie (cel: 5-10)",
+              "Optymalizacja mobilna strony"
+            ]
+          },
+          "2": {
+            "title": "Miesiąc 2: Rozwój",
+            "expectedResult": "+30-50% ruchu organicznego",
+            "tasks": [
+              "Dodaj lokalne słowa kluczowe na stronie",
+              "Stwórz 3-5 podstron dla dzielnic",
+              "Zdobądź 5-10 lokalnych linków",
+              "Wdróż podstawowe Schema markup"
+            ]
+          },
+          "3": {
+            "title": "Miesiąc 3: Dominacja",
+            "expectedResult": "TOP 3 dla głównych fraz lokalnych",
+            "tasks": [
+              "Napisz 5-10 lokalnych artykułów",
+              "Osiągnij 20+ opinii",
+              "Rozszerz Schema o FAQ i usługi",
+              "Kampania link building (10+ linków)"
+            ]
+          }
+        }
+      },
+      "quickChecklist": {
+        "title": "✅ Szybki Checklist - Sprawdź Co Już Masz",
+        "items": [
+          "Google Moja Firma założona i w 100% wypełniona",
+          "Minimum 10 opinii ze średnią 4.5+",
+          "NAP identyczne wszędzie w internecie",
+          "Strona ładuje się <3 sek na mobile",
+          "Lokalne słowa kluczowe w tytułach",
+          "Schema LocalBusiness wdrożone",
+          "10+ lokalnych linków",
+          "Treści lokalne publikowane regularnie"
+        ],
+        "note": "📊 Jeśli masz <4 zaznaczone: Masz ogromny potencjał wzrostu!"
+      },
+      "tools": {
+        "title": "🔧 Narzędzia Które Ułatwią Ci Pracę",
+        "free": {
+          "title": "Darmowe:",
+          "items": [
+            "Google My Business - zarządzanie profilem",
+            "Google Search Console - analiza ruchu",
+            "Schema.org Generator - tworzenie kodu",
+            "GTmetrix - test szybkości"
+          ]
+        },
+        "paid": {
+          "title": "Płatne (warte inwestycji):",
+          "items": [
+            "BrightLocal - audyt NAP i monitoring",
+            "Whitespark - budowanie cytowań",
+            "Surfer Local - analiza konkurencji",
+            "ReviewTrackers - zarządzanie opiniami"
+          ]
+        }
+      },
+      "finalCta": {
+        "title": "Potrzebujesz Pomocy z Lokalnym SEO?",
+        "description": "Zrobimy kompletny audyt Twojej widoczności lokalnej i pokażemy dokładnie co poprawić, żeby być #1 w Twojej okolicy.",
+        "features": [
+          { "icon": "Search", "label": "Analiza 50+ czynników" },
+          { "icon": "MapPin", "label": "Mapa konkurencji" },
+          { "icon": "BarChart", "label": "Plan działania" },
+          { "icon": "Shield", "label": "Gwarancja TOP 3" }
+        ],
+        "button": "Zamów darmowy audyt lokalnego SEO",
+        "note": "Pokażemy Ci dokładnie gdzie jesteś teraz i jak dostać się na szczyt"
+      }
+    }
+  }
+}
