@@ -82,7 +82,16 @@ export function EducationSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-center"
         >
-          <Button size="lg" className="text-base bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+          <Button 
+            size="lg" 
+            className="text-base bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
             <Download className="mr-2 h-4 w-4" />
             {t('cta')}
           </Button>

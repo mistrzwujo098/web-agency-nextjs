@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { convertKit, KIT_FORMS, KIT_TAGS } from '@/lib/services/convertkit'
+import { mailerLite, MAILERLITE_GROUPS, MAILERLITE_AUTOMATIONS } from '@/lib/services/mailerlite'
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,17 +14,20 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Add to ConvertKit newsletter form
-    await convertKit.addSubscriberToForm(KIT_FORMS.NEWSLETTER, {
+    // Add to MailerLite with newsletter group
+    await mailerLite.addSubscriberWithGroups(
       email,
-      fields: {
+      {
         source: 'footer_newsletter',
         subscribed_at: new Date().toISOString()
-      }
-    })
+      },
+      [MAILERLITE_GROUPS.NEWSLETTER]
+    )
 
-    // Tag as newsletter subscriber
-    await convertKit.tagSubscriber(email, KIT_TAGS.NEWSLETTER_SUBSCRIBER)
+    // Trigger welcome automation if configured
+    if (MAILERLITE_AUTOMATIONS.WELCOME) {
+      await mailerLite.triggerAutomation(MAILERLITE_AUTOMATIONS.WELCOME, email)
+    }
 
     return NextResponse.json(
       { success: true, message: 'Successfully subscribed to newsletter' },

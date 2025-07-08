@@ -46,42 +46,6 @@
     "title": "Co mówią po miesiącu:",
     "cta": "Więcej opinii →"
   },
-  "pricing": {
-    "title": "Ile to kosztuje? Mniej niż myślisz:",
-    "plans": [
-      {
-        "name": "Darmowy Audyt",
-        "price": "0 zł",
-        "features": [
-          "Nagranie wideo z analizą",
-          "Porównanie z konkurencją",
-          "Lista co naprawić najpierw"
-        ],
-        "cta": "Weź audyt"
-      },
-      {
-        "name": "Szybki Test",
-        "price": "990 zł",
-        "badge": "Najczęściej biorą",
-        "features": [
-          "Naprawiam 1 największy problem",
-          "Testujesz 14 dni",
-          "Dostajesz raport z wynikami"
-        ],
-        "cta": "Testuj za 990 zł"
-      },
-      {
-        "name": "Cała Strona",
-        "price": "4900 zł",
-        "features": [
-          "Robię wszystko od nowa",
-          "Gwarantuję +30% leadów",
-          "Pomagam 90 dni po starcie"
-        ],
-        "cta": "Zróbmy to"
-      }
-    ]
-  },
   "portfolio": {
     "title": "Co zrobiłem w tym miesiącu:",
     "cta": "Zobacz wszystkie →"
@@ -133,13 +97,13 @@
     "cta": "Wyślij mi"
   },
   "navigation": {
-    "home": "Start",
+    "home": "Home",
     "services": "Co robię",
     "portfolio": "Moje projekty",
     "about": "O mnie",
     "pricing": "Ceny",
     "blog": "Blog",
-    "contact": "Gadajmy",
+    "contact": "Pogadajmy",
     "resources": "Darmowe materiały",
     "cta": "Sprawdź gdzie gubisz kasę",
     "submenu": {

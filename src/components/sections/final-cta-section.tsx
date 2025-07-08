@@ -54,10 +54,30 @@ export function FinalCTASection() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" variant="secondary" className="text-base px-8 py-6">
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="text-base px-8 py-6"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               {t('primary')}
             </Button>
-            <Button size="lg" variant="outline" className="text-base px-8 py-6 bg-transparent text-white border-white hover:bg-white hover:text-primary">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="text-base px-8 py-6 bg-transparent text-white border-white hover:bg-white hover:text-primary"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               <Phone className="mr-2 h-4 w-4" />
               {t('secondary')}
             </Button>

@@ -96,6 +96,12 @@ export function Hero() {
             <Button 
               size="lg" 
               className="text-base px-8 py-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               {t('cta_primary')}
             </Button>
@@ -103,6 +109,12 @@ export function Hero() {
               variant="outline" 
               size="lg" 
               className="text-base px-8 py-6 bg-white/10 backdrop-blur-md border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105"
+              onClick={() => {
+                const portfolioSection = document.getElementById('portfolio');
+                if (portfolioSection) {
+                  portfolioSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               {t('cta_secondary')}
               <ArrowRight className="ml-2 h-4 w-4" />

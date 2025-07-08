@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { convertKit, KIT_FORMS, KIT_TAGS } from '@/lib/services/convertkit'
+import { mailerLite, MAILERLITE_GROUPS, MAILERLITE_AUTOMATIONS } from '@/lib/services/mailerlite'
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,23 +14,27 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Add to ConvertKit quiz form
-    await convertKit.addSubscriberToForm(KIT_FORMS.QUIZ, {
+    // Determine groups based on quiz results
+    const groups = [MAILERLITE_GROUPS.QUIZ]
+    if (score <= 3) {
+      groups.push(MAILERLITE_GROUPS.HIGH_INTENT)
+    }
+
+    // Add to MailerLite with quiz group
+    await mailerLite.addSubscriberWithGroups(
       email,
-      fields: {
-        quiz_score: score,
+      {
+        quiz_score: score.toString(),
         quiz_answers: JSON.stringify(answers),
         source: 'interactive_quiz',
         completed_at: new Date().toISOString()
-      }
-    })
+      },
+      groups
+    )
 
-    // Tag based on quiz results
-    await convertKit.tagSubscriber(email, KIT_TAGS.QUIZ_COMPLETED)
-    
-    // If score is low (needs help), tag as high intent
-    if (score <= 3) {
-      await convertKit.tagSubscriber(email, KIT_TAGS.HIGH_INTENT)
+    // Trigger quiz results automation if configured
+    if (MAILERLITE_AUTOMATIONS.QUIZ_RESULTS) {
+      await mailerLite.triggerAutomation(MAILERLITE_AUTOMATIONS.QUIZ_RESULTS, email)
     }
 
     return NextResponse.json(

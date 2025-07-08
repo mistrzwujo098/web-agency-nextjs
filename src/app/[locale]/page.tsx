@@ -8,7 +8,6 @@ import { ProcessTimeline } from '@/components/sections/process-timeline'
 import { TestimonialsSection } from '@/components/sections/testimonials-section'
 import { CaseStudy } from '@/components/sections/case-study'
 import { MythsVsFacts } from '@/components/sections/myths-vs-facts'
-import { PricingSection } from '@/components/sections/pricing-section'
 import { PortfolioSection } from '@/components/sections/portfolio-section'
 import { InteractiveQuiz } from '@/components/sections/interactive-quiz'
 import { GuaranteeSection } from '@/components/sections/guarantee-section'
@@ -34,7 +33,6 @@ export default function Home() {
       <TestimonialsSection />
       <MythsVsFacts />
       <CaseStudy />
-      <PricingSection />
       <PortfolioSection />
       <GuaranteeSection />
       <InteractiveQuiz />

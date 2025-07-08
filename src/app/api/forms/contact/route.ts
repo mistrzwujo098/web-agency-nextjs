@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { convertKit, KIT_FORMS, KIT_TAGS } from '@/lib/services/convertkit'
+import { mailerLite, MAILERLITE_GROUPS, MAILERLITE_AUTOMATIONS } from '@/lib/services/mailerlite'
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,30 +14,31 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Add to ConvertKit
-    await convertKit.addSubscriberToForm(KIT_FORMS.CONTACT, {
-      email,
-      first_name: name,
-      fields: {
-        phone,
-        company,
-        service_interest: service,
-        message,
-        source: 'contact_form',
-        submitted_at: new Date().toISOString()
-      }
-    })
-
-    // Tag as contacted and potentially high intent
-    await convertKit.tagSubscriber(email, KIT_TAGS.CONTACTED)
-    
-    // If they're asking about specific services, tag as high intent
+    // Determine groups based on intent
+    const groups = [MAILERLITE_GROUPS.CONTACT]
     if (service !== 'Konsultacja') {
-      await convertKit.tagSubscriber(email, KIT_TAGS.HIGH_INTENT)
+      groups.push(MAILERLITE_GROUPS.HIGH_INTENT)
     }
 
-    // TODO: Send notification email to team
-    // TODO: Send confirmation email to user
+    // Add to MailerLite with contact group
+    await mailerLite.addSubscriberWithGroups(
+      email,
+      {
+        name: name,
+        phone: phone,
+        company: company,
+        service_interest: service,
+        message: message,
+        source: 'contact_form',
+        submitted_at: new Date().toISOString()
+      },
+      groups
+    )
+
+    // Trigger contact automation if configured
+    if (MAILERLITE_AUTOMATIONS.CONTACT_FOLLOWUP) {
+      await mailerLite.triggerAutomation(MAILERLITE_AUTOMATIONS.CONTACT_FOLLOWUP, email)
+    }
 
     return NextResponse.json(
       { success: true, message: 'Form submitted successfully' },

@@ -26,7 +26,6 @@ export function Header() {
   }, [])
 
   const navigation = [
-    { name: t('home'), href: '#hero' },
     { 
       name: t('services'), 
       href: '#services',
@@ -51,7 +50,6 @@ export function Header() {
     },
     { name: t('portfolio'), href: '#portfolio' },
     { name: t('about'), href: '#about' },
-    { name: t('pricing'), href: '#pricing' },
     { name: t('contact'), href: '#contact' }
   ]
 
@@ -144,6 +142,12 @@ export function Header() {
             {/* CTA Button */}
             <Button
               className="hidden sm:inline-flex bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               {t('cta')}
             </Button>
@@ -239,7 +243,16 @@ export function Header() {
                   </div>
                   
                   <div className="px-4">
-                    <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg">
+                    <Button 
+                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg"
+                      onClick={() => {
+                        const contactSection = document.getElementById('contact');
+                        if (contactSection) {
+                          contactSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                        setIsMobileMenuOpen(false);
+                      }}
+                    >
                       {t('cta')}
                     </Button>
                   </div>

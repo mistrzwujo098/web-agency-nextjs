@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { convertKit, KIT_FORMS, KIT_TAGS } from '@/lib/services/convertkit'
+import { mailerLite, MAILERLITE_GROUPS, MAILERLITE_AUTOMATIONS } from '@/lib/services/mailerlite'
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,20 +14,21 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Add to ConvertKit download form
-    await convertKit.addSubscriberToForm(KIT_FORMS.DOWNLOAD, {
+    // Add to MailerLite with download group
+    await mailerLite.addSubscriberWithGroups(
       email,
-      fields: {
+      {
         downloaded_resource: resource,
         source: 'lead_magnet_download',
         downloaded_at: new Date().toISOString()
-      }
-    })
+      },
+      [MAILERLITE_GROUPS.DOWNLOAD]
+    )
 
-    // Tag as downloaded resource
-    await convertKit.tagSubscriber(email, KIT_TAGS.DOWNLOADED_RESOURCE)
-
-    // TODO: Trigger automation to send download link
+    // Trigger download automation if configured
+    if (MAILERLITE_AUTOMATIONS.DOWNLOAD_FOLLOWUP) {
+      await mailerLite.triggerAutomation(MAILERLITE_AUTOMATIONS.DOWNLOAD_FOLLOWUP, email)
+    }
 
     return NextResponse.json(
       { success: true, message: 'Download request processed' },

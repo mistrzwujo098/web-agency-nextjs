@@ -46,42 +46,6 @@
     "title": "What they say after a month:",
     "cta": "More reviews →"
   },
-  "pricing": {
-    "title": "How much? Less than you think:",
-    "plans": [
-      {
-        "name": "Free Audit",
-        "price": "$0",
-        "features": [
-          "Video analysis recording",
-          "Competition comparison",
-          "List of what to fix first"
-        ],
-        "cta": "Get audit"
-      },
-      {
-        "name": "Quick Test",
-        "price": "$249",
-        "badge": "Most popular",
-        "features": [
-          "Fix 1 biggest problem",
-          "Test for 14 days",
-          "Get results report"
-        ],
-        "cta": "Test for $249"
-      },
-      {
-        "name": "Full Site",
-        "price": "$1,249",
-        "features": [
-          "Rebuild everything",
-          "Guarantee +30% leads",
-          "Help for 90 days"
-        ],
-        "cta": "Let's do it"
-      }
-    ]
-  },
   "portfolio": {
     "title": "What I did this month:",
     "cta": "See all →"
