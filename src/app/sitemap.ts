@@ -1,8 +1,6 @@
 import { MetadataRoute } from 'next'
 import { locales } from '@/i18n/config'
 
-export const dynamic = 'force-static'
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://yourwebsite.com'
   
