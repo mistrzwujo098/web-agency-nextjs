@@ -1,34 +1,65 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams, useParams } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { Download, Mail, BookOpen, Users, ArrowRight } from 'lucide-react'
+import { Download, Mail, BookOpen, Users, ArrowRight, FileText } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
 export default function DownloadThankYouPage() {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const [timeLeft, setTimeLeft] = useState(30)
+  const params = useParams()
+  const locale = params.locale as string
+  const [timeLeft, setTimeLeft] = useState(5)
+  const [hasRedirected, setHasRedirected] = useState(false)
   
   // Get resource name from URL params
   const resource = searchParams.get('resource') || 'materiał'
   
+  // Map resource to slug
+  const resourceSlugMap: { [key: string]: string } = {
+    '10 błędów, które kosztują Cię klientów': '10-bledow-poradnik',
+    '10 Mistakes That Cost You Customers': '10-bledow-poradnik',
+    '50 elementów strony, które zwiększają sprzedaż': '50-elementow-checklist',
+    '50 Website Elements That Increase Sales': '50-elementow-checklist',
+    'Jak być #1 w Google w swojej okolicy': 'seo-local-guide',
+    'How to be #1 on Google locally': 'seo-local-guide',
+    'Automatyzacja marketingu dla lokalnych firm': 'marketing-automation-guide',
+    'Marketing Automation for Local Businesses': 'marketing-automation-guide',
+    'Checklist przed startem strony': 'website-launch-checklist',
+    'Website Launch Checklist': 'website-launch-checklist',
+    'Kalkulator ROI strony internetowej': 'roi-calculator',
+    'Website ROI Calculator': 'roi-calculator'
+  }
+  
+  const resourceSlug = resourceSlugMap[resource] || null
+  
   useEffect(() => {
-    const timer = setInterval(() => {
+    if (resourceSlug && !hasRedirected) {
+      const timer = setTimeout(() => {
+        setHasRedirected(true)
+        router.push(`/${locale}/resources/${resourceSlug}`)
+      }, 5000)
+      
+      return () => clearTimeout(timer)
+    }
+  }, [resourceSlug, router, locale, hasRedirected])
+  
+  useEffect(() => {
+    const countdown = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
-          clearInterval(timer)
-          router.push('/')
+          clearInterval(countdown)
           return 0
         }
         return prev - 1
       })
     }, 1000)
 
-    return () => clearInterval(timer)
-  }, [router])
+    return () => clearInterval(countdown)
+  }, [])
 
   const relatedResources = [
     {
@@ -67,7 +98,7 @@ export default function DownloadThankYouPage() {
           className="mb-8"
         >
           <div className="w-32 h-32 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto shadow-2xl shadow-green-500/25">
-            <Download className="w-16 h-16 text-white animate-bounce" />
+            <FileText className="w-16 h-16 text-white" />
           </div>
         </motion.div>
 
@@ -78,10 +109,12 @@ export default function DownloadThankYouPage() {
           transition={{ delay: 0.3 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Pobieranie rozpoczęte!
+            {locale === 'pl' ? 'Dziękujemy za zapis!' : 'Thank you for signing up!'}
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-            {resource} został wysłany na Twój adres email
+            {locale === 'pl' 
+              ? `Za chwilę przejdziesz do strony z materiałem: ${resource}`
+              : `You'll be redirected to download: ${resource}`}
           </p>
         </motion.div>
 
@@ -95,18 +128,20 @@ export default function DownloadThankYouPage() {
           <div className="flex items-center justify-center mb-4">
             <Mail className="w-8 h-8 text-green-400 mr-3" />
             <h2 className="text-2xl font-semibold text-white">
-              Sprawdź swoją skrzynkę
+              {locale === 'pl' ? 'Sprawdź swoją skrzynkę' : 'Check your inbox'}
             </h2>
           </div>
           <p className="text-gray-300 mb-4">
-            Wysłaliśmy email z linkiem do pobrania. Jeśli nie widzisz wiadomości, sprawdź folder SPAM.
+            {locale === 'pl' 
+              ? 'Wysłaliśmy email z potwierdzeniem. Sprawdź też folder SPAM.'
+              : 'We sent you a confirmation email. Check your SPAM folder too.'}
           </p>
           <div className="bg-gray-800/50 rounded-xl p-4">
             <p className="text-sm text-gray-400">
-              <span className="text-white font-medium">Temat:</span> Twój darmowy materiał od WebCraftAI
+              <span className="text-white font-medium">{locale === 'pl' ? 'Temat:' : 'Subject:'}</span> {locale === 'pl' ? 'Twój darmowy materiał od WebCraftAI' : 'Your free resource from WebCraftAI'}
             </p>
             <p className="text-sm text-gray-400 mt-1">
-              <span className="text-white font-medium">Nadawca:</span> materialy@webcraftai.pl
+              <span className="text-white font-medium">{locale === 'pl' ? 'Nadawca:' : 'From:'}</span> materials@webcraftai.com
             </p>
           </div>
         </motion.div>

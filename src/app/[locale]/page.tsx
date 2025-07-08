@@ -1,6 +1,7 @@
 import { Hero } from '@/components/sections/hero'
 import { TrustSection } from '@/components/sections/trust-section'
 import { EducationSection } from '@/components/sections/education-section'
+import { LeadMagnetsSection } from '@/components/sections/lead-magnets-section'
 import { ROICalculator } from '@/components/sections/roi-calculator'
 import { BeforeAfterComparison } from '@/components/sections/before-after-comparison'
 import { ProcessTimeline } from '@/components/sections/process-timeline'
@@ -26,6 +27,7 @@ export default function Home() {
       <Hero />
       <TrustSection />
       <EducationSection />
+      <LeadMagnetsSection />
       <ROICalculator />
       <BeforeAfterComparison />
       <ProcessTimeline />
