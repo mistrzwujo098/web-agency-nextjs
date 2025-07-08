@@ -42,12 +42,12 @@ export function NeuralBackground() {
     resizeCanvas()
     window.addEventListener('resize', resizeCanvas)
 
-    // Create particles (neurons) - increased for better quality
+    // Create particles (neurons) - optimized for readability
     const createParticles = () => {
       const particles: Particle[] = []
       const particleCount = isMobile() 
-        ? Math.min(50, Math.floor((canvas.width * canvas.height) / 25000))
-        : Math.min(200, Math.floor((canvas.width * canvas.height) / 10000))
+        ? Math.min(20, Math.floor((canvas.width * canvas.height) / 40000))
+        : Math.min(50, Math.floor((canvas.width * canvas.height) / 30000))
       
       for (let i = 0; i < particleCount; i++) {
         const x = Math.random() * canvas.width
@@ -101,7 +101,7 @@ export function NeuralBackground() {
     
     // Create random pulses
     setInterval(() => {
-      if (particlesRef.current.length > 0 && pulses.length < 20) {
+      if (particlesRef.current.length > 0 && pulses.length < 5) {
         const start = Math.floor(Math.random() * particlesRef.current.length)
         const connections = particlesRef.current[start].connections
         if (connections.length > 0) {
@@ -114,12 +114,12 @@ export function NeuralBackground() {
           })
         }
       }
-    }, 300)
+    }, 800)
 
     // Render function
     const render = () => {
       // Clear with fade effect
-      ctx.fillStyle = 'rgba(5, 5, 5, 0.03)'
+      ctx.fillStyle = 'rgba(5, 5, 5, 0.05)'
       ctx.fillRect(0, 0, canvas.width, canvas.height)
       
       // Add multi-layer noise texture for depth
@@ -127,8 +127,8 @@ export function NeuralBackground() {
         ctx.save()
         
         // Large ambient particles
-        ctx.globalAlpha = 0.015
-        for (let i = 0; i < 30; i++) {
+        ctx.globalAlpha = 0.008
+        for (let i = 0; i < 15; i++) {
           const x = Math.random() * canvas.width
           const y = Math.random() * canvas.height
           const radius = Math.random() * 3 + 1
@@ -142,8 +142,8 @@ export function NeuralBackground() {
         }
         
         // Small detail particles
-        ctx.globalAlpha = 0.03
-        for (let i = 0; i < 100; i++) {
+        ctx.globalAlpha = 0.015
+        for (let i = 0; i < 50; i++) {
           const x = Math.random() * canvas.width
           const y = Math.random() * canvas.height
           const size = Math.random() * 1.5
@@ -183,14 +183,14 @@ export function NeuralBackground() {
           
           if (connectionDistance < 250) {
             // Draw multiple connection layers for depth
-            const opacity = (1 - connectionDistance / 250) * 0.4
+            const opacity = (1 - connectionDistance / 250) * 0.2
             
             // Glow layer
             ctx.beginPath()
             ctx.moveTo(particle.x, particle.y)
             ctx.lineTo(connectedParticle.x, connectedParticle.y)
-            ctx.strokeStyle = `rgba(139, 92, 246, ${opacity * 0.2})`
-            ctx.lineWidth = 6
+            ctx.strokeStyle = `rgba(139, 92, 246, ${opacity * 0.1})`
+            ctx.lineWidth = 4
             ctx.stroke()
             
             // Mid layer
@@ -202,17 +202,17 @@ export function NeuralBackground() {
               connectedParticle.x, connectedParticle.y
             )
             gradient.addColorStop(0, `rgba(139, 92, 246, ${opacity})`)
-            gradient.addColorStop(0.5, `rgba(59, 130, 246, ${opacity * 1.2})`)
+            gradient.addColorStop(0.5, `rgba(59, 130, 246, ${opacity})`)
             gradient.addColorStop(1, `rgba(139, 92, 246, ${opacity})`)
             ctx.strokeStyle = gradient
-            ctx.lineWidth = 2
+            ctx.lineWidth = 1
             ctx.stroke()
             
             // Core layer
             ctx.beginPath()
             ctx.moveTo(particle.x, particle.y)
             ctx.lineTo(connectedParticle.x, connectedParticle.y)
-            ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.3})`
+            ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.15})`
             ctx.lineWidth = 0.5
             ctx.stroke()
           }
@@ -228,8 +228,8 @@ export function NeuralBackground() {
           particle.x, particle.y, 0,
           particle.x, particle.y, glowRadius * 4
         )
-        outerGlow.addColorStop(0, 'rgba(139, 92, 246, 0.1)')
-        outerGlow.addColorStop(0.3, 'rgba(59, 130, 246, 0.05)')
+        outerGlow.addColorStop(0, 'rgba(139, 92, 246, 0.05)')
+        outerGlow.addColorStop(0.3, 'rgba(59, 130, 246, 0.02)')
         outerGlow.addColorStop(1, 'rgba(139, 92, 246, 0)')
         ctx.fillStyle = outerGlow
         ctx.beginPath()
@@ -241,8 +241,8 @@ export function NeuralBackground() {
           particle.x, particle.y, 0,
           particle.x, particle.y, glowRadius * 2.5
         )
-        middleGlow.addColorStop(0, 'rgba(139, 92, 246, 0.3)')
-        middleGlow.addColorStop(0.4, 'rgba(59, 130, 246, 0.2)')
+        middleGlow.addColorStop(0, 'rgba(139, 92, 246, 0.15)')
+        middleGlow.addColorStop(0.4, 'rgba(59, 130, 246, 0.1)')
         middleGlow.addColorStop(1, 'rgba(139, 92, 246, 0)')
         ctx.fillStyle = middleGlow
         ctx.beginPath()
@@ -254,8 +254,8 @@ export function NeuralBackground() {
           particle.x, particle.y, 0,
           particle.x, particle.y, glowRadius
         )
-        innerGlow.addColorStop(0, 'rgba(255, 255, 255, 0.8)')
-        innerGlow.addColorStop(0.2, 'rgba(139, 92, 246, 0.6)')
+        innerGlow.addColorStop(0, 'rgba(255, 255, 255, 0.4)')
+        innerGlow.addColorStop(0.2, 'rgba(139, 92, 246, 0.3)')
         innerGlow.addColorStop(1, 'rgba(59, 130, 246, 0)')
         ctx.fillStyle = innerGlow
         ctx.beginPath()
@@ -371,20 +371,20 @@ export function NeuralBackground() {
       
       {/* Static background image with enhanced effects */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{ 
           backgroundImage: 'url(/backgrounds/neuron-bg.png)',
-          filter: 'blur(1px) brightness(1.2) contrast(1.1)',
+          filter: 'blur(2px) brightness(0.8) contrast(0.9)',
           transform: 'scale(1.1)'
         }}
       />
       
       {/* Secondary static layer for parallax effect */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
         style={{ 
           backgroundImage: 'url(/backgrounds/neuron-bg.png)',
-          filter: 'blur(8px) brightness(0.8)',
+          filter: 'blur(10px) brightness(0.6)',
           transform: 'scale(1.2) translateY(50px)'
         }}
       />
@@ -395,22 +395,23 @@ export function NeuralBackground() {
         className="absolute inset-0 w-full h-full"
         style={{ 
           mixBlendMode: 'screen',
-          filter: 'contrast(1.1) brightness(1.05)'
+          opacity: 0.7,
+          filter: 'contrast(1.05) brightness(0.9)'
         }}
       />
       
       {/* Color enhancement overlay */}
       <div 
-        className="absolute inset-0 opacity-30"
+        className="absolute inset-0 opacity-20"
         style={{
-          background: 'radial-gradient(circle at 50% 50%, transparent 0%, rgba(139, 92, 246, 0.1) 50%, rgba(59, 130, 246, 0.2) 100%)'
+          background: 'radial-gradient(circle at 50% 50%, transparent 0%, rgba(139, 92, 246, 0.05) 50%, rgba(59, 130, 246, 0.1) 100%)'
         }}
       />
       
-      {/* Vignette effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/70" />
+      {/* Subtle vignette effect */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50" />
       <div className="absolute inset-0" style={{
-        background: 'radial-gradient(circle at 50% 50%, transparent 0%, transparent 40%, rgba(0, 0, 0, 0.4) 100%)'
+        background: 'radial-gradient(circle at 50% 50%, transparent 0%, transparent 60%, rgba(0, 0, 0, 0.2) 100%)'
       }} />
     </>
   )
