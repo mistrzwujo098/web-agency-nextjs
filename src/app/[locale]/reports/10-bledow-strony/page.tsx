@@ -36,7 +36,7 @@ export default function Report10BledowPage() {
       title: t('mistakes.1.title'),
       impact: t('mistakes.1.impact'),
       problem: t('mistakes.1.problem'),
-      symptoms: t('mistakes.1.symptoms'),
+      symptoms: t.raw('mistakes.1.symptoms'),
       solution: t('mistakes.1.solution'),
       realExample: t('mistakes.1.realExample')
     },
@@ -46,7 +46,7 @@ export default function Report10BledowPage() {
       title: t('mistakes.2.title'),
       impact: t('mistakes.2.impact'),
       problem: t('mistakes.2.problem'),
-      symptoms: t('mistakes.2.symptoms'),
+      symptoms: t.raw('mistakes.2.symptoms'),
       solution: t('mistakes.2.solution'),
       realExample: t('mistakes.2.realExample')
     },
@@ -56,7 +56,7 @@ export default function Report10BledowPage() {
       title: t('mistakes.3.title'),
       impact: t('mistakes.3.impact'),
       problem: t('mistakes.3.problem'),
-      symptoms: t('mistakes.3.symptoms'),
+      symptoms: t.raw('mistakes.3.symptoms'),
       solution: t('mistakes.3.solution'),
       realExample: t('mistakes.3.realExample')
     },
@@ -66,7 +66,7 @@ export default function Report10BledowPage() {
       title: t('mistakes.4.title'),
       impact: t('mistakes.4.impact'),
       problem: t('mistakes.4.problem'),
-      symptoms: t('mistakes.4.symptoms'),
+      symptoms: t.raw('mistakes.4.symptoms'),
       solution: t('mistakes.4.solution'),
       realExample: t('mistakes.4.realExample')
     },
@@ -76,7 +76,7 @@ export default function Report10BledowPage() {
       title: t('mistakes.5.title'),
       impact: t('mistakes.5.impact'),
       problem: t('mistakes.5.problem'),
-      symptoms: t('mistakes.5.symptoms'),
+      symptoms: t.raw('mistakes.5.symptoms'),
       solution: t('mistakes.5.solution'),
       realExample: t('mistakes.5.realExample')
     },
@@ -86,7 +86,7 @@ export default function Report10BledowPage() {
       title: t('mistakes.6.title'),
       impact: t('mistakes.6.impact'),
       problem: t('mistakes.6.problem'),
-      symptoms: t('mistakes.6.symptoms'),
+      symptoms: t.raw('mistakes.6.symptoms'),
       solution: t('mistakes.6.solution'),
       realExample: t('mistakes.6.realExample')
     },
@@ -96,7 +96,7 @@ export default function Report10BledowPage() {
       title: t('mistakes.7.title'),
       impact: t('mistakes.7.impact'),
       problem: t('mistakes.7.problem'),
-      symptoms: t('mistakes.7.symptoms'),
+      symptoms: t.raw('mistakes.7.symptoms'),
       solution: t('mistakes.7.solution'),
       realExample: t('mistakes.7.realExample')
     },
@@ -106,7 +106,7 @@ export default function Report10BledowPage() {
       title: t('mistakes.8.title'),
       impact: t('mistakes.8.impact'),
       problem: t('mistakes.8.problem'),
-      symptoms: t('mistakes.8.symptoms'),
+      symptoms: t.raw('mistakes.8.symptoms'),
       solution: t('mistakes.8.solution'),
       realExample: t('mistakes.8.realExample')
     },
@@ -116,7 +116,7 @@ export default function Report10BledowPage() {
       title: t('mistakes.9.title'),
       impact: t('mistakes.9.impact'),
       problem: t('mistakes.9.problem'),
-      symptoms: t('mistakes.9.symptoms'),
+      symptoms: t.raw('mistakes.9.symptoms'),
       solution: t('mistakes.9.solution'),
       realExample: t('mistakes.9.realExample')
     },
@@ -126,7 +126,7 @@ export default function Report10BledowPage() {
       title: t('mistakes.10.title'),
       impact: t('mistakes.10.impact'),
       problem: t('mistakes.10.problem'),
-      symptoms: t('mistakes.10.symptoms'),
+      symptoms: t.raw('mistakes.10.symptoms'),
       solution: t('mistakes.10.solution'),
       realExample: t('mistakes.10.realExample')
     }
@@ -332,7 +332,7 @@ export default function Report10BledowPage() {
                   {tCommon('symptoms')}
                 </h3>
                 <ul className="space-y-2">
-                  {mistake.symptoms.map((symptom, i) => (
+                  {mistake.symptoms.map((symptom: string, i: number) => (
                     <li key={i} className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0" />
                       <span className="text-gray-300">{symptom}</span>
@@ -394,7 +394,7 @@ export default function Report10BledowPage() {
               </div>
 
               <div className="grid md:grid-cols-3 gap-6 mb-8">
-                {t('summary.stats').map((stat, index) => (
+                {t.raw('summary.stats').map((stat: any, index: number) => (
                   <div key={index} className="text-center">
                     <div className={`text-4xl font-bold mb-2 ${
                       index === 0 ? 'text-white' : 

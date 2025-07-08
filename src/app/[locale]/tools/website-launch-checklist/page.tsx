@@ -30,6 +30,7 @@ export default function WebsiteLaunchChecklistTool() {
   const params = useParams()
   const locale = params.locale as string
   const t = useTranslations('websiteLaunch')
+  const isPL = locale === 'pl'
 
   const [projectInfo, setProjectInfo] = useState({
     projectName: '',

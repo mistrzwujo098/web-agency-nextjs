@@ -39,7 +39,7 @@ export default function ReportMarketingAutopilotPage() {
       roi: t('strategies.1.roi'),
       description: t('strategies.1.description'),
       howItWorks: tCommon('howItWorks'),
-      steps: t('strategies.1.steps'),
+      steps: t.raw('strategies.1.steps'),
       tools: t('strategies.1.tools'),
       realExample: t('strategies.1.realExample')
     },
@@ -52,7 +52,7 @@ export default function ReportMarketingAutopilotPage() {
       roi: t('strategies.2.roi'),
       description: t('strategies.2.description'),
       howItWorks: tCommon('automaticFeatures'),
-      steps: t('strategies.2.steps'),
+      steps: t.raw('strategies.2.steps'),
       tools: t('strategies.2.tools'),
       realExample: t('strategies.2.realExample')
     },
@@ -65,7 +65,7 @@ export default function ReportMarketingAutopilotPage() {
       roi: t('strategies.3.roi'),
       description: t('strategies.3.description'),
       howItWorks: tCommon('howItWorks'),
-      steps: t('strategies.3.steps'),
+      steps: t.raw('strategies.3.steps'),
       tools: t('strategies.3.tools'),
       realExample: t('strategies.3.realExample')
     },
@@ -78,7 +78,7 @@ export default function ReportMarketingAutopilotPage() {
       roi: t('strategies.4.roi'),
       description: t('strategies.4.description'),
       howItWorks: tCommon('automaticProcess'),
-      steps: t('strategies.4.steps'),
+      steps: t.raw('strategies.4.steps'),
       tools: t('strategies.4.tools'),
       realExample: t('strategies.4.realExample')
     },
@@ -91,7 +91,7 @@ export default function ReportMarketingAutopilotPage() {
       roi: t('strategies.5.roi'),
       description: t('strategies.5.description'),
       howItWorks: tCommon('contentAutomation'),
-      steps: t('strategies.5.steps'),
+      steps: t.raw('strategies.5.steps'),
       tools: t('strategies.5.tools'),
       realExample: t('strategies.5.realExample')
     },
@@ -104,7 +104,7 @@ export default function ReportMarketingAutopilotPage() {
       roi: t('strategies.6.roi'),
       description: t('strategies.6.description'),
       howItWorks: tCommon('howItWorksProcess'),
-      steps: t('strategies.6.steps'),
+      steps: t.raw('strategies.6.steps'),
       tools: t('strategies.6.tools'),
       realExample: t('strategies.6.realExample')
     }
@@ -114,22 +114,22 @@ export default function ReportMarketingAutopilotPage() {
     {
       week: t('implementationPlan.phases.1.week'),
       title: t('implementationPlan.phases.1.title'),
-      tasks: t('implementationPlan.phases.1.tasks')
+      tasks: t.raw('implementationPlan.phases.1.tasks')
     },
     {
       week: t('implementationPlan.phases.2.week'),
       title: t('implementationPlan.phases.2.title'),
-      tasks: t('implementationPlan.phases.2.tasks')
+      tasks: t.raw('implementationPlan.phases.2.tasks')
     },
     {
       week: t('implementationPlan.phases.3.week'),
       title: t('implementationPlan.phases.3.title'),
-      tasks: t('implementationPlan.phases.3.tasks')
+      tasks: t.raw('implementationPlan.phases.3.tasks')
     },
     {
       week: t('implementationPlan.phases.4.week'),
       title: t('implementationPlan.phases.4.title'),
-      tasks: t('implementationPlan.phases.4.tasks')
+      tasks: t.raw('implementationPlan.phases.4.tasks')
     }
   ]
 
@@ -205,7 +205,7 @@ export default function ReportMarketingAutopilotPage() {
 
             {/* Key Stats */}
             <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
-              {t('keyStats').map((stat, index) => (
+              {t.raw('keyStats').map((stat: any, index: number) => (
                 <div key={index} className="text-center">
                   <div className={`text-3xl font-bold mb-2 ${
                     index === 0 ? 'text-white' : 
@@ -303,7 +303,7 @@ export default function ReportMarketingAutopilotPage() {
                 {/* How it works */}
                 <h4 className="text-white font-semibold mb-3">{strategy.howItWorks}</h4>
                 <ol className="space-y-2 mb-4">
-                  {strategy.steps.map((step, i) => (
+                  {strategy.steps.map((step: string, i: number) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 text-sm font-medium flex-shrink-0">
                         {i + 1}
@@ -364,7 +364,7 @@ export default function ReportMarketingAutopilotPage() {
                   </div>
                 </div>
                 <ul className="space-y-2">
-                  {phase.tasks.map((task, i) => (
+                  {phase.tasks.map((task: string, i: number) => (
                     <li key={i} className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-300">{task}</span>
@@ -454,7 +454,7 @@ export default function ReportMarketingAutopilotPage() {
             </h2>
             
             <div className="space-y-4">
-              {t('commonMistakes.mistakes').map((item, index) => (
+              {t.raw('commonMistakes.mistakes').map((item: any, index: number) => (
                 <div key={index} className="glass-dark rounded-xl p-6">
                   <p className="text-red-400 font-semibold mb-2">❌ {item.mistake}</p>
                   <p className="text-gray-300">✅ {item.solution}</p>

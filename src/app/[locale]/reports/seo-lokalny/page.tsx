@@ -13,6 +13,7 @@ export default function ReportSEOLokalnyPage() {
   const locale = params.locale as string
   const t = useTranslations('reports.localSeo')
   const tCommon = useTranslations('reports.common')
+  const isPL = locale === 'pl'
 
   const [activeSection, setActiveSection] = useState(0)
   const [readProgress, setReadProgress] = useState(0)
@@ -39,14 +40,14 @@ export default function ReportSEOLokalnyPage() {
     impact: t(`steps.${i + 1}.impact`),
     description: t(`steps.${i + 1}.description`),
     howTo: t(`steps.${i + 1}.howTo`),
-    steps: t(`steps.${i + 1}.steps`),
+    steps: t.raw(`steps.${i + 1}.steps`),
     proTip: t(`steps.${i + 1}.proTip`),
     realExample: t(`steps.${i + 1}.realExample`)
   }))
 
   const monthlyPlan = Array.from({ length: 3 }, (_, i) => ({
     month: t(`monthlyPlan.${i + 1}.month`),
-    tasks: t(`monthlyPlan.${i + 1}.tasks`),
+    tasks: t.raw(`monthlyPlan.${i + 1}.tasks`),
     expectedResult: t(`monthlyPlan.${i + 1}.expectedResult`)
   }))
 
@@ -166,7 +167,7 @@ export default function ReportSEOLokalnyPage() {
             className="glass-dark rounded-2xl p-8"
           >
             <h2 className="text-2xl font-bold text-white mb-6">
-              {isPL ? '📊 Fakty o lokalnych wyszukiwaniach (2024):' : '📊 Facts about local searches (2024):'}
+              {t('whyLocalSeo.title')}
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-4">
@@ -278,7 +279,7 @@ export default function ReportSEOLokalnyPage() {
                 
                 <h4 className="text-white font-semibold mb-3">{step.howTo}</h4>
                 <ol className="space-y-2 mb-6">
-                  {step.steps.map((item, i) => (
+                  {step.steps.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 text-sm font-medium flex-shrink-0">
                         {i + 1}
@@ -341,7 +342,7 @@ export default function ReportSEOLokalnyPage() {
                   <span className="text-green-400 font-medium">{month.expectedResult}</span>
                 </div>
                 <ul className="space-y-2">
-                  {month.tasks.map((task, i) => (
+                  {month.tasks.map((task: string, i: number) => (
                     <li key={i} className="flex items-center gap-3">
                       <Target className="w-5 h-5 text-blue-400 flex-shrink-0" />
                       <span className="text-gray-300">{task}</span>
