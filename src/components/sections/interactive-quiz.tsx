@@ -42,6 +42,23 @@ export function InteractiveQuiz() {
   const progressRef = useRef<HTMLDivElement>(null)
   const confettiRef = useRef<HTMLDivElement>(null)
 
+  // Load quiz state from localStorage
+  useEffect(() => {
+    const savedState = localStorage.getItem('quizState')
+    if (savedState) {
+      const { currentQuestion: savedQuestion, answers: savedAnswers, showResult: savedResult } = JSON.parse(savedState)
+      setCurrentQuestion(savedQuestion)
+      setAnswers(savedAnswers)
+      setShowResult(savedResult)
+    }
+  }, [])
+
+  // Save quiz state to localStorage
+  useEffect(() => {
+    const quizState = { currentQuestion, answers, showResult }
+    localStorage.setItem('quizState', JSON.stringify(quizState))
+  }, [currentQuestion, answers, showResult])
+
   const questions: QuizQuestion[] = [
     {
       id: 'age',
@@ -191,6 +208,7 @@ export function InteractiveQuiz() {
     setAnswers([])
     setShowResult(false)
     setSelectedOption(null)
+    localStorage.removeItem('quizState')
   }
 
   useEffect(() => {
@@ -234,7 +252,7 @@ export function InteractiveQuiz() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-gradient">{t('title')}</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto font-light">
             {t('subtitle')}
           </p>
         </motion.div>
@@ -297,7 +315,7 @@ export function InteractiveQuiz() {
               <div className="mt-6 text-center">
                 <button
                   onClick={() => handleAnswer(3)}
-                  className="text-gray-400 hover:text-gray-300 text-sm transition-colors"
+                  className="text-gray-300 hover:text-gray-300 text-sm transition-colors"
                 >
                   {t('skipQuestion')}
                 </button>

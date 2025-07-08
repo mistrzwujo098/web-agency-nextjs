@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
 import { motion } from 'framer-motion'
+import debounce from 'lodash.debounce'
 import { 
   Mail, 
   Phone, 
@@ -56,11 +57,15 @@ export function ContactForm() {
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    try {
+  // Debounced submit handler to prevent multiple submissions
+  const debouncedSubmit = useCallback(
+    debounce(async () => {
+      if (isSubmitting) return
+      
+      setIsSubmitting(true)
+      setSubmitStatus('idle')
+      
+      try {
       const response = await fetch('/api/forms/contact', {
         method: 'POST',
         headers: {
@@ -93,6 +98,13 @@ export function ContactForm() {
     } finally {
       setIsSubmitting(false)
     }
+    }, 1000),
+    [formData, isSubmitting, locale]
+  )
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    debouncedSubmit()
   }
 
   return (

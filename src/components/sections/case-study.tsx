@@ -107,7 +107,7 @@ export function CaseStudy() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-gradient">Case Study: 300% wzrost</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto font-light">
             Zobacz, jak pomogliśmy lokalnej restauracji stać się liderem online w swojej branży
           </p>
         </motion.div>
@@ -173,7 +173,7 @@ export function CaseStudy() {
                     Wyzwanie
                   </h4>
                   <p className="text-gray-300 mb-4">{caseStudyData.challenge}</p>
-                  <ul className="space-y-2 text-gray-400">
+                  <ul className="space-y-2 text-gray-300">
                     <li className="flex items-start">
                       <ArrowDown className="w-4 h-4 text-red-400 mr-2 mt-0.5" />
                       <span>Pozycja 47 w Google na kluczowe frazy</span>
@@ -194,7 +194,7 @@ export function CaseStudy() {
                     Rozwiązanie
                   </h4>
                   <p className="text-gray-300 mb-4">{caseStudyData.solution}</p>
-                  <ul className="space-y-2 text-gray-400">
+                  <ul className="space-y-2 text-gray-300">
                     <li className="flex items-start">
                       <ArrowUp className="w-4 h-4 text-green-400 mr-2 mt-0.5" />
                       <span>System rezerwacji online zintegrowany z kalendarzem</span>
@@ -325,6 +325,7 @@ export function CaseStudy() {
                   <img 
                     src={caseStudyData.chartImage} 
                     alt="Wykres wzrostu sprzedaży"
+                    loading="lazy"
                     className="w-full h-auto rounded-lg"
                   />
                 </div>

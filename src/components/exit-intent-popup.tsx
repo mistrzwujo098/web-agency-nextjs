@@ -45,22 +45,22 @@ export function ExitIntentPopup() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-xl p-8 max-w-md w-full mx-4 z-50"
+            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 glass-dark rounded-3xl shadow-2xl p-8 max-w-md w-full mx-4 z-50 border border-white/10"
           >
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+              className="absolute top-4 right-4 text-gray-300 hover:text-white transition-colors"
             >
               <X className="h-6 w-6" />
             </button>
 
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+            <h3 className="text-2xl font-bold text-white mb-2">
               {t('title')}
             </h3>
-            <h4 className="text-xl font-semibold text-primary mb-2">
+            <h4 className="text-xl font-semibold text-gradient mb-2">
               {t('subtitle')}
             </h4>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-300 mb-6">
               {t('description')}
             </p>
 
@@ -71,7 +71,7 @@ export function ExitIntentPopup() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Twój email"
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 backdrop-blur-sm"
               />
               <Button type="submit" className="w-full" size="lg">
                 {t('cta')}

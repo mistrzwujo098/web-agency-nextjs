@@ -46,8 +46,8 @@ export function NeuralBackground() {
     const createParticles = () => {
       const particles: Particle[] = []
       const particleCount = isMobile() 
-        ? Math.min(20, Math.floor((canvas.width * canvas.height) / 40000))
-        : Math.min(50, Math.floor((canvas.width * canvas.height) / 30000))
+        ? Math.min(8, Math.floor((canvas.width * canvas.height) / 80000))
+        : Math.min(15, Math.floor((canvas.width * canvas.height) / 60000))
       
       for (let i = 0; i < particleCount; i++) {
         const x = Math.random() * canvas.width

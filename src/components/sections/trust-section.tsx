@@ -58,7 +58,9 @@ export function TrustSection() {
         </div>
 
         <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 md:p-12 shadow-lg">
-          <p className="text-center text-gray-700 font-medium mb-8">Zaufali nam lokalni liderzy:</p>
+          <p className="text-center text-gray-700 font-medium mb-8">
+            <span className="text-2xl font-bold text-gray-900">127+</span> lokalnych firm zaufało nam swój sukces online:
+          </p>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
             {/* Real client logos with names */}
             {[

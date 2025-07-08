@@ -164,13 +164,13 @@ export function Header() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-3 -mr-3 text-gray-300 hover:text-white transition-colors"
+              className="lg:hidden p-4 -mr-2 text-gray-300 hover:text-white transition-colors rounded-lg hover:bg-white/10"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
-                <X className="w-7 h-7" />
+                <X className="w-8 h-8" />
               ) : (
-                <Menu className="w-7 h-7" />
+                <Menu className="w-8 h-8" />
               )}
             </button>
           </div>
