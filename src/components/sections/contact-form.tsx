@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { useParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { 
   Mail, 
@@ -26,6 +27,8 @@ interface FormData {
 
 export function ContactForm() {
   const t = useTranslations('contact')
+  const params = useParams()
+  const locale = params.locale as string
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -38,12 +41,12 @@ export function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   const services = [
-    'Strona www',
-    'Sklep online',
-    'SEO lokalne',
-    'Automatyzacja',
-    'Naprawa strony',
-    'Audyt'
+    t('form.services.website'),
+    t('form.services.redesign'),
+    t('form.services.ecommerce'),
+    t('form.services.seo'),
+    t('form.services.audit'),
+    t('form.services.other')
   ]
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -82,7 +85,7 @@ export function ContactForm() {
       
       // Redirect to thank you page after 2 seconds
       setTimeout(() => {
-        window.location.href = '/pl/thank-you/contact'
+        window.location.href = `/${locale}/thank-you/contact`
       }, 2000)
     } catch (error) {
       console.error('Form submission error:', error)
@@ -121,7 +124,7 @@ export function ContactForm() {
           >
             <div className="glass-dark rounded-2xl p-8 space-y-6">
               <h3 className="text-2xl font-bold text-white mb-6">
-                Dane kontaktowe
+                {t('contactInfo.title')}
               </h3>
               
               <div className="space-y-4">
@@ -205,7 +208,7 @@ export function ContactForm() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3.5 text-base bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
-                    placeholder="Jan Kowalski"
+                    placeholder={t('form.placeholders.name')}
                   />
                 </div>
                 
@@ -221,7 +224,7 @@ export function ContactForm() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3.5 text-base bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
-                    placeholder="jan@firma.pl"
+                    placeholder={t('form.placeholders.email')}
                   />
                 </div>
                 
@@ -236,7 +239,7 @@ export function ContactForm() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3.5 text-base bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
-                    placeholder="+48 123 456 789"
+                    placeholder={t('form.placeholders.phone')}
                   />
                 </div>
                 
@@ -251,7 +254,7 @@ export function ContactForm() {
                     value={formData.company}
                     onChange={handleChange}
                     className="w-full px-4 py-3.5 text-base bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
-                    placeholder="Nazwa Twojej firmy"
+                    placeholder={t('form.placeholders.company')}
                   />
                 </div>
               </div>
@@ -268,7 +271,7 @@ export function ContactForm() {
                   required
                   className="w-full px-4 py-3.5 text-base bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:border-purple-500 transition-colors"
                 >
-                  <option value="" className="bg-gray-900">Wybierz usługę...</option>
+                  <option value="" className="bg-gray-900">{t('form.selectService')}</option>
                   {services.map(service => (
                     <option key={service} value={service} className="bg-gray-900">
                       {service}
@@ -289,7 +292,7 @@ export function ContactForm() {
                   required
                   rows={4}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-purple-500 transition-colors resize-none"
-                  placeholder="Napisz o co chodzi"
+                  placeholder={t('form.messagePlaceholder')}
                 />
               </div>
               
@@ -301,7 +304,7 @@ export function ContactForm() {
                   className="flex items-center gap-2 p-4 bg-green-500/20 border border-green-500/50 rounded-xl text-green-400"
                 >
                   <CheckCircle className="w-5 h-5" />
-                  <span>Wiadomość została wysłana! Przekierowujemy...</span>
+                  <span>{t('form.successMessage')}</span>
                 </motion.div>
               )}
               
@@ -312,13 +315,13 @@ export function ContactForm() {
                   className="flex items-center gap-2 p-4 bg-red-500/20 border border-red-500/50 rounded-xl text-red-400"
                 >
                   <AlertCircle className="w-5 h-5" />
-                  <span>Wystąpił błąd. Spróbuj ponownie.</span>
+                  <span>{t('form.errorMessage')}</span>
                 </motion.div>
               )}
               
               <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
                 <p className="text-sm text-gray-400">
-                  * Pola wymagane
+                  {t('form.required')}
                 </p>
                 
                 <Button
@@ -341,10 +344,7 @@ export function ContactForm() {
               </div>
               
               <p className="text-xs text-gray-500 text-center">
-                Wysyłając formularz zgadzasz się na przetwarzanie danych osobowych zgodnie z naszą{' '}
-                <Link href="/privacy-policy" className="text-purple-400 hover:text-purple-300 underline">
-                  polityką prywatności
-                </Link>
+                {t('form.gdpr')}
               </p>
             </form>
           </motion.div>

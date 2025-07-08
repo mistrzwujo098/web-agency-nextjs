@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { 
@@ -19,45 +20,40 @@ import { Button } from '@/components/ui/button'
 
 export function Footer() {
   const t = useTranslations('footer')
+  const params = useParams()
+  const locale = params.locale as string
   const currentYear = new Date().getFullYear()
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const footerLinks = {
     services: [
-      { name: 'Strony www', href: '/services/web-development' },
-      { name: 'Sklepy online', href: '/services/ecommerce' },
-      { name: 'SEO lokalne', href: '/services/seo' },
-      { name: 'Automatyzacja', href: '/services/automation' },
-      { name: 'Pomoc techniczna', href: '/services/hosting' }
+      { name: t('links.items.webDevelopment'), href: '#web-development' },
+      { name: t('links.items.ecommerce'), href: '#ecommerce' },
+      { name: t('links.items.seo'), href: '#seo' },
+      { name: t('links.items.automation'), href: '#automation' }
     ],
     company: [
-      { name: 'O nas', href: '/about' },
-      { name: 'Portfolio', href: '/portfolio' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Kariera', href: '/careers' },
-      { name: 'Kontakt', href: '/#contact' }
+      { name: t('links.items.aboutUs'), href: '#about' },
+      { name: t('links.items.portfolio'), href: '#portfolio' },
+      { name: t('links.items.contact'), href: '#contact' }
     ],
     resources: [
-      { name: 'Darmowa analiza', href: '/free-analysis' },
-      { name: 'Kalkulator ROI', href: '/#roi-calculator' },
-      { name: 'Case studies', href: '/case-studies' },
-      { name: 'Poradniki', href: '/guides' },
-      { name: 'FAQ', href: '/faq' }
+      { name: t('links.items.10mistakes'), href: `/${locale}/download/10-bledow-poradnik` },
+      { name: t('links.items.50elements'), href: `/${locale}/download/50-elementow-checklist` },
+      { name: t('links.items.localSeoGuide'), href: `/${locale}/download/seo-local-guide` },
+      { name: t('links.items.marketingAutomation'), href: `/${locale}/download/marketing-automation-guide` },
+      { name: t('links.items.launchChecklist'), href: `/${locale}/download/website-launch-checklist` },
+      { name: t('links.items.roiCalculator'), href: `/${locale}/tools/roi-calculator` }
     ],
-    legal: [
-      { name: 'Polityka prywatności', href: '/privacy-policy' },
-      { name: 'Regulamin', href: '/terms-of-service' },
-      { name: 'Polityka cookies', href: '/cookie-policy' },
-      { name: 'RODO', href: '/gdpr' }
-    ]
+    legal: []
   }
 
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/webcraftai' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/webcraftai' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/webcraftai' },
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/webcraftai' }
+    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com' },
+    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
+    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com' }
   ]
 
   return (
@@ -88,7 +84,7 @@ export function Footer() {
                   })
                   
                   if (response.ok) {
-                    window.location.href = '/pl/thank-you/newsletter'
+                    window.location.href = `/${locale}/thank-you/newsletter`
                   }
                 } catch (error) {
                   console.error('Newsletter subscription error:', error)
@@ -110,7 +106,7 @@ export function Footer() {
                 disabled={isSubmitting}
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 disabled:opacity-50"
               >
-                {isSubmitting ? 'Wysyłam...' : t('newsletter.button')}
+                {isSubmitting ? t('newsletter.submitting') : t('newsletter.button')}
               </Button>
             </form>
             
@@ -123,7 +119,7 @@ export function Footer() {
 
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-3 mb-6 group">
@@ -151,7 +147,7 @@ export function Footer() {
               </a>
               <div className="flex items-start gap-3 text-gray-400">
                 <MapPin className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
-                <span>ul. Innowacyjna 10<br />00-001 Warszawa</span>
+                <span>{t('company.address')}<br />{t('company.city')}</span>
               </div>
               <div className="flex items-center gap-3 text-gray-400">
                 <Clock className="w-5 h-5 text-purple-500" />
@@ -230,23 +226,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
-          <div>
-            <h4 className="text-white font-semibold mb-4">{t('links.legal')}</h4>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1 group"
-                  >
-                    {link.name}
-                    <ArrowRight className="w-3 h-3 opacity-0 -ml-1 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         {/* Trust Badges */}
@@ -279,7 +258,7 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-6 text-sm text-gray-400">
               <span>{t('vat')}: 123-456-78-90</span>
-              <span>{t('regon')}: 123456789</span>
+              <span>{locale === 'pl' ? 'REGON' : 'Company ID'}: 123456789</span>
             </div>
           </div>
         </div>

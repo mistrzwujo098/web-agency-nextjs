@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { Check, Download, Printer, RefreshCw, TrendingUp, AlertCircle, Info } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useParams } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
 interface ChecklistItem {
@@ -23,93 +24,93 @@ interface ChecklistCategory {
 export default function ConversionChecklistTool() {
   const params = useParams()
   const locale = params.locale as string
-  const isPL = locale === 'pl'
+  const t = useTranslations('conversionChecklist')
 
   const [categories, setCategories] = useState<ChecklistCategory[]>([
     {
-      name: isPL ? 'Nagłówek i nawigacja' : 'Header & Navigation',
+      name: t('categories.header'),
       icon: '🎯',
       items: [
-        { id: 'header-1', text: isPL ? 'Numer telefonu w widocznym miejscu' : 'Phone number prominently displayed', priority: 'critical', checked: false },
-        { id: 'header-2', text: isPL ? 'Widoczne godziny otwarcia' : 'Clear business hours visible', priority: 'critical', checked: false },
-        { id: 'header-3', text: isPL ? 'Sticky nawigacja przy scrollowaniu' : 'Sticky navigation on scroll', priority: 'important', checked: false },
-        { id: 'header-4', text: isPL ? 'Mobilne menu hamburger' : 'Mobile-friendly hamburger menu', priority: 'critical', checked: false },
-        { id: 'header-5', text: isPL ? 'Funkcja wyszukiwania' : 'Search functionality', priority: 'nice', checked: false },
-        { id: 'header-6', text: isPL ? 'Lokalizacja/adres w nagłówku' : 'Location/address in header', priority: 'important', checked: false },
-        { id: 'header-7', text: isPL ? 'Przycisk "Umów się" lub "Wycena"' : '"Book Now" or "Get Quote" button', priority: 'critical', checked: false },
-        { id: 'header-8', text: isPL ? 'Widget live chat' : 'Live chat widget', priority: 'important', checked: false }
+        { id: 'header-1', text: t('items.header.phone'), priority: 'critical', checked: false },
+        { id: 'header-2', text: t('items.header.hours'), priority: 'critical', checked: false },
+        { id: 'header-3', text: t('items.header.sticky'), priority: 'important', checked: false },
+        { id: 'header-4', text: t('items.header.mobile'), priority: 'critical', checked: false },
+        { id: 'header-5', text: t('items.header.search'), priority: 'nice', checked: false },
+        { id: 'header-6', text: t('items.header.location'), priority: 'important', checked: false },
+        { id: 'header-7', text: t('items.header.booking'), priority: 'critical', checked: false },
+        { id: 'header-8', text: t('items.header.chat'), priority: 'important', checked: false }
       ]
     },
     {
-      name: isPL ? 'Strona główna' : 'Homepage',
+      name: t('categories.homepage'),
       icon: '🏠',
       items: [
-        { id: 'home-1', text: isPL ? 'Jasna propozycja wartości above the fold' : 'Clear value proposition above the fold', priority: 'critical', checked: false },
-        { id: 'home-2', text: isPL ? 'Profesjonalny hero image/video' : 'Professional hero image/video', priority: 'critical', checked: false },
-        { id: 'home-3', text: isPL ? 'Obszar działania jasno określony' : 'Service area clearly defined', priority: 'critical', checked: false },
-        { id: 'home-4', text: isPL ? 'Widoczne certyfikaty/odznaczenia' : 'Trust badges/certifications visible', priority: 'important', checked: false },
-        { id: 'home-5', text: isPL ? 'Sekcja opinii klientów' : 'Customer testimonials section', priority: 'critical', checked: false },
-        { id: 'home-6', text: isPL ? 'Wyróżnione usługi/produkty' : 'Featured services/products', priority: 'important', checked: false },
-        { id: 'home-7', text: isPL ? 'Informacja o trybie pilnym/tym samym dniu' : 'Emergency/same-day service callout', priority: 'important', checked: false },
-        { id: 'home-8', text: isPL ? 'Interaktywna mapa z lokalizacją' : 'Interactive map with location', priority: 'important', checked: false },
-        { id: 'home-9', text: isPL ? 'Najnowsze realizacje/portfolio' : 'Recent projects/portfolio gallery', priority: 'important', checked: false },
-        { id: 'home-10', text: isPL ? 'Baner z ofertami specjalnymi/promocjami' : 'Special offers/promotions banner', priority: 'important', checked: false },
-        { id: 'home-11', text: isPL ? 'Logo nagród i wyróżnień' : 'Awards and recognition logos', priority: 'nice', checked: false },
-        { id: 'home-12', text: isPL ? 'Wbudowane video testimoniale' : 'Video testimonials embedded', priority: 'nice', checked: false }
+        { id: 'home-1', text: t('items.homepage.value'), priority: 'critical', checked: false },
+        { id: 'home-2', text: t('items.homepage.hero'), priority: 'critical', checked: false },
+        { id: 'home-3', text: t('items.homepage.area'), priority: 'critical', checked: false },
+        { id: 'home-4', text: t('items.homepage.badges'), priority: 'important', checked: false },
+        { id: 'home-5', text: t('items.homepage.testimonials'), priority: 'critical', checked: false },
+        { id: 'home-6', text: t('items.homepage.featured'), priority: 'important', checked: false },
+        { id: 'home-7', text: t('items.homepage.emergency'), priority: 'important', checked: false },
+        { id: 'home-8', text: t('items.homepage.map'), priority: 'important', checked: false },
+        { id: 'home-9', text: t('items.homepage.portfolio'), priority: 'important', checked: false },
+        { id: 'home-10', text: t('items.homepage.offers'), priority: 'important', checked: false },
+        { id: 'home-11', text: t('items.homepage.awards'), priority: 'nice', checked: false },
+        { id: 'home-12', text: t('items.homepage.videoTestimonials'), priority: 'nice', checked: false }
       ]
     },
     {
-      name: isPL ? 'Treść i komunikaty' : 'Content & Messaging',
+      name: t('categories.content'),
       icon: '📝',
       items: [
-        { id: 'content-1', text: isPL ? 'Nagłówki skupione na korzyściach' : 'Benefit-focused headlines', priority: 'critical', checked: false },
-        { id: 'content-2', text: isPL ? 'Jasne ceny lub ceny "od"' : 'Clear pricing or "starting at" prices', priority: 'important', checked: false },
-        { id: 'content-3', text: isPL ? 'Sekcja FAQ odpowiadająca na wątpliwości' : 'FAQ section addressing objections', priority: 'critical', checked: false },
-        { id: 'content-4', text: isPL ? 'Podkreślona unikalna propozycja sprzedaży' : 'Unique selling proposition highlighted', priority: 'critical', checked: false },
-        { id: 'content-5', text: isPL ? 'Sekcja proces/jak to działa' : 'Process/how it works section', priority: 'important', checked: false },
-        { id: 'content-6', text: isPL ? 'Informacje o gwarancji' : 'Guarantee or warranty information', priority: 'important', checked: false },
-        { id: 'content-7', text: isPL ? 'Galerie przed/po' : 'Before/after galleries', priority: 'important', checked: false },
-        { id: 'content-8', text: isPL ? 'Sekcja zespół/o nas ze zdjęciami' : 'Team/about us section with photos', priority: 'nice', checked: false },
-        { id: 'content-9', text: isPL ? 'Case studies z wynikami' : 'Case studies with results', priority: 'nice', checked: false },
-        { id: 'content-10', text: isPL ? 'Słownik branżowy wyjaśniony' : 'Industry-specific terminology explained', priority: 'nice', checked: false }
+        { id: 'content-1', text: t('items.content.headlines'), priority: 'critical', checked: false },
+        { id: 'content-2', text: t('items.content.pricing'), priority: 'important', checked: false },
+        { id: 'content-3', text: t('items.content.faq'), priority: 'critical', checked: false },
+        { id: 'content-4', text: t('items.content.usp'), priority: 'critical', checked: false },
+        { id: 'content-5', text: t('items.content.process'), priority: 'important', checked: false },
+        { id: 'content-6', text: t('items.content.guarantee'), priority: 'important', checked: false },
+        { id: 'content-7', text: t('items.content.beforeAfter'), priority: 'important', checked: false },
+        { id: 'content-8', text: t('items.content.team'), priority: 'nice', checked: false },
+        { id: 'content-9', text: t('items.content.caseStudies'), priority: 'nice', checked: false },
+        { id: 'content-10', text: t('items.content.terminology'), priority: 'nice', checked: false }
       ]
     },
     {
-      name: isPL ? 'Wezwania do działania' : 'Calls to Action',
+      name: t('categories.cta'),
       icon: '🎯',
       items: [
-        { id: 'cta-1', text: isPL ? 'Wiele CTA na stronę (3-5)' : 'Multiple CTAs per page (3-5)', priority: 'critical', checked: false },
-        { id: 'cta-2', text: isPL ? 'Kontrastujące kolory przycisków' : 'Contrasting button colors', priority: 'critical', checked: false },
-        { id: 'cta-3', text: isPL ? 'Tekst przycisków zorientowany na działanie' : 'Action-oriented button text', priority: 'critical', checked: false },
-        { id: 'cta-4', text: isPL ? 'Pływający/sticky CTA na mobile' : 'Floating/sticky CTA on mobile', priority: 'important', checked: false },
-        { id: 'cta-5', text: isPL ? 'Exit-intent popup z ofertą' : 'Exit-intent popup offer', priority: 'nice', checked: false },
-        { id: 'cta-6', text: isPL ? 'Przyciski click-to-call na mobile' : 'Click-to-call buttons on mobile', priority: 'critical', checked: false }
+        { id: 'cta-1', text: t('items.cta.multiple'), priority: 'critical', checked: false },
+        { id: 'cta-2', text: t('items.cta.contrast'), priority: 'critical', checked: false },
+        { id: 'cta-3', text: t('items.cta.actionText'), priority: 'critical', checked: false },
+        { id: 'cta-4', text: t('items.cta.sticky'), priority: 'important', checked: false },
+        { id: 'cta-5', text: t('items.cta.exitIntent'), priority: 'nice', checked: false },
+        { id: 'cta-6', text: t('items.cta.clickToCall'), priority: 'critical', checked: false }
       ]
     },
     {
-      name: isPL ? 'Dowody społeczne' : 'Social Proof',
+      name: t('categories.social'),
       icon: '⭐',
       items: [
-        { id: 'social-1', text: isPL ? 'Wyświetlone gwiazdki z Google/Yelp' : 'Google/Yelp review stars displayed', priority: 'critical', checked: false },
-        { id: 'social-2', text: isPL ? 'Liczba klientów lub lat działalności' : 'Customer count or years in business', priority: 'important', checked: false },
-        { id: 'social-3', text: isPL ? 'Prawdziwe zdjęcia klientów' : 'Real customer photos', priority: 'important', checked: false },
-        { id: 'social-4', text: isPL ? 'Członkostwo w stowarzyszeniach branżowych' : 'Industry association memberships', priority: 'nice', checked: false },
-        { id: 'social-5', text: isPL ? 'Wzmianki w mediach lub "Widziane w"' : 'Media mentions or "As seen in"', priority: 'nice', checked: false },
-        { id: 'social-6', text: isPL ? 'Feed z mediów społecznościowych na żywo' : 'Live social media feed', priority: 'nice', checked: false },
-        { id: 'social-7', text: isPL ? 'Logo partnerów/dostawców' : 'Partner/supplier logos', priority: 'nice', checked: false }
+        { id: 'social-1', text: t('items.social.reviews'), priority: 'critical', checked: false },
+        { id: 'social-2', text: t('items.social.count'), priority: 'important', checked: false },
+        { id: 'social-3', text: t('items.social.photos'), priority: 'important', checked: false },
+        { id: 'social-4', text: t('items.social.associations'), priority: 'nice', checked: false },
+        { id: 'social-5', text: t('items.social.media'), priority: 'nice', checked: false },
+        { id: 'social-6', text: t('items.social.liveFeed'), priority: 'nice', checked: false },
+        { id: 'social-7', text: t('items.social.partners'), priority: 'nice', checked: false }
       ]
     },
     {
-      name: isPL ? 'Wydajność i SEO' : 'Performance & SEO',
+      name: t('categories.performance'),
       icon: '🚀',
       items: [
-        { id: 'perf-1', text: isPL ? 'Ładowanie strony poniżej 3 sekund' : 'Page load under 3 seconds', priority: 'critical', checked: false },
-        { id: 'perf-2', text: isPL ? 'Responsywny design mobilny' : 'Mobile-responsive design', priority: 'critical', checked: false },
-        { id: 'perf-3', text: isPL ? 'Lokalny schema markup' : 'Local schema markup', priority: 'important', checked: false },
-        { id: 'perf-4', text: isPL ? 'Aktywny certyfikat SSL' : 'SSL certificate active', priority: 'critical', checked: false },
-        { id: 'perf-5', text: isPL ? 'Google My Business połączony' : 'Google My Business linked', priority: 'critical', checked: false },
-        { id: 'perf-6', text: isPL ? 'Optymalizacja/kompresja obrazów' : 'Image optimization/compression', priority: 'important', checked: false },
-        { id: 'perf-7', text: isPL ? 'Strony AMP dla kluczowej treści' : 'AMP pages for key content', priority: 'nice', checked: false }
+        { id: 'perf-1', text: t('items.performance.speed'), priority: 'critical', checked: false },
+        { id: 'perf-2', text: t('items.performance.mobile'), priority: 'critical', checked: false },
+        { id: 'perf-3', text: t('items.performance.schema'), priority: 'important', checked: false },
+        { id: 'perf-4', text: t('items.performance.ssl'), priority: 'critical', checked: false },
+        { id: 'perf-5', text: t('items.performance.gmb'), priority: 'critical', checked: false },
+        { id: 'perf-6', text: t('items.performance.images'), priority: 'important', checked: false },
+        { id: 'perf-7', text: t('items.performance.amp'), priority: 'nice', checked: false }
       ]
     }
   ])
@@ -152,20 +153,11 @@ export default function ConversionChecklistTool() {
   }
 
   const getPriorityLabel = (priority: string) => {
-    if (isPL) {
-      switch (priority) {
-        case 'critical': return 'Krytyczne'
-        case 'important': return 'Ważne'
-        case 'nice': return 'Przydatne'
-        default: return ''
-      }
-    } else {
-      switch (priority) {
-        case 'critical': return 'Critical'
-        case 'important': return 'Important'
-        case 'nice': return 'Nice to have'
-        default: return ''
-      }
+    switch (priority) {
+      case 'critical': return t('priorities.critical')
+      case 'important': return t('priorities.important')
+      case 'nice': return t('priorities.nice')
+      default: return ''
     }
   }
 
@@ -192,7 +184,7 @@ export default function ConversionChecklistTool() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href={`/${locale}`} className="text-white hover:text-purple-400 transition-colors">
-              ← {isPL ? 'Powrót' : 'Back'}
+              ← {t('back')}
             </Link>
             <div className="flex items-center gap-4">
               <Button
@@ -202,7 +194,7 @@ export default function ConversionChecklistTool() {
                 className="hidden sm:flex"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
-                {isPL ? 'Resetuj' : 'Reset'}
+                {t('reset')}
               </Button>
               <Button
                 variant="outline"
@@ -211,7 +203,7 @@ export default function ConversionChecklistTool() {
                 className="hidden sm:flex"
               >
                 <Printer className="w-4 h-4 mr-2" />
-                {isPL ? 'Drukuj' : 'Print'}
+                {t('print')}
               </Button>
               <Button
                 size="sm"
@@ -219,7 +211,7 @@ export default function ConversionChecklistTool() {
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
               >
                 <Download className="w-4 h-4 mr-2" />
-                {isPL ? 'Eksportuj' : 'Export'}
+                {t('export')}
               </Button>
             </div>
           </div>
@@ -235,18 +227,16 @@ export default function ConversionChecklistTool() {
           className="text-center mb-8"
         >
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            🚀 {isPL ? '50 elementów zwiększających konwersję' : '50 Website Elements That Increase Conversions'}
+            🚀 {t('title')}
           </h1>
           <p className="text-xl text-gray-300 mb-6">
-            {isPL 
-              ? 'Sprawdź swoją stronę punkt po punkcie'
-              : 'Check your website point by point'}
+            {t('subtitle')}
           </p>
           
           {/* Progress Bar */}
           <div className="max-w-md mx-auto mb-6">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-gray-400">{isPL ? 'Postęp' : 'Progress'}</span>
+              <span className="text-sm text-gray-400">{t('progress')}</span>
               <span className="text-sm font-medium text-white">{completionRate}%</span>
             </div>
             <div className="w-full bg-gray-700 rounded-full h-3">
@@ -342,26 +332,22 @@ export default function ConversionChecklistTool() {
             className="glass-dark rounded-2xl p-8 text-center mb-8"
           >
             <h3 className="text-2xl font-bold text-white mb-4">
-              {isPL ? 'Twój wynik' : 'Your Score'}
+              {t('results.title')}
             </h3>
             <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 mb-4">
               {completionRate}%
             </div>
             <p className="text-gray-300 mb-6">
-              {isPL 
-                ? completionRate >= 80 ? 'Świetna robota! Twoja strona jest dobrze zoptymalizowana.' 
-                  : completionRate >= 50 ? 'Niezły wynik, ale jest sporo do poprawy.'
-                  : 'Masz dużo pracy przed sobą, ale to się opłaci!'
-                : completionRate >= 80 ? 'Great job! Your website is well optimized.'
-                  : completionRate >= 50 ? 'Good start, but there\'s room for improvement.'
-                  : 'Lots of work ahead, but it will pay off!'}
+              {completionRate >= 80 ? t('results.excellent')
+                : completionRate >= 50 ? t('results.good')
+                : t('results.needsWork')}
             </p>
             
             {completionRate < 80 && (
               <Link href={`/${locale}/#contact`}>
                 <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
                   <TrendingUp className="w-4 h-4 mr-2" />
-                  {isPL ? 'Potrzebujesz pomocy? Skontaktuj się' : 'Need help? Get in touch'}
+                  {t('results.needHelp')}
                 </Button>
               </Link>
             )}
@@ -378,14 +364,10 @@ export default function ConversionChecklistTool() {
           <Info className="w-6 h-6 text-blue-400 flex-shrink-0 mt-0.5" />
           <div className="text-gray-300">
             <p className="mb-2">
-              {isPL 
-                ? 'Ta checklist jest oparta na analizie 237 stron lokalnych firm. Elementy oznaczone jako "Krytyczne" mają największy wpływ na konwersję.'
-                : 'This checklist is based on analysis of 237 local business websites. Elements marked as "Critical" have the biggest impact on conversions.'}
+              {t('info.title')}
             </p>
             <p>
-              {isPL
-                ? 'Zacznij od czerwonych punktów - to da Ci największy zwrot z inwestycji.'
-                : 'Start with red items - they\'ll give you the biggest ROI.'}
+              {t('info.subtitle')}
             </p>
           </div>
         </motion.div>

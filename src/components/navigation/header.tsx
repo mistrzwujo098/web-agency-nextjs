@@ -25,64 +25,34 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navigation = locale === 'pl' ? [
+  const navigation = [
     { name: t('home'), href: '#hero' },
     { 
       name: t('services'), 
       href: '#services',
       submenu: [
-        { name: 'Strony www', href: '#web-development' },
-        { name: 'Sklepy online', href: '#ecommerce' },
-        { name: 'SEO lokalne', href: '#seo' },
-        { name: 'Automatyzacja', href: '#automation' }
+        { name: t('submenu.webDevelopment'), href: '#web-development' },
+        { name: t('submenu.ecommerce'), href: '#ecommerce' },
+        { name: t('submenu.seo'), href: '#seo' },
+        { name: t('submenu.automation'), href: '#automation' }
       ]
     },
     { 
       name: t('resources'), 
       href: '#',
       submenu: [
-        { name: '10 błędów które kosztują klientów', href: `/${locale}/download/10-bledow-poradnik` },
-        { name: '50 elementów zwiększających sprzedaż', href: `/${locale}/download/50-elementow-checklist` },
-        { name: 'Jak być #1 w Google lokalnie', href: `/${locale}/download/seo-local-guide` },
-        { name: 'Automatyzacja marketingu - przewodnik', href: `/${locale}/download/marketing-automation-guide` },
-        { name: 'Checklist przed startem strony', href: `/${locale}/download/website-launch-checklist` },
-        { name: 'Kalkulator ROI', href: `/${locale}/download/roi-calculator` }
+        { name: t('submenu.10mistakes'), href: `/${locale}/download/10-bledow-poradnik` },
+        { name: t('submenu.50elements'), href: `/${locale}/download/50-elementow-checklist` },
+        { name: t('submenu.localSeo'), href: `/${locale}/download/seo-local-guide` },
+        { name: t('submenu.marketingAutomation'), href: `/${locale}/download/marketing-automation-guide` },
+        { name: t('submenu.launchChecklist'), href: `/${locale}/download/website-launch-checklist` },
+        { name: t('submenu.roiCalculator'), href: `/${locale}/tools/roi-calculator` }
       ]
     },
     { name: t('portfolio'), href: '#portfolio' },
     { name: t('about'), href: '#about' },
     { name: t('pricing'), href: '#pricing' },
-    { name: t('blog'), href: '/blog' },
     { name: t('contact'), href: '#contact' }
-  ] : [
-    { name: 'Home', href: '#hero' },
-    { 
-      name: 'Services', 
-      href: '#services',
-      submenu: [
-        { name: 'Web Development', href: '#web-development' },
-        { name: 'E-commerce', href: '#ecommerce' },
-        { name: 'SEO Optimization', href: '#seo' },
-        { name: 'Marketing Automation', href: '#automation' }
-      ]
-    },
-    { 
-      name: 'Free Resources', 
-      href: '#',
-      submenu: [
-        { name: '10 Mistakes That Cost You Customers', href: `/${locale}/download/10-bledow-poradnik` },
-        { name: '50 Elements That Increase Sales', href: `/${locale}/download/50-elementow-checklist` },
-        { name: 'How to be #1 on Google locally', href: `/${locale}/download/seo-local-guide` },
-        { name: 'Marketing Automation Guide', href: `/${locale}/download/marketing-automation-guide` },
-        { name: 'Website Launch Checklist', href: `/${locale}/download/website-launch-checklist` },
-        { name: 'ROI Calculator', href: `/${locale}/download/roi-calculator` }
-      ]
-    },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'About', href: '#about' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '#contact' }
   ]
 
   return (
@@ -175,7 +145,7 @@ export function Header() {
             <Button
               className="hidden sm:inline-flex bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              {locale === 'pl' ? 'Sprawdź gdzie gubisz kasę' : 'Check where you lose money'}
+              {t('cta')}
             </Button>
 
             {/* Mobile Menu Toggle */}
@@ -270,7 +240,7 @@ export function Header() {
                   
                   <div className="px-4">
                     <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg">
-                      {locale === 'pl' ? 'Sprawdź gdzie gubisz kasę' : 'Check where you lose money'}
+                      {t('cta')}
                     </Button>
                   </div>
                 </div>

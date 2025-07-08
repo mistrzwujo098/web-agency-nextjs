@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { Wrench, FileText, Search, Scale, Zap, BarChart3, Megaphone, Eye, Check, Download, Printer, RefreshCw, ChevronDown, ChevronUp } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useParams } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
 interface ChecklistTask {
@@ -28,7 +29,7 @@ interface ChecklistCategory {
 export default function WebsiteLaunchChecklistTool() {
   const params = useParams()
   const locale = params.locale as string
-  const isPL = locale === 'pl'
+  const t = useTranslations('websiteLaunch')
 
   const [projectInfo, setProjectInfo] = useState({
     projectName: '',
@@ -39,39 +40,39 @@ export default function WebsiteLaunchChecklistTool() {
 
   const [categories, setCategories] = useState<ChecklistCategory[]>([
     {
-      name: isPL ? 'Kontrola techniczna przed startem' : 'Pre-launch Technical Checks',
+      name: t('categories.technical'),
       icon: Wrench,
       emoji: '🔧',
       expanded: true,
       tasks: [
-        { id: 'tech-1', task: isPL ? 'DNS domeny skonfigurowany poprawnie' : 'Domain DNS configured correctly', priority: 'critical', timeline: isPL ? '7 dni przed' : '7 days before', checked: false, responsible: '', notes: '' },
-        { id: 'tech-2', task: isPL ? 'Certyfikat SSL zainstalowany i działający' : 'SSL certificate installed and working', priority: 'critical', timeline: isPL ? '5 dni przed' : '5 days before', checked: false, responsible: '', notes: '' },
-        { id: 'tech-3', task: isPL ? 'Środowisko hostingowe skonfigurowane' : 'Hosting environment configured', priority: 'critical', timeline: isPL ? '7 dni przed' : '7 days before', checked: false, responsible: '', notes: '' },
-        { id: 'tech-4', task: isPL ? 'System automatycznych kopii zapasowych' : 'Automated backup system in place', priority: 'high', timeline: isPL ? '3 dni przed' : '3 days before', checked: false, responsible: '', notes: '' },
-        { id: 'tech-5', task: isPL ? 'CDN skonfigurowane (jeśli dotyczy)' : 'CDN configured (if applicable)', priority: 'medium', timeline: isPL ? '3 dni przed' : '3 days before', checked: false, responsible: '', notes: '' },
-        { id: 'tech-6', task: isPL ? 'Konta e-mail skonfigurowane i przetestowane' : 'Email accounts set up and tested', priority: 'high', timeline: isPL ? '5 dni przed' : '5 days before', checked: false, responsible: '', notes: '' },
-        { id: 'tech-7', task: isPL ? 'Baza danych zoptymalizowana i zindeksowana' : 'Database optimized and indexed', priority: 'high', timeline: isPL ? '2 dni przed' : '2 days before', checked: false, responsible: '', notes: '' },
-        { id: 'tech-8', task: isPL ? 'Nagłówki bezpieczeństwa skonfigurowane' : 'Security headers configured', priority: 'high', timeline: isPL ? '2 dni przed' : '2 days before', checked: false, responsible: '', notes: '' }
+        { id: 'tech-1', task: t('tasks.technical.dns'), priority: 'critical', timeline: t('timeline.7daysBefore'), checked: false, responsible: '', notes: '' },
+        { id: 'tech-2', task: t('tasks.technical.ssl'), priority: 'critical', timeline: t('timeline.5daysBefore'), checked: false, responsible: '', notes: '' },
+        { id: 'tech-3', task: t('tasks.technical.hosting'), priority: 'critical', timeline: t('timeline.7daysBefore'), checked: false, responsible: '', notes: '' },
+        { id: 'tech-4', task: t('tasks.technical.backup'), priority: 'high', timeline: t('timeline.3daysBefore'), checked: false, responsible: '', notes: '' },
+        { id: 'tech-5', task: t('tasks.technical.cdn'), priority: 'medium', timeline: t('timeline.3daysBefore'), checked: false, responsible: '', notes: '' },
+        { id: 'tech-6', task: t('tasks.technical.email'), priority: 'high', timeline: t('timeline.5daysBefore'), checked: false, responsible: '', notes: '' },
+        { id: 'tech-7', task: t('tasks.technical.database'), priority: 'high', timeline: t('timeline.2daysBefore'), checked: false, responsible: '', notes: '' },
+        { id: 'tech-8', task: t('tasks.technical.security'), priority: 'high', timeline: t('timeline.2daysBefore'), checked: false, responsible: '', notes: '' }
       ]
     },
     {
-      name: isPL ? 'Przegląd treści' : 'Content Review',
+      name: t("categories.content"),
       icon: FileText,
       emoji: '📝',
       expanded: true,
       tasks: [
-        { id: 'content-1', task: isPL ? 'Cała treść sprawdzona pod kątem błędów' : 'All content spell-checked', priority: 'critical', timeline: isPL ? '3 dni przed' : '3 days before', checked: false, responsible: '', notes: '' },
-        { id: 'content-2', task: isPL ? 'Wszystkie linki przetestowane i działające' : 'All links tested and working', priority: 'critical', timeline: isPL ? '2 dni przed' : '2 days before', checked: false, responsible: '', notes: '' },
-        { id: 'content-3', task: isPL ? 'Obrazy zoptymalizowane dla internetu' : 'Images optimized for web', priority: 'high', timeline: isPL ? '3 dni przed' : '3 days before', checked: false, responsible: '', notes: '' },
-        { id: 'content-4', task: isPL ? 'Alt text dodany do wszystkich obrazów' : 'Alt text added to all images', priority: 'high', timeline: isPL ? '3 dni przed' : '3 days before', checked: false, responsible: '', notes: '' },
-        { id: 'content-5', task: isPL ? 'Strona błędu 404 utworzona' : '404 error page created', priority: 'high', timeline: isPL ? '4 dni przed' : '4 days before', checked: false, responsible: '', notes: '' },
-        { id: 'content-6', task: isPL ? 'Dane kontaktowe dokładne' : 'Contact information accurate', priority: 'critical', timeline: isPL ? '2 dni przed' : '2 days before', checked: false, responsible: '', notes: '' },
-        { id: 'content-7', task: isPL ? 'Formularze przetestowane i działające' : 'Forms tested and working', priority: 'critical', timeline: isPL ? '1 dzień przed' : '1 day before', checked: false, responsible: '', notes: '' },
-        { id: 'content-8', task: isPL ? 'Treść zastępcza usunięta' : 'Placeholder content removed', priority: 'critical', timeline: isPL ? '1 dzień przed' : '1 day before', checked: false, responsible: '', notes: '' }
+        { id: 'content-1', task: t('tasks.content.spellCheck'), priority: 'critical', timeline: t('timeline.3daysBefore'), checked: false, responsible: '', notes: '' },
+        { id: 'content-2', task: t('tasks.content.links'), priority: 'critical', timeline: t('timeline.2daysBefore'), checked: false, responsible: '', notes: '' },
+        { id: 'content-3', task: t('tasks.content.images'), priority: 'high', timeline: t('timeline.3daysBefore'), checked: false, responsible: '', notes: '' },
+        { id: 'content-4', task: t('tasks.content.altText'), priority: 'high', timeline: t('timeline.3daysBefore'), checked: false, responsible: '', notes: '' },
+        { id: 'content-5', task: t('tasks.content.404'), priority: 'high', timeline: t('timeline.4daysBefore'), checked: false, responsible: '', notes: '' },
+        { id: 'content-6', task: t('tasks.content.contact'), priority: 'critical', timeline: t('timeline.2daysBefore'), checked: false, responsible: '', notes: '' },
+        { id: 'content-7', task: t('tasks.content.forms'), priority: 'critical', timeline: t('timeline.1dayBefore'), checked: false, responsible: '', notes: '' },
+        { id: 'content-8', task: t('tasks.content.placeholder'), priority: 'critical', timeline: t('timeline.1dayBefore'), checked: false, responsible: '', notes: '' }
       ]
     },
     {
-      name: isPL ? 'Konfiguracja SEO' : 'SEO Setup',
+      name: t('categories.seo'),
       icon: Search,
       emoji: '🔍',
       expanded: true,
@@ -87,7 +88,7 @@ export default function WebsiteLaunchChecklistTool() {
       ]
     },
     {
-      name: isPL ? 'Zgodność prawna' : 'Legal Compliance',
+      name: t('categories.legal'),
       icon: Scale,
       emoji: '⚖️',
       expanded: true,
@@ -102,7 +103,7 @@ export default function WebsiteLaunchChecklistTool() {
       ]
     },
     {
-      name: isPL ? 'Testy wydajności' : 'Performance Testing',
+      name: t('categories.performance'),
       icon: Zap,
       emoji: '⚡',
       expanded: true,
@@ -117,7 +118,7 @@ export default function WebsiteLaunchChecklistTool() {
       ]
     },
     {
-      name: isPL ? 'Konfiguracja analityki' : 'Analytics Setup',
+      name: t('categories.analytics'),
       icon: BarChart3,
       emoji: '📊',
       expanded: true,
@@ -132,7 +133,7 @@ export default function WebsiteLaunchChecklistTool() {
       ]
     },
     {
-      name: isPL ? 'Przygotowanie marketingowe' : 'Marketing Preparation',
+      name: t('categories.marketing'),
       icon: Megaphone,
       emoji: '📣',
       expanded: true,
@@ -147,7 +148,7 @@ export default function WebsiteLaunchChecklistTool() {
       ]
     },
     {
-      name: isPL ? 'Monitorowanie po uruchomieniu' : 'Post-launch Monitoring',
+      name: t('categories.monitoring'),
       icon: Eye,
       emoji: '👀',
       expanded: true,
@@ -307,7 +308,7 @@ export default function WebsiteLaunchChecklistTool() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href={`/${locale}`} className="text-white hover:text-purple-400 transition-colors">
-              ← {isPL ? 'Powrót' : 'Back'}
+              ← {t("back")}
             </Link>
             <div className="flex items-center gap-4">
               <Button
@@ -317,7 +318,7 @@ export default function WebsiteLaunchChecklistTool() {
                 className="hidden sm:flex"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
-                {isPL ? 'Resetuj' : 'Reset'}
+                {t("reset")}
               </Button>
               <Button
                 variant="outline"
@@ -326,7 +327,7 @@ export default function WebsiteLaunchChecklistTool() {
                 className="hidden sm:flex"
               >
                 <Printer className="w-4 h-4 mr-2" />
-                {isPL ? 'Drukuj' : 'Print'}
+                {t("print")}
               </Button>
               <Button
                 size="sm"
@@ -334,7 +335,7 @@ export default function WebsiteLaunchChecklistTool() {
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
               >
                 <Download className="w-4 h-4 mr-2" />
-                {isPL ? 'Eksportuj' : 'Export'}
+                {t("export")}
               </Button>
             </div>
           </div>

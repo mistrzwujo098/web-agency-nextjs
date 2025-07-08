@@ -5,112 +5,17 @@ import { motion } from 'framer-motion'
 import { Download, CheckCircle, CheckSquare, Zap, TrendingUp, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useParams } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 
 export default function Download50ElementowPage() {
   const params = useParams()
   const locale = params.locale as string
-  const isPL = locale === 'pl'
+  const t = useTranslations('downloads.checklist50')
   
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showForm, setShowForm] = useState(true)
 
-  const content = {
-    pl: {
-      badge: 'DARMOWA CHECKLIST',
-      format: 'PDF • Do druku',
-      title: '50 elementów strony, które zwiększają sprzedaż',
-      subtitle: 'Kompletna checklist do analizy swojej strony. Sprawdź punkt po punkcie, co możesz poprawić, aby ',
-      highlight: 'przekształcić więcej odwiedzających w klientów',
-      categories: [
-        { name: 'Nagłówek i nawigacja', count: 8, icon: '🎯' },
-        { name: 'Strona główna', count: 12, icon: '🏠' },
-        { name: 'Treść i przekaz', count: 10, icon: '📝' },
-        { name: 'Wezwania do działania', count: 6, icon: '🎪' },
-        { name: 'Dowody społeczne', count: 7, icon: '⭐' },
-        { name: 'Wydajność i SEO', count: 7, icon: '🚀' }
-      ],
-      features: [
-        { icon: CheckSquare, text: 'Gotowa do druku' },
-        { icon: Zap, text: 'Szybka analiza' },
-        { icon: TrendingUp, text: 'Priorytety wdrożenia' },
-        { icon: Star, text: 'Best practices' }
-      ],
-      formTitle: 'Pobierz checklistę za darmo',
-      emailPlaceholder: 'Twój email...',
-      submitButton: 'Pobierz checklistę (PDF)',
-      submitting: 'Wysyłanie...',
-      disclaimer: 'Raz w tygodniu wysyłam 1 konkretną poradę. Żadnego spamu.',
-      successTitle: 'Checklist wysłana!',
-      successMessage: 'Sprawdź email i pobierz checklistę',
-      stats: [
-        { value: '5312', label: 'pobrań' },
-        { value: '4.8/5', label: 'ocena' }
-      ],
-      howToUse: 'Jak korzystać z checklisty?',
-      steps: [
-        { number: '1', title: 'Wydrukuj checklistę', description: 'Lub otwórz na ekranie i przejdź punkt po punkcie' },
-        { number: '2', title: 'Analizuj swoją stronę', description: 'Zaznaczaj elementy, które już masz i te do poprawy' },
-        { number: '3', title: 'Wdrażaj zmiany', description: 'Zacznij od elementów oznaczonych jako priorytetowe' }
-      ],
-      sampleItems: [
-        'Logo widoczne w lewym górnym rogu',
-        'Jasny i czytelny nagłówek główny',
-        'Numer telefonu w widocznym miejscu'
-      ],
-      cta: 'Potrzebujesz pomocy we wdrożeniu?',
-      ctaDescription: 'Nasz zespół może przeprowadzić dla Ciebie kompletny audyt i zaproponować plan działania',
-      ctaButton: 'Zamów darmową analizę strony'
-    },
-    en: {
-      badge: 'FREE CHECKLIST',
-      format: 'PDF • Printable',
-      title: '50 Website Elements That Increase Sales',
-      subtitle: 'Complete checklist to analyze your website. Check point by point what you can improve to ',
-      highlight: 'convert more visitors into customers',
-      categories: [
-        { name: 'Header & Navigation', count: 8, icon: '🎯' },
-        { name: 'Homepage', count: 12, icon: '🏠' },
-        { name: 'Content & Messaging', count: 10, icon: '📝' },
-        { name: 'Calls to Action', count: 6, icon: '🎪' },
-        { name: 'Social Proof', count: 7, icon: '⭐' },
-        { name: 'Performance & SEO', count: 7, icon: '🚀' }
-      ],
-      features: [
-        { icon: CheckSquare, text: 'Print-ready' },
-        { icon: Zap, text: 'Quick analysis' },
-        { icon: TrendingUp, text: 'Implementation priorities' },
-        { icon: Star, text: 'Best practices' }
-      ],
-      formTitle: 'Get your free checklist',
-      emailPlaceholder: 'Your email...',
-      submitButton: 'Download Checklist (PDF)',
-      submitting: 'Sending...',
-      disclaimer: 'Once a week I send 1 specific tip. No spam.',
-      successTitle: 'Checklist sent!',
-      successMessage: 'Check your email to download',
-      stats: [
-        { value: '5312', label: 'downloads' },
-        { value: '4.8/5', label: 'rating' }
-      ],
-      howToUse: 'How to use the checklist?',
-      steps: [
-        { number: '1', title: 'Print the checklist', description: 'Or open on screen and go through point by point' },
-        { number: '2', title: 'Analyze your website', description: 'Check off elements you have and those to improve' },
-        { number: '3', title: 'Implement changes', description: 'Start with elements marked as priority' }
-      ],
-      sampleItems: [
-        'Logo visible in top left corner',
-        'Clear and readable main heading',
-        'Phone number in visible location'
-      ],
-      cta: 'Need help with implementation?',
-      ctaDescription: 'Our team can conduct a complete audit and propose an action plan',
-      ctaButton: 'Request free website analysis'
-    }
-  }
-
-  const t = content[isPL ? 'pl' : 'en']
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -131,7 +36,7 @@ export default function Download50ElementowPage() {
       if (response.ok) {
         setShowForm(false)
         setTimeout(() => {
-          window.location.href = `/${locale}/thank-you/download?resource=${encodeURIComponent(t.title)}`
+          window.location.href = `/${locale}/thank-you/download?resource=${encodeURIComponent(t('title'))}`
         }, 1000)
       }
     } catch (error) {
@@ -155,25 +60,28 @@ export default function Download50ElementowPage() {
             >
               <div className="flex items-center gap-2 mb-4">
                 <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm font-medium">
-                  {t.badge}
+                  {t('badge')}
                 </span>
-                <span className="text-gray-400">{t.format}</span>
+                <span className="text-gray-400">{t('format')}</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                {t.title}
+                {t('title')}
               </h1>
               
               <p className="text-xl text-gray-300 mb-8">
-                {t.subtitle}
-                <span className="text-green-400 font-semibold">{t.highlight}</span>.
+                {t('subtitle')}
+                <span className="text-green-400 font-semibold">{t('highlight')}</span>.
               </p>
 
               {/* Key Features */}
               <div className="grid grid-cols-2 gap-4 mb-8">
-                {t.features.map((feature, index) => (
+                {t.raw('features').map((feature: any, index: number) => (
                   <div key={index} className="flex items-center gap-3">
-                    <feature.icon className="w-6 h-6 text-green-400 flex-shrink-0" />
+                    {index === 0 && <CheckSquare className="w-6 h-6 text-green-400 flex-shrink-0" />}
+                    {index === 1 && <Zap className="w-6 h-6 text-green-400 flex-shrink-0" />}
+                    {index === 2 && <TrendingUp className="w-6 h-6 text-green-400 flex-shrink-0" />}
+                    {index === 3 && <Star className="w-6 h-6 text-green-400 flex-shrink-0" />}
                     <span className="text-white">{feature.text}</span>
                   </div>
                 ))}
@@ -189,10 +97,10 @@ export default function Download50ElementowPage() {
                   className="glass-dark rounded-2xl p-6"
                 >
                   <h3 className="text-lg font-semibold text-white mb-4">
-                    {isPL ? '🌐 Użyj narzędzia online' : '🌐 Use Online Tool'}
+                    {t('onlineTool.title')}
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    {isPL ? 'Interaktywna wersja z automatycznym liczeniem i zapisywaniem postępu' : 'Interactive version with automatic counting and progress saving'}
+                    {t('onlineTool.description')}
                   </p>
                   <Button
                     onClick={() => window.location.href = `/${locale}/tools/conversion-checklist`}
@@ -200,7 +108,7 @@ export default function Download50ElementowPage() {
                   >
                     <span className="flex items-center gap-2">
                       <CheckSquare className="w-5 h-5" />
-                      {isPL ? 'Otwórz interaktywne narzędzie' : 'Open Interactive Tool'}
+                      {t('onlineTool.button')}
                     </span>
                   </Button>
                 </motion.div>
@@ -215,14 +123,14 @@ export default function Download50ElementowPage() {
                     className="glass-dark rounded-2xl p-6"
                   >
                     <h3 className="text-lg font-semibold text-white mb-4">
-                      {isPL ? '📄 Lub pobierz PDF do druku' : '📄 Or Download PDF Version'}
+                      {t('pdfDownload.title')}
                     </h3>
                     <div className="space-y-4">
                       <input
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        placeholder={t.emailPlaceholder}
+                        placeholder={t('form.emailPlaceholder')}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-green-500 transition-colors"
                         required
                       />
@@ -234,18 +142,18 @@ export default function Download50ElementowPage() {
                         {isSubmitting ? (
                           <span className="flex items-center gap-2">
                             <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                            {t.submitting}
+                            {t('form.submitting')}
                           </span>
                         ) : (
                           <span className="flex items-center gap-2">
                             <Download className="w-5 h-5" />
-                            {t.submitButton}
+                            {t('form.submitButton')}
                           </span>
                         )}
                       </Button>
                     </div>
                     <p className="text-xs text-gray-500 mt-3 text-center">
-                      {t.disclaimer}
+                      {t('form.disclaimer')}
                     </p>
                   </motion.form>
                 ) : (
@@ -256,9 +164,9 @@ export default function Download50ElementowPage() {
                   >
                     <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
                     <h3 className="text-xl font-semibold text-white mb-2">
-                      {t.successTitle}
+                      {t('form.successTitle')}
                     </h3>
-                    <p className="text-gray-400">{t.successMessage}</p>
+                    <p className="text-gray-400">{t('form.successMessage')}</p>
                   </motion.div>
                 )}
               </div>
@@ -266,12 +174,12 @@ export default function Download50ElementowPage() {
               {/* Trust Indicators */}
               <div className="flex items-center gap-6 mt-8">
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl font-bold text-white">{t.stats[0].value}</span>
-                  <span className="text-gray-400 text-sm">{t.stats[0].label}</span>
+                  <span className="text-2xl font-bold text-white">{t.raw('stats')[0].value}</span>
+                  <span className="text-gray-400 text-sm">{t.raw('stats')[0].label}</span>
                 </div>
                 <div className="w-px h-8 bg-gray-700" />
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl font-bold text-white">{t.stats[1].value}</span>
+                  <span className="text-2xl font-bold text-white">{t.raw('stats')[1].value}</span>
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -294,10 +202,10 @@ export default function Download50ElementowPage() {
                   <div className="flex items-center justify-between mb-6">
                     <div>
                       <h2 className="text-2xl font-bold text-gray-900">
-                        {isPL ? 'Checklist konwersji' : 'Conversion Checklist'}
+                        {t('mockup.title')}
                       </h2>
                       <p className="text-gray-600">
-                        {isPL ? '50 kluczowych elementów' : '50 key elements'}
+                        {t('mockup.subtitle')}
                       </p>
                     </div>
                     <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
@@ -307,7 +215,7 @@ export default function Download50ElementowPage() {
 
                   {/* Category Preview */}
                   <div className="space-y-3">
-                    {t.categories.map((category, index) => (
+                    {t.raw('categories').map((category: any, index: number) => (
                       <motion.div
                         key={index}
                         initial={{ opacity: 0, x: -20 }}
@@ -320,7 +228,7 @@ export default function Download50ElementowPage() {
                           <span className="text-gray-800 font-medium">{category.name}</span>
                         </div>
                         <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
-                          {category.count} {isPL ? 'punktów' : 'points'}
+                          {category.count} {t('content.pointsLabel')}
                         </span>
                       </motion.div>
                     ))}
@@ -329,10 +237,10 @@ export default function Download50ElementowPage() {
                   {/* Sample Checklist Items */}
                   <div className="mt-6 pt-6 border-t border-gray-200">
                     <p className="text-xs text-gray-500 mb-3">
-                      {isPL ? 'Przykładowe punkty:' : 'Sample items:'}
+                      {t('content.sampleItemsLabel')}
                     </p>
                     <div className="space-y-2">
-                      {t.sampleItems.map((item, index) => (
+                      {t.raw('content.sampleItems').map((item: string, index: number) => (
                         <label key={index} className="flex items-center gap-2 text-sm text-gray-700">
                           <input type="checkbox" className="w-4 h-4" checked={index === 0} readOnly />
                           {item}
@@ -357,12 +265,12 @@ export default function Download50ElementowPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
-              {t.howToUse}
+              {t('content.howToUse')}
             </h2>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {t.steps.map((step, index) => (
+            {t.raw('content.steps').map((step: any, index: number) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -391,16 +299,16 @@ export default function Download50ElementowPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-2xl font-bold text-white mb-4">
-              {t.cta}
+              {t('cta.title')}
             </h2>
             <p className="text-gray-300 mb-8">
-              {t.ctaDescription}
+              {t('cta.description')}
             </p>
             <Button
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
               onClick={() => window.location.href = `/${locale}/free-analysis`}
             >
-              {t.ctaButton}
+              {t('cta.button')}
             </Button>
           </motion.div>
         </div>

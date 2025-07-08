@@ -5,142 +5,16 @@ import { motion } from 'framer-motion'
 import { Download, CheckCircle, BookOpen, Target, TrendingUp, AlertTriangle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useParams } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 
 export default function Download10BledowPage() {
   const params = useParams()
   const locale = params.locale as string
-  const isPL = locale === 'pl'
+  const t = useTranslations('downloads.mistakes10')
   
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showForm, setShowForm] = useState(true)
-
-  const content = {
-    pl: {
-      badge: 'DARMOWY PORADNIK',
-      format: 'PDF • 32 strony',
-      title: '10 błędów, które kosztują Cię klientów',
-      subtitle: 'Odkryj najczęstsze błędy na stronach internetowych lokalnych firm i dowiedz się, jak je naprawić, aby ',
-      highlight: 'zwiększyć konwersję o minimum 30%',
-      benefits: [
-        {
-          title: 'Konkretne przykłady i rozwiązania',
-          description: 'Każdy błąd opisany z przykładami i gotowymi rozwiązaniami'
-        },
-        {
-          title: 'Checklist do samodzielnej analizy',
-          description: 'Sprawdź swoją stronę punkt po punkcie'
-        },
-        {
-          title: 'Priorytety implementacji',
-          description: 'Dowiedz się, od czego zacząć, aby szybko zobaczyć efekty'
-        }
-      ],
-      mistakes: [
-        'Brak jasnego przekazu wartości',
-        'Słaba widoczność informacji kontaktowych',
-        'Brak dowodów społecznych',
-        'Niezoptymalizowana wersja mobilna',
-        'Wolne ładowanie strony',
-        'Skomplikowana nawigacja',
-        'Brak wezwań do działania (CTA)',
-        'Nieaktualne treści',
-        'Brak optymalizacji SEO',
-        'Ignorowanie analityki'
-      ],
-      formTitle: 'Pobierz darmowy poradnik',
-      emailPlaceholder: 'Twój email...',
-      submitButton: 'Pobierz poradnik za darmo',
-      submitting: 'Wysyłanie...',
-      disclaimer: 'Zero spamu. Wypisujesz się jednym klikiem.',
-      successTitle: 'Sprawdź swoją skrzynkę email!',
-      successMessage: 'Wysłaliśmy link do pobrania poradnika',
-      whatInside: 'Co znajdziesz w poradniku?',
-      stats: [
-        { value: '32', label: 'strony' },
-        { value: '10', label: 'błędów' },
-        { value: '50+', label: 'wskazówek' }
-      ],
-      testimonials: [
-        {
-          text: 'Naprawiłem 5 rzeczy z listy. Teraz mam 12 telefonów dziennie zamiast 3.',
-          author: 'Michał, pizzeria w Gdańsku'
-        },
-        {
-          text: 'Strona ładowała się 8 sekund. Nie wiedziałam że to problem. Teraz 2 sek i +30% wizyt.',
-          author: 'Anna, salon kosmetyczny Mokotów'
-        },
-        {
-          text: 'Błąd nr 3 kosztował mnie 2000 zł miesięcznie. Serio.',
-          author: 'Piotr, serwis iPhone Kraków'
-        }
-      ],
-      socialProof: 'Pobrane już 2137 razy'
-    },
-    en: {
-      badge: 'FREE GUIDE',
-      format: 'PDF • 32 pages',
-      title: '10 Mistakes That Cost You Customers',
-      subtitle: 'Discover the most common website mistakes local businesses make and learn how to fix them to ',
-      highlight: 'increase conversion by at least 30%',
-      benefits: [
-        {
-          title: 'Concrete examples and solutions',
-          description: 'Each mistake described with examples and ready-to-use solutions'
-        },
-        {
-          title: 'Self-analysis checklist',
-          description: 'Check your website point by point'
-        },
-        {
-          title: 'Implementation priorities',
-          description: 'Learn where to start to see quick results'
-        }
-      ],
-      mistakes: [
-        'No clear value proposition',
-        'Poor contact information visibility',
-        'No social proof',
-        'Not optimized for mobile',
-        'Slow page loading',
-        'Complicated navigation',
-        'Missing calls to action (CTAs)',
-        'Outdated content',
-        'No SEO optimization',
-        'Ignoring analytics'
-      ],
-      formTitle: 'Get your free guide',
-      emailPlaceholder: 'Your email...',
-      submitButton: 'Download guide for free',
-      submitting: 'Sending...',
-      disclaimer: 'Zero spam. Unsubscribe with one click.',
-      successTitle: 'Check your email inbox!',
-      successMessage: 'We sent you the download link',
-      whatInside: 'What\'s inside the guide?',
-      stats: [
-        { value: '32', label: 'pages' },
-        { value: '10', label: 'mistakes' },
-        { value: '50+', label: 'tips' }
-      ],
-      testimonials: [
-        {
-          text: 'Fixed 5 things from the list. Now I get 12 calls daily instead of 3.',
-          author: 'Michael, pizza place in Chicago'
-        },
-        {
-          text: 'Site loaded in 8 seconds. Didn\'t know it was a problem. Now 2 sec and +30% visits.',
-          author: 'Anna, beauty salon Brooklyn'
-        },
-        {
-          text: 'Mistake #3 was costing me $500/month. Seriously.',
-          author: 'Peter, iPhone repair Austin'
-        }
-      ],
-      socialProof: 'Downloaded 2137 times already'
-    }
-  }
-
-  const t = content[isPL ? 'pl' : 'en']
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -161,7 +35,7 @@ export default function Download10BledowPage() {
       if (response.ok) {
         setShowForm(false)
         setTimeout(() => {
-          window.location.href = `/${locale}/thank-you/download?resource=${encodeURIComponent(t.title)}`
+          window.location.href = `/${locale}/thank-you/download?resource=${encodeURIComponent(t('title'))}`
         }, 1000)
       }
     } catch (error) {
@@ -185,23 +59,23 @@ export default function Download10BledowPage() {
             >
               <div className="flex items-center gap-2 mb-4">
                 <span className="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm font-medium">
-                  {t.badge}
+                  {t('badge')}
                 </span>
-                <span className="text-gray-400">{t.format}</span>
+                <span className="text-gray-400">{t('format')}</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                {t.title}
+                {t('title')}
               </h1>
               
               <p className="text-xl text-gray-300 mb-8">
-                {t.subtitle}
-                <span className="text-purple-400 font-semibold">{t.highlight}</span>.
+                {t('subtitle')}
+                <span className="text-purple-400 font-semibold">{t('highlight')}</span>.
               </p>
 
               {/* Benefits */}
               <div className="space-y-4 mb-8">
-                {t.benefits.map((benefit, index) => (
+                {t.raw('benefits').map((benefit: any, index: number) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" />
                     <div>
@@ -222,14 +96,14 @@ export default function Download10BledowPage() {
                   className="glass-dark rounded-2xl p-6"
                 >
                   <h3 className="text-lg font-semibold text-white mb-4">
-                    {t.formTitle}
+                    {t('form.title')}
                   </h3>
                   <div className="space-y-4">
                     <input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder={t.emailPlaceholder}
+                      placeholder={t('form.emailPlaceholder')}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
                       required
                     />
@@ -241,18 +115,18 @@ export default function Download10BledowPage() {
                       {isSubmitting ? (
                         <span className="flex items-center gap-2">
                           <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                          {t.submitting}
+                          {t('form.submitting')}
                         </span>
                       ) : (
                         <span className="flex items-center gap-2">
                           <Download className="w-5 h-5" />
-                          {t.submitButton}
+                          {t('form.submitButton')}
                         </span>
                       )}
                     </Button>
                   </div>
                   <p className="text-xs text-gray-500 mt-3 text-center">
-                    {t.disclaimer}
+                    {t('form.disclaimer')}
                   </p>
                 </motion.form>
               ) : (
@@ -263,10 +137,10 @@ export default function Download10BledowPage() {
                 >
                   <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-2">
-                    {t.successTitle}
+                    {t('form.successTitle')}
                   </h3>
                   <p className="text-gray-400">
-                    {t.successMessage}
+                    {t('form.successMessage')}
                   </p>
                 </motion.div>
               )}
@@ -286,21 +160,21 @@ export default function Download10BledowPage() {
                   <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
                     <AlertTriangle className="w-16 h-16 text-red-400 mb-4" />
                     <h2 className="text-3xl font-bold text-white mb-2">
-                      {isPL ? '10 BŁĘDÓW' : '10 MISTAKES'}
+                      {t('mockup.title')}
                     </h2>
                     <p className="text-lg text-gray-300 mb-4">
-                      {isPL ? 'które kosztują Cię klientów' : 'that cost you customers'}
+                      {t('mockup.subtitle')}
                     </p>
                     <div className="w-20 h-0.5 bg-white/50 mb-4" />
                     <p className="text-sm text-gray-400">
-                      {isPL ? 'Jak je naprawić i zwiększyć sprzedaż' : 'How to fix them and boost sales'}
+                      {t('mockup.description')}
                     </p>
                   </div>
                 </div>
                 
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-4 mt-6">
-                  {t.stats.map((stat, index) => (
+                  {t.raw('stats').map((stat: any, index: number) => (
                     <div key={index} className="text-center">
                       <div className="text-2xl font-bold text-white">{stat.value}</div>
                       <div className="text-xs text-gray-400">{stat.label}</div>
@@ -323,18 +197,15 @@ export default function Download10BledowPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              {t.whatInside}
+              {t('content.whatInside')}
             </h2>
             <p className="text-xl text-gray-300">
-              {isPL 
-                ? 'Kompleksowy przewodnik po najczęstszych błędach i ich rozwiązaniach'
-                : 'Comprehensive guide to the most common mistakes and their solutions'
-              }
+              {t('content.insideDescription')}
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {t.mistakes.map((mistake, index) => (
+            {t.raw('mistakes').map((mistake: string, index: number) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -349,10 +220,7 @@ export default function Download10BledowPage() {
                 <div>
                   <h3 className="text-white font-medium mb-2">{mistake}</h3>
                   <p className="text-gray-400 text-sm">
-                    {isPL 
-                      ? 'Szczegółowy opis problemu i gotowe rozwiązanie do wdrożenia'
-                      : 'Detailed problem description and ready-to-implement solution'
-                    }
+                    {t('content.mistakeDescription')}
                   </p>
                 </div>
               </motion.div>
@@ -371,11 +239,11 @@ export default function Download10BledowPage() {
             className="text-center"
           >
             <h2 className="text-2xl font-bold text-white mb-8">
-              {t.socialProof}
+              {t('socialProof')}
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {t.testimonials.map((testimonial, index) => (
+              {t.raw('testimonials').map((testimonial: any, index: number) => (
                 <div key={index} className="glass-dark rounded-xl p-6">
                   <div className="flex justify-center mb-3">
                     {[...Array(5)].map((_, i) => (
