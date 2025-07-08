@@ -64,7 +64,7 @@ export function Hero() {
         ))}
       </div>
 
-      <div className="container mx-auto px-4 max-w-6xl relative z-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl relative z-20">
         <motion.div 
           className="text-center"
           initial={{ opacity: 0, y: 30 }}

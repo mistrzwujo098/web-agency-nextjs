@@ -93,8 +93,8 @@ export function Header() {
           : 'bg-transparent'
       }`}
     >
-      <nav className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-purple-500/25 transition-all duration-300">
@@ -181,13 +181,13 @@ export function Header() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
+              className="lg:hidden p-3 -mr-3 text-gray-300 hover:text-white transition-colors"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
+                <X className="w-7 h-7" />
               ) : (
-                <Menu className="w-6 h-6" />
+                <Menu className="w-7 h-7" />
               )}
             </button>
           </div>
@@ -203,14 +203,14 @@ export function Header() {
               transition={{ duration: 0.3 }}
               className="lg:hidden overflow-hidden"
             >
-              <div className="py-4 space-y-2">
+              <div className="py-4 space-y-1">
                 {navigation.map((item) => (
                   <div key={item.name}>
                     {item.submenu ? (
                       <div>
                         <button
                           onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                          className="w-full px-4 py-3 text-left text-gray-300 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-200 flex items-center justify-between"
+                          className="w-full px-5 py-4 text-left text-base text-gray-300 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-200 flex items-center justify-between"
                         >
                           {item.name}
                           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${

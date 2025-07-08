@@ -78,6 +78,15 @@
       radial-gradient(at 80% 50%, rgba(59, 130, 246, 0.05) 0px, transparent 50%),
       radial-gradient(at 20% 80%, rgba(139, 92, 246, 0.05) 0px, transparent 50%);
     min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 640px) {
+    body {
+      font-size: 15px;
+      line-height: 1.7;
+    }
   }
   
   /* Typography */
@@ -111,6 +120,46 @@
   
   ::-webkit-scrollbar-thumb:hover {
     background: hsl(var(--primary) / 0.8);
+  }
+}
+
+/* Mobile-specific improvements */
+@layer base {
+  /* Ensure clickable elements are at least 44px tall on mobile */
+  @media (max-width: 768px) {
+    button, a, input, select, textarea {
+      min-height: 44px;
+    }
+    
+    /* Better tap targets for links in navigation */
+    nav a {
+      padding: 0.75rem 1rem;
+    }
+    
+    /* Reduce heavy animations on mobile for performance */
+    .animate-blob {
+      animation: none;
+    }
+    
+    /* Simplify gradients on mobile */
+    body {
+      background-image: 
+        radial-gradient(at 50% 0%, rgba(139, 92, 246, 0.08) 0px, transparent 50%);
+    }
+  }
+  
+  /* Improve text readability on small screens */
+  @media (max-width: 640px) {
+    p {
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+    
+    /* Smaller headings on mobile */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
   }
 }
 

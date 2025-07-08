@@ -227,7 +227,7 @@ export default function ConversionChecklistTool() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8 max-w-4xl">
         {/* Title & Progress */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
