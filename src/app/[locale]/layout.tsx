@@ -3,7 +3,7 @@ import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {locales} from '@/i18n/config';
 import { Inter } from "next/font/google";
-import { AnalyticsWrapper } from '@/components/analytics';
+// import { AnalyticsWrapper } from '@/components/analytics';
 import { LanguageSwitcher } from '@/components/language-switcher';
 
 const inter = Inter({ subsets: ["latin"] });
@@ -31,7 +31,7 @@ export default async function LocaleLayout({
             <LanguageSwitcher />
           </div>
           {children}
-          <AnalyticsWrapper />
+          {/* <AnalyticsWrapper /> */}
         </NextIntlClientProvider>
       </body>
     </html>

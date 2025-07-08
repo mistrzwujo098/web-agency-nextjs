@@ -10,7 +10,6 @@ const nextConfig: NextConfig = {
     remotePatterns: [],
     unoptimized: true
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
   trailingSlash: true
 };
  
