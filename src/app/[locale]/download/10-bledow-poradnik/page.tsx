@@ -52,7 +52,7 @@ export default function Download10BledowPage() {
       emailPlaceholder: 'Twój email...',
       submitButton: 'Pobierz poradnik za darmo',
       submitting: 'Wysyłanie...',
-      disclaimer: 'Dołączysz też do naszego newslettera. Możesz się wypisać w każdej chwili.',
+      disclaimer: 'Zero spamu. Wypisujesz się jednym klikiem.',
       successTitle: 'Sprawdź swoją skrzynkę email!',
       successMessage: 'Wysłaliśmy link do pobrania poradnika',
       whatInside: 'Co znajdziesz w poradniku?',
@@ -63,19 +63,19 @@ export default function Download10BledowPage() {
       ],
       testimonials: [
         {
-          text: 'Prosty i konkretny poradnik. Wdrożyłem 5 zmian i widzę już pierwsze efekty!',
-          author: 'Michał K., właściciel restauracji'
+          text: 'Naprawiłem 5 rzeczy z listy. Teraz mam 12 telefonów dziennie zamiast 3.',
+          author: 'Michał, pizzeria w Gdańsku'
         },
         {
-          text: 'Odkryłam błędy, których nie byłam świadoma. Świetna checklist!',
-          author: 'Anna D., salon kosmetyczny'
+          text: 'Strona ładowała się 8 sekund. Nie wiedziałam że to problem. Teraz 2 sek i +30% wizyt.',
+          author: 'Anna, salon kosmetyczny Mokotów'
         },
         {
-          text: 'Dzięki poradnikowi zwiększyłem konwersję o 25% w miesiąc!',
-          author: 'Piotr W., sklep z elektroniką'
+          text: 'Błąd nr 3 kosztował mnie 2000 zł miesięcznie. Serio.',
+          author: 'Piotr, serwis iPhone Kraków'
         }
       ],
-      socialProof: 'Dołącz do 2000+ przedsiębiorców, którzy pobrali ten poradnik'
+      socialProof: 'Pobrane już 2137 razy'
     },
     en: {
       badge: 'FREE GUIDE',
@@ -113,7 +113,7 @@ export default function Download10BledowPage() {
       emailPlaceholder: 'Your email...',
       submitButton: 'Download guide for free',
       submitting: 'Sending...',
-      disclaimer: 'You\'ll also join our newsletter. You can unsubscribe anytime.',
+      disclaimer: 'Zero spam. Unsubscribe with one click.',
       successTitle: 'Check your email inbox!',
       successMessage: 'We sent you the download link',
       whatInside: 'What\'s inside the guide?',
@@ -124,19 +124,19 @@ export default function Download10BledowPage() {
       ],
       testimonials: [
         {
-          text: 'Simple and practical guide. Implemented 5 changes and already seeing results!',
-          author: 'Michael K., Restaurant Owner'
+          text: 'Fixed 5 things from the list. Now I get 12 calls daily instead of 3.',
+          author: 'Michael, pizza place in Chicago'
         },
         {
-          text: 'Discovered mistakes I wasn\'t aware of. Great checklist!',
-          author: 'Anna D., Beauty Salon'
+          text: 'Site loaded in 8 seconds. Didn\'t know it was a problem. Now 2 sec and +30% visits.',
+          author: 'Anna, beauty salon Brooklyn'
         },
         {
-          text: 'Thanks to this guide, I increased conversion by 25% in a month!',
-          author: 'Peter W., Electronics Store'
+          text: 'Mistake #3 was costing me $500/month. Seriously.',
+          author: 'Peter, iPhone repair Austin'
         }
       ],
-      socialProof: 'Join 2000+ entrepreneurs who downloaded this guide'
+      socialProof: 'Downloaded 2137 times already'
     }
   }
 

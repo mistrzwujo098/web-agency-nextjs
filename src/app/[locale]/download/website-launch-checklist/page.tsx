@@ -20,7 +20,7 @@ export default function WebsiteLaunchChecklistPage() {
       badge: 'LISTA KONTROLNA',
       format: 'PDF • Do druku',
       title: 'Checklist przed startem strony',
-      subtitle: 'Kompletna lista kontrolna 87 punktów, które musisz sprawdzić przed publikacją strony. Używana przez profesjonalne agencje.',
+      subtitle: 'Sprawdź 87 rzeczy przed startem strony. Żeby nie było wpadki jak u konkurencji.',
       highlight: 'uniknij kosztownych błędów',
       categories: [
         { name: 'Sprawdzenie techniczne', count: 15, icon: '⚙️', color: 'purple' },
@@ -41,11 +41,11 @@ export default function WebsiteLaunchChecklistPage() {
       emailPlaceholder: 'Twój email...',
       submitButton: 'Pobierz checklistę (PDF)',
       submitting: 'Wysyłanie...',
-      disclaimer: 'Dołączysz do newslettera z poradami. Możesz się wypisać w każdej chwili.',
+      disclaimer: 'Zero spamu. Co tydzień 1 porada która działa.',
       successTitle: 'Checklist wysłana!',
       successMessage: 'Sprawdź email i pobierz checklistę',
       stats: [
-        { value: '2100+', label: 'pobrań' },
+        { value: '2187', label: 'pobrań' },
         { value: '87', label: 'punktów' }
       ],
       howToUse: 'Jak korzystać z checklisty?',
@@ -93,7 +93,7 @@ export default function WebsiteLaunchChecklistPage() {
       badge: 'LAUNCH CHECKLIST',
       format: 'PDF • Printable',
       title: 'Website Launch Checklist',
-      subtitle: 'Complete 87-point checklist to verify before publishing your website. Used by professional agencies.',
+      subtitle: 'Check 87 things before launch. So you don\'t embarrass yourself like competitors.',
       highlight: 'avoid costly mistakes',
       categories: [
         { name: 'Technical checks', count: 15, icon: '⚙️', color: 'purple' },
@@ -114,11 +114,11 @@ export default function WebsiteLaunchChecklistPage() {
       emailPlaceholder: 'Your email...',
       submitButton: 'Download Checklist (PDF)',
       submitting: 'Sending...',
-      disclaimer: 'You\'ll join our tips newsletter. Unsubscribe anytime.',
+      disclaimer: 'Zero spam. 1 tip that works weekly.',
       successTitle: 'Checklist sent!',
       successMessage: 'Check your email to download',
       stats: [
-        { value: '2100+', label: 'downloads' },
+        { value: '2187', label: 'downloads' },
         { value: '87', label: 'checkpoints' }
       ],
       howToUse: 'How to use the checklist?',

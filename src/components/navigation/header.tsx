@@ -43,6 +43,7 @@ export function Header() {
       submenu: [
         { name: '10 błędów które kosztują klientów', href: `/${locale}/download/10-bledow-poradnik` },
         { name: '50 elementów zwiększających sprzedaż', href: `/${locale}/download/50-elementow-checklist` },
+        { name: 'Jak być #1 w Google lokalnie', href: `/${locale}/download/seo-local-guide` },
         { name: 'Automatyzacja marketingu - przewodnik', href: `/${locale}/download/marketing-automation-guide` },
         { name: 'Checklist przed startem strony', href: `/${locale}/download/website-launch-checklist` },
         { name: 'Kalkulator ROI', href: `/${locale}/download/roi-calculator` }
@@ -71,6 +72,7 @@ export function Header() {
       submenu: [
         { name: '10 Mistakes That Cost You Customers', href: `/${locale}/download/10-bledow-poradnik` },
         { name: '50 Elements That Increase Sales', href: `/${locale}/download/50-elementow-checklist` },
+        { name: 'How to be #1 on Google locally', href: `/${locale}/download/seo-local-guide` },
         { name: 'Marketing Automation Guide', href: `/${locale}/download/marketing-automation-guide` },
         { name: 'Website Launch Checklist', href: `/${locale}/download/website-launch-checklist` },
         { name: 'ROI Calculator', href: `/${locale}/download/roi-calculator` }

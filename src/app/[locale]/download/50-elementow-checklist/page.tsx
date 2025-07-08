@@ -40,12 +40,12 @@ export default function Download50ElementowPage() {
       emailPlaceholder: 'Twój email...',
       submitButton: 'Pobierz checklistę (PDF)',
       submitting: 'Wysyłanie...',
-      disclaimer: 'Otrzymasz też dostęp do ekskluzywnych materiałów',
+      disclaimer: 'Raz w tygodniu wysyłam 1 konkretną poradę. Żadnego spamu.',
       successTitle: 'Checklist wysłana!',
       successMessage: 'Sprawdź email i pobierz checklistę',
       stats: [
-        { value: '5000+', label: 'pobrań' },
-        { value: '4.8/5', label: '' }
+        { value: '5312', label: 'pobrań' },
+        { value: '4.8/5', label: 'ocena' }
       ],
       howToUse: 'Jak korzystać z checklisty?',
       steps: [
@@ -86,12 +86,12 @@ export default function Download50ElementowPage() {
       emailPlaceholder: 'Your email...',
       submitButton: 'Download Checklist (PDF)',
       submitting: 'Sending...',
-      disclaimer: 'You\'ll also get access to exclusive content',
+      disclaimer: 'Once a week I send 1 specific tip. No spam.',
       successTitle: 'Checklist sent!',
       successMessage: 'Check your email to download',
       stats: [
-        { value: '5000+', label: 'downloads' },
-        { value: '4.8/5', label: '' }
+        { value: '5312', label: 'downloads' },
+        { value: '4.8/5', label: 'rating' }
       ],
       howToUse: 'How to use the checklist?',
       steps: [

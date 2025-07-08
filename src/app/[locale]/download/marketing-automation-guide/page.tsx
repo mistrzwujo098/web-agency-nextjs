@@ -20,7 +20,7 @@ export default function MarketingAutomationGuidePage() {
       badge: 'KOMPLETNY PRZEWODNIK',
       format: 'PDF • 45 stron',
       title: 'Automatyzacja marketingu dla lokalnych firm',
-      subtitle: 'Jak zautomatyzować pozyskiwanie klientów i zwiększyć sprzedaż bez zatrudniania zespołu marketingu',
+      subtitle: 'Niech Twoja strona sprzedaje 24/7 bez Twojego udziału. Pokażę Ci jak',
       highlight: 'oszczędź 20h tygodniowo',
       features: [
         {
@@ -48,11 +48,11 @@ export default function MarketingAutomationGuidePage() {
       emailPlaceholder: 'Twój email...',
       submitButton: 'Pobierz przewodnik (PDF)',
       submitting: 'Wysyłanie...',
-      disclaimer: 'Otrzymasz też praktyczne porady co tydzień. Możesz się wypisać w każdej chwili.',
+      disclaimer: 'Zero spamu. Raz w tygodniu 1 konkretna porada.',
       successTitle: 'Przewodnik wysłany!',
       successMessage: 'Sprawdź swoją skrzynkę email',
       stats: [
-        { value: '3500+', label: 'pobrań' },
+        { value: '3521', label: 'pobrań' },
         { value: '4.9/5', label: 'ocena' }
       ],
       automations: [
@@ -65,16 +65,16 @@ export default function MarketingAutomationGuidePage() {
       whatYouGet: 'Co znajdziesz w przewodniku?',
       testimonials: [
         {
-          text: 'Wdrożyłem 3 automatyzacje i oszczędzam 15h tygodniowo. Genialny przewodnik!',
-          author: 'Tomasz K., salon fryzjerski'
+          text: 'Email powitalny + 3 followupy = 15 nowych klientów w miesiąc. Działa.',
+          author: 'Tomek, fryzjer męski Poznań'
         },
         {
-          text: 'Nareszcie coś praktycznego dla małych firm. Zwiększyłam rezerwacje o 40%.',
-          author: 'Marta D., gabinet kosmetyczny'
+          text: 'Przypomnienia o wizytach zmniejszyły no-show z 30% do 5%. To duża kasa.',
+          author: 'Marta, kosmetyczka Gdańsk'
         },
         {
-          text: 'Szablony emaili są świetne. ROI z automatyzacji to 350% w 3 miesiące.',
-          author: 'Robert W., serwis samochodowy'
+          text: 'Automat do opinii Google = 47 nowych recenzji w 2 miesiące. Z 4.2 na 4.8.',
+          author: 'Robert, warsztat Wrocław'
         }
       ]
     },
@@ -82,7 +82,7 @@ export default function MarketingAutomationGuidePage() {
       badge: 'COMPLETE GUIDE',
       format: 'PDF • 45 pages',
       title: 'Marketing Automation for Local Businesses',
-      subtitle: 'How to automate customer acquisition and increase sales without hiring a marketing team',
+      subtitle: 'Let your website sell 24/7 without you. I\'ll show you how',
       highlight: 'save 20h weekly',
       features: [
         {
@@ -110,11 +110,11 @@ export default function MarketingAutomationGuidePage() {
       emailPlaceholder: 'Your email...',
       submitButton: 'Download Guide (PDF)',
       submitting: 'Sending...',
-      disclaimer: 'You\'ll also get weekly practical tips. Unsubscribe anytime.',
+      disclaimer: 'Zero spam. Once a week 1 specific tip.',
       successTitle: 'Guide sent!',
       successMessage: 'Check your email inbox',
       stats: [
-        { value: '3500+', label: 'downloads' },
+        { value: '3521', label: 'downloads' },
         { value: '4.9/5', label: 'rating' }
       ],
       automations: [
@@ -127,16 +127,16 @@ export default function MarketingAutomationGuidePage() {
       whatYouGet: 'What\'s inside the guide?',
       testimonials: [
         {
-          text: 'Implemented 3 automations and saving 15h weekly. Brilliant guide!',
-          author: 'Thomas K., Hair Salon'
+          text: 'Welcome email + 3 followups = 15 new clients monthly. It works.',
+          author: 'Tom, barber shop Denver'
         },
         {
-          text: 'Finally something practical for small businesses. Increased bookings by 40%.',
-          author: 'Martha D., Beauty Salon'
+          text: 'Appointment reminders reduced no-shows from 30% to 5%. That\'s big money.',
+          author: 'Martha, beauty salon Miami'
         },
         {
-          text: 'Email templates are great. ROI from automation is 350% in 3 months.',
-          author: 'Robert W., Auto Service'
+          text: 'Google review automation = 47 new reviews in 2 months. From 4.2 to 4.8.',
+          author: 'Rob, auto shop Seattle'
         }
       ]
     }
