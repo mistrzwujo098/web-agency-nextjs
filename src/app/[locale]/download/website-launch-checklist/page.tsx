@@ -240,62 +240,89 @@ export default function WebsiteLaunchChecklistPage() {
                 ))}
               </div>
 
-              {/* Form */}
-              {showForm ? (
-                <motion.form
+              {/* Tool Options */}
+              <div className="space-y-4">
+                {/* Online Tool Button */}
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
-                  onSubmit={handleSubmit}
                   className="glass-dark rounded-2xl p-6"
                 >
                   <h3 className="text-lg font-semibold text-white mb-4">
-                    {t.formTitle}
+                    {isPL ? '🌐 Użyj narzędzia online' : '🌐 Use Online Tool'}
                   </h3>
-                  <div className="space-y-4">
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder={t.emailPlaceholder}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
-                      required
-                    />
-                    <Button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white shadow-lg disabled:opacity-50"
-                    >
-                      {isSubmitting ? (
-                        <span className="flex items-center gap-2">
-                          <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                          {t.submitting}
-                        </span>
-                      ) : (
-                        <span className="flex items-center gap-2">
-                          <Download className="w-5 h-5" />
-                          {t.submitButton}
-                        </span>
-                      )}
-                    </Button>
-                  </div>
-                  <p className="text-xs text-gray-500 mt-3 text-center">
-                    {t.disclaimer}
+                  <p className="text-gray-300 mb-4">
+                    {isPL ? 'Interaktywna wersja z zarządzaniem zadań i śledzeniem postępu' : 'Interactive version with task management and progress tracking'}
                   </p>
-                </motion.form>
-              ) : (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="glass-dark rounded-2xl p-6 text-center"
-                >
-                  <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    {t.successTitle}
-                  </h3>
-                  <p className="text-gray-400">{t.successMessage}</p>
+                  <Button
+                    onClick={() => window.location.href = `/${locale}/tools/website-launch-checklist`}
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg"
+                  >
+                    <span className="flex items-center gap-2">
+                      <Rocket className="w-5 h-5" />
+                      {isPL ? 'Otwórz interaktywne narzędzie' : 'Open Interactive Tool'}
+                    </span>
+                  </Button>
                 </motion.div>
-              )}
+
+                {/* Download Form */}
+                {showForm ? (
+                  <motion.form
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    onSubmit={handleSubmit}
+                    className="glass-dark rounded-2xl p-6"
+                  >
+                    <h3 className="text-lg font-semibold text-white mb-4">
+                      {isPL ? '📄 Lub pobierz PDF do druku' : '📄 Or Download PDF Version'}
+                    </h3>
+                    <div className="space-y-4">
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder={t.emailPlaceholder}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                        required
+                      />
+                      <Button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white shadow-lg disabled:opacity-50"
+                      >
+                        {isSubmitting ? (
+                          <span className="flex items-center gap-2">
+                            <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                            {t.submitting}
+                          </span>
+                        ) : (
+                          <span className="flex items-center gap-2">
+                            <Download className="w-5 h-5" />
+                            {t.submitButton}
+                          </span>
+                        )}
+                      </Button>
+                    </div>
+                    <p className="text-xs text-gray-500 mt-3 text-center">
+                      {t.disclaimer}
+                    </p>
+                  </motion.form>
+                ) : (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="glass-dark rounded-2xl p-6 text-center"
+                  >
+                    <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      {t.successTitle}
+                    </h3>
+                    <p className="text-gray-400">{t.successMessage}</p>
+                  </motion.div>
+                )}
+              </div>
 
               <div className="flex items-center gap-6 mt-8">
                 {t.stats.map((stat, index) => (
