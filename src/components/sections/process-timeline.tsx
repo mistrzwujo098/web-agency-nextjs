@@ -110,7 +110,7 @@ export function ProcessTimeline() {
   }, [steps])
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900 relative overflow-hidden">
+    <section className="py-24 md:py-32 relative overflow-hidden">
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -119,17 +119,17 @@ export function ProcessTimeline() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Proces, który przynosi rezultaty
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="text-gradient">Proces, który przynosi rezultaty</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
             Od pierwszego kontaktu do działającej strony w 14 dni
           </p>
         </motion.div>
 
         <div ref={timelineRef} className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-white/20 transform md:-translate-x-1/2">
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500/20 via-blue-500/20 to-purple-500/20 transform md:-translate-x-1/2">
             <div 
               ref={progressRef}
               className="absolute top-0 left-0 w-full bg-gradient-to-b from-purple-600 to-blue-600"
@@ -150,7 +150,7 @@ export function ProcessTimeline() {
                 <div className={`flex-1 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
                   <motion.div
                     whileHover={{ scale: 1.02 }}
-                    className="bg-white/10 backdrop-blur-md rounded-2xl p-6 ml-20 md:ml-0 border border-white/20"
+                    className="glass-dark rounded-3xl p-6 ml-20 md:ml-0 shadow-xl hover:shadow-purple-500/10 transition-all duration-300 border border-white/10"
                   >
                     <div className={`flex items-center gap-4 mb-4 ${
                       index % 2 === 0 ? 'md:flex-row-reverse' : ''
@@ -197,7 +197,7 @@ export function ProcessTimeline() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-16 text-center"
         >
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 max-w-3xl mx-auto">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl p-8 max-w-3xl mx-auto shadow-2xl border border-purple-400/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Gotowa strona w 14 dni roboczych
             </h3>

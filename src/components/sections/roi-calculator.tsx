@@ -52,10 +52,13 @@ export function ROICalculator() {
   }, [visitors, conversionRate, avgOrderValue])
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900 relative overflow-hidden">
-      {/* Animated Background */}
+    <section className="py-24 md:py-32 relative overflow-hidden">
+      {/* Modern gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-950/20 via-transparent to-blue-950/20" />
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 animate-pulse" />
+        <div className="absolute top-0 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob" />
+        <div className="absolute top-0 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000" />
+        <div className="absolute -bottom-32 left-20 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-4000" />
       </div>
 
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
@@ -66,13 +69,13 @@ export function ROICalculator() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full mb-4">
-            <Calculator className="w-8 h-8 text-white" />
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl mb-6 shadow-2xl animate-glow">
+            <Calculator className="w-10 h-10 text-white" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Kalkulator ROI - Zobacz ile tracisz
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="text-gradient">Kalkulator ROI</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
             Wprowadź swoje dane i zobacz, ile dodatkowych przychodów możesz generować z obecnego ruchu
           </p>
         </motion.div>
@@ -84,7 +87,7 @@ export function ROICalculator() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20"
+            className="glass-dark rounded-3xl p-8 shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 border border-white/10"
           >
             <h3 className="text-2xl font-bold text-white mb-6">Twoje obecne wyniki</h3>
             
@@ -101,7 +104,7 @@ export function ROICalculator() {
                   step="1000"
                   value={visitors}
                   onChange={(e) => setVisitors(parseInt(e.target.value))}
-                  className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
+                  className="w-full h-3 bg-gray-800 rounded-full appearance-none cursor-pointer slider"
                 />
               </div>
 
@@ -117,7 +120,7 @@ export function ROICalculator() {
                   step="0.1"
                   value={conversionRate}
                   onChange={(e) => setConversionRate(parseFloat(e.target.value))}
-                  className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
+                  className="w-full h-3 bg-gray-800 rounded-full appearance-none cursor-pointer slider"
                 />
               </div>
 
@@ -133,7 +136,7 @@ export function ROICalculator() {
                   step="50"
                   value={avgOrderValue}
                   onChange={(e) => setAvgOrderValue(parseInt(e.target.value))}
-                  className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
+                  className="w-full h-3 bg-gray-800 rounded-full appearance-none cursor-pointer slider"
                 />
               </div>
             </div>
@@ -149,7 +152,7 @@ export function ROICalculator() {
             className="space-y-6"
           >
             {/* Current State */}
-            <div className="bg-red-500/20 backdrop-blur-md rounded-2xl p-6 border border-red-500/30">
+            <div className="bg-gradient-to-br from-red-950/40 to-red-900/20 backdrop-blur-md rounded-2xl p-6 border border-red-500/40 shadow-xl">
               <h4 className="text-xl font-bold text-white mb-4 flex items-center">
                 <TrendingUp className="w-5 h-5 mr-2 text-red-400" />
                 Obecna sytuacja
@@ -171,7 +174,7 @@ export function ROICalculator() {
             </div>
 
             {/* Improved State */}
-            <div className="bg-green-500/20 backdrop-blur-md rounded-2xl p-6 border border-green-500/30">
+            <div className="bg-gradient-to-br from-green-950/40 to-green-900/20 backdrop-blur-md rounded-2xl p-6 border border-green-500/40 shadow-xl">
               <h4 className="text-xl font-bold text-white mb-4 flex items-center">
                 <TrendingUp className="w-5 h-5 mr-2 text-green-400" />
                 Po optymalizacji (+30% konwersji)
@@ -193,7 +196,7 @@ export function ROICalculator() {
             </div>
 
             {/* ROI Summary */}
-            <div className="bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl p-6 text-white">
+            <div className="bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl p-6 text-white shadow-2xl border border-purple-400/20">
               <h4 className="text-xl font-bold mb-4 flex items-center">
                 <Euro className="w-5 h-5 mr-2" />
                 Twój potencjalny zysk
@@ -216,7 +219,7 @@ export function ROICalculator() {
 
             <Button 
               size="lg" 
-              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 text-lg font-semibold py-6"
             >
               Chcę zwiększyć swoje przychody
             </Button>

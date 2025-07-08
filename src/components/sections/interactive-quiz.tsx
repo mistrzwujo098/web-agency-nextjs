@@ -226,7 +226,7 @@ export function InteractiveQuiz() {
   const result = getResult(totalScore)
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900 relative overflow-hidden">
+    <section className="py-24 md:py-32 relative overflow-hidden">
       {/* Confetti Container */}
       <div ref={confettiRef} className="absolute inset-0 pointer-events-none z-20" />
 
@@ -246,13 +246,13 @@ export function InteractiveQuiz() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full mb-4">
-            <HelpCircle className="w-8 h-8 text-white" />
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl mb-6 shadow-2xl animate-glow">
+            <HelpCircle className="w-10 h-10 text-white" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Sprawdź kondycję swojej strony
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="text-gradient">Sprawdź kondycję swojej strony</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
             Odpowiedz na 6 krótkich pytań i otrzymaj spersonalizowaną analizę
           </p>
         </motion.div>
@@ -265,7 +265,7 @@ export function InteractiveQuiz() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.3 }}
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20"
+              className="glass-dark rounded-3xl p-8 shadow-2xl border border-white/10"
             >
               {/* Progress Bar */}
               <div className="mb-8">
@@ -295,10 +295,10 @@ export function InteractiveQuiz() {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={() => handleAnswer(index)}
-                    className={`option-${index} w-full text-left p-4 rounded-xl border transition-all duration-300 ${
+                    className={`option-${index} w-full text-left p-5 rounded-xl border transition-all duration-300 ${
                       selectedOption === index
-                        ? 'bg-gradient-to-r from-purple-600/30 to-blue-600/30 border-purple-500'
-                        : 'bg-white/5 border-white/20 hover:bg-white/10 hover:border-white/30'
+                        ? 'bg-gradient-to-r from-purple-600/40 to-blue-600/40 border-purple-500/60 shadow-lg'
+                        : 'bg-gray-900/50 border-gray-700/50 hover:bg-gray-800/50 hover:border-purple-500/30 hover:shadow-md'
                     }`}
                   >
                     <div className="flex items-center justify-between">
@@ -326,7 +326,7 @@ export function InteractiveQuiz() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20"
+              className="glass-dark rounded-3xl p-8 shadow-2xl border border-white/10"
             >
               {/* Result Header */}
               <div className="text-center mb-8">

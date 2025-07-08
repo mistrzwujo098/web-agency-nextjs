@@ -62,7 +62,7 @@ export function MythsVsFacts() {
   }
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-purple-900/10 relative overflow-hidden">
+    <section className="py-24 md:py-32 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -79,10 +79,10 @@ export function MythsVsFacts() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Mity vs Fakty o stronach internetowych
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="text-gradient">Mity vs Fakty</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
             Kliknij kartę, aby odkryć prawdę o popularnych mitach
           </p>
         </motion.div>
@@ -110,7 +110,7 @@ export function MythsVsFacts() {
                   }`}
                   style={{ backfaceVisibility: 'hidden' }}
                 >
-                  <div className="h-full bg-red-500/20 backdrop-blur-md border border-red-500/30 rounded-2xl p-6 flex flex-col">
+                  <div className="h-full bg-gradient-to-br from-red-950/50 to-red-900/30 backdrop-blur-md border border-red-500/40 rounded-3xl p-6 flex flex-col shadow-xl">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-4xl">{item.icon}</span>
                       <div className="w-8 h-8 bg-red-500/30 rounded-full flex items-center justify-center">
@@ -142,7 +142,7 @@ export function MythsVsFacts() {
                     transform: 'rotateY(180deg)'
                   }}
                 >
-                  <div className="h-full bg-green-500/20 backdrop-blur-md border border-green-500/30 rounded-2xl p-6 flex flex-col">
+                  <div className="h-full bg-gradient-to-br from-green-950/50 to-green-900/30 backdrop-blur-md border border-green-500/40 rounded-3xl p-6 flex flex-col shadow-xl">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-4xl">{item.icon}</span>
                       <div className="w-8 h-8 bg-green-500/30 rounded-full flex items-center justify-center">
@@ -179,7 +179,7 @@ export function MythsVsFacts() {
           <p className="text-xl text-gray-300 mb-6">
             Nie pozwól, aby mity kosztowały Cię klientów
           </p>
-          <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-xl">
+          <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-6 rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-2xl text-lg border border-purple-400/20">
             Zbuduj stronę opartą na faktach
           </button>
         </motion.div>

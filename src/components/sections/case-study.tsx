@@ -83,7 +83,7 @@ export function CaseStudy() {
   }, [activeTab])
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-gray-900 via-purple-900/10 to-gray-900 relative overflow-hidden">
+    <section className="py-24 md:py-32 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -100,13 +100,13 @@ export function CaseStudy() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full mb-4">
-            <Award className="w-8 h-8 text-white" />
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl mb-6 shadow-2xl animate-glow">
+            <Award className="w-10 h-10 text-white" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Case Study: 300% wzrost przychodów w 3 miesiące
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="text-gradient">Case Study: 300% wzrost</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
             Zobacz, jak pomogliśmy lokalnej restauracji stać się liderem online w swojej branży
           </p>
         </motion.div>
@@ -117,7 +117,7 @@ export function CaseStudy() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-white/10 backdrop-blur-md rounded-2xl p-8 mb-8 border border-white/20"
+          className="glass-dark rounded-3xl p-8 mb-8 shadow-2xl border border-white/10"
         >
           <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
             <div>
@@ -129,8 +129,8 @@ export function CaseStudy() {
                 variant={activeTab === 'overview' ? 'default' : 'outline'}
                 onClick={() => setActiveTab('overview')}
                 className={activeTab === 'overview' 
-                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 border-0' 
-                  : 'border-white/20 text-white hover:bg-white/10'
+                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 border-0 shadow-lg' 
+                  : 'border-white/20 text-gray-300 hover:bg-white/10 hover:text-white'
                 }
               >
                 Przegląd

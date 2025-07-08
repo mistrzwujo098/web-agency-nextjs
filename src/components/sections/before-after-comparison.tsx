@@ -54,7 +54,7 @@ export function BeforeAfterComparison() {
   }
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-purple-900/10 relative overflow-hidden">
+    <section className="py-24 md:py-32 relative overflow-hidden">
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -63,10 +63,10 @@ export function BeforeAfterComparison() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Zobacz różnicę - Przed i Po optymalizacji
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="text-gradient">Zobacz różnicę</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
             Przesuń suwak, aby zobaczyć transformację strony i jej wydajności
           </p>
         </motion.div>
@@ -81,12 +81,12 @@ export function BeforeAfterComparison() {
         >
           <div 
             ref={containerRef}
-            className="relative h-[500px] rounded-2xl overflow-hidden cursor-ew-resize"
+            className="relative h-[500px] rounded-3xl overflow-hidden cursor-ew-resize shadow-2xl border border-white/10"
             onMouseDown={() => setIsDragging(true)}
           >
             {/* After Image */}
             <div className="absolute inset-0">
-              <div className="w-full h-full bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center">
+              <div className="w-full h-full bg-gradient-to-br from-purple-950/40 via-blue-950/30 to-indigo-950/40 flex items-center justify-center backdrop-blur-sm">
                 <div className="text-center">
                   <Zap className="w-20 h-20 text-green-400 mx-auto mb-4" />
                   <h3 className="text-3xl font-bold text-white mb-2">Po optymalizacji</h3>
@@ -100,7 +100,7 @@ export function BeforeAfterComparison() {
               className="absolute inset-0"
               style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
             >
-              <div className="w-full h-full bg-gradient-to-br from-red-600/20 to-gray-600/20 flex items-center justify-center">
+              <div className="w-full h-full bg-gradient-to-br from-red-950/50 via-gray-900/50 to-gray-950/50 flex items-center justify-center backdrop-blur-sm">
                 <div className="text-center">
                   <Timer className="w-20 h-20 text-red-400 mx-auto mb-4 animate-pulse" />
                   <h3 className="text-3xl font-bold text-white mb-2">Przed optymalizacją</h3>
@@ -133,7 +133,7 @@ export function BeforeAfterComparison() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="bg-red-500/20 backdrop-blur-md rounded-2xl p-8 border border-red-500/30"
+            className="bg-gradient-to-br from-red-950/50 to-red-900/30 backdrop-blur-md rounded-3xl p-8 border border-red-500/40 shadow-xl"
           >
             <h3 className="text-2xl font-bold text-white mb-6">Przed optymalizacją</h3>
             <div className="space-y-4">
@@ -171,7 +171,7 @@ export function BeforeAfterComparison() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="bg-green-500/20 backdrop-blur-md rounded-2xl p-8 border border-green-500/30"
+            className="bg-gradient-to-br from-green-950/50 to-green-900/30 backdrop-blur-md rounded-3xl p-8 border border-green-500/40 shadow-xl"
           >
             <h3 className="text-2xl font-bold text-white mb-6">Po optymalizacji</h3>
             <div className="space-y-4">
