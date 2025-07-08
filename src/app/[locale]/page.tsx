@@ -1,9 +1,15 @@
 import { Hero } from '@/components/sections/hero'
 import { TrustSection } from '@/components/sections/trust-section'
 import { EducationSection } from '@/components/sections/education-section'
+import { ROICalculator } from '@/components/sections/roi-calculator'
+import { BeforeAfterComparison } from '@/components/sections/before-after-comparison'
+import { ProcessTimeline } from '@/components/sections/process-timeline'
 import { TestimonialsSection } from '@/components/sections/testimonials-section'
+import { CaseStudy } from '@/components/sections/case-study'
+import { MythsVsFacts } from '@/components/sections/myths-vs-facts'
 import { PricingSection } from '@/components/sections/pricing-section'
 import { PortfolioSection } from '@/components/sections/portfolio-section'
+import { InteractiveQuiz } from '@/components/sections/interactive-quiz'
 import { GuaranteeSection } from '@/components/sections/guarantee-section'
 import { TeamSection } from '@/components/sections/team-section'
 import { FAQSection } from '@/components/sections/faq-section'
@@ -19,14 +25,18 @@ export default function Home() {
       <Hero />
       <TrustSection />
       <EducationSection />
+      <ROICalculator />
+      <BeforeAfterComparison />
+      <ProcessTimeline />
       <TestimonialsSection />
+      <MythsVsFacts />
+      <CaseStudy />
       <PricingSection />
       <PortfolioSection />
-      <TestimonialsSection />
       <GuaranteeSection />
+      <InteractiveQuiz />
       <TeamSection />
       <FAQSection />
-      <TestimonialsSection />
       <FinalCTASection />
       <ExitIntentPopup />
     </>
