@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { ArrowRight, Star } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import { NeuralBackground } from '@/components/neural-background'
 
 export function Hero() {
   const t = useTranslations('hero')
@@ -27,20 +28,9 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Video Background */}
+      {/* Neural Network Background */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          poster="/backgrounds/hero-poster.png"
-        >
-          <source src="/backgrounds/hero-video.mp4" type="video/mp4" />
-        </video>
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+        <NeuralBackground />
         
         {/* Animated Gradient Overlay */}
         <div 
