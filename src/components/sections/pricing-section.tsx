@@ -47,8 +47,13 @@ export function PricingSection() {
   ]
 
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-purple-900/10 relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-blue-600/10 to-purple-600/10 animate-pulse" />
+      </div>
+      
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +61,7 @@ export function PricingSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             {t('title')}
           </h2>
         </motion.div>
@@ -69,26 +74,26 @@ export function PricingSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative rounded-lg p-8 ${
+              className={`relative rounded-xl p-8 transition-all duration-300 hover:scale-105 ${
                 plan.popular
-                  ? 'bg-primary text-white shadow-xl scale-105'
-                  : 'bg-gray-50'
+                  ? 'bg-gradient-to-br from-purple-600 to-blue-600 text-white shadow-2xl scale-105 border-2 border-purple-400'
+                  : 'bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20'
               }`}
             >
               {plan.badge && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-medium">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-4 py-1 rounded-full text-sm font-medium shadow-lg">
                   {plan.badge}
                 </div>
               )}
               
               <div className="mb-6">
                 <h3 className={`text-2xl font-bold mb-2 ${
-                  plan.popular ? 'text-white' : 'text-gray-900'
+                  plan.popular ? 'text-white' : 'text-white'
                 }`}>
                   {plan.name}
                 </h3>
                 <div className={`text-3xl font-bold ${
-                  plan.popular ? 'text-white' : 'text-primary'
+                  plan.popular ? 'text-white' : 'text-purple-400'
                 }`}>
                   {plan.price}
                 </div>
@@ -100,7 +105,7 @@ export function PricingSection() {
                     <Check className={`h-5 w-5 mr-2 flex-shrink-0 ${
                       plan.popular ? 'text-white' : 'text-green-500'
                     }`} />
-                    <span className={plan.popular ? 'text-white' : 'text-gray-600'}>
+                    <span className={plan.popular ? 'text-white' : 'text-gray-300'}>
                       {feature}
                     </span>
                   </li>
@@ -108,8 +113,11 @@ export function PricingSection() {
               </ul>
 
               <Button
-                className="w-full"
-                variant={plan.popular ? 'secondary' : 'default'}
+                className={`w-full transition-all duration-300 hover:scale-105 ${
+                  plan.popular 
+                    ? 'bg-white text-purple-600 hover:bg-gray-100' 
+                    : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0'
+                }`}
                 size="lg"
               >
                 {plan.cta}
