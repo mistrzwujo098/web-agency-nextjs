@@ -99,7 +99,7 @@ export function MythsVsFacts() {
               onClick={() => handleCardFlip(index)}
             >
               <div 
-                ref={el => cardRefs.current[index] = el}
+                ref={el => {cardRefs.current[index] = el}}
                 className="absolute inset-0 w-full h-full transition-transform duration-600 preserve-3d"
                 style={{ transformStyle: 'preserve-3d' }}
               >
