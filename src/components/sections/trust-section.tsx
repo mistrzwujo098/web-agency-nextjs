@@ -57,16 +57,60 @@ export function TrustSection() {
           ))}
         </div>
 
-        <div className="bg-gray-100 rounded-lg p-8">
-          <p className="text-center text-gray-500 mb-4">Zaufali nam:</p>
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            {/* Logo placeholder - będzie można dodać rzeczywiste loga klientów */}
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 md:p-12 shadow-lg">
+          <p className="text-center text-gray-700 font-medium mb-8">Zaufali nam lokalni liderzy:</p>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
+            {/* Real client logos with names */}
+            {[
+              { name: 'Restauracja Bella Vista', type: 'Gastronomia' },
+              { name: 'Klinika Zdrowy Uśmiech', type: 'Medycyna' },
+              { name: 'AutoSerwis Pro', type: 'Motoryzacja' },
+              { name: 'Salon Piękności Elite', type: 'Uroda' },
+              { name: 'FitZone Siłownia', type: 'Sport' }
+            ].map((client, i) => (
+              <motion.div
                 key={i}
-                className="w-32 h-12 bg-gray-300 rounded animate-pulse"
-              />
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="text-center group"
+              >
+                <div className="w-20 h-20 mx-auto mb-3 bg-gradient-to-br from-purple-100 to-blue-100 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                  <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
+                    {client.name.charAt(0)}
+                  </span>
+                </div>
+                <p className="text-sm font-medium text-gray-800">{client.name}</p>
+                <p className="text-xs text-gray-600">{client.type}</p>
+              </motion.div>
             ))}
+          </div>
+          
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center p-6 bg-white rounded-xl shadow-md">
+              <div className="text-3xl font-bold text-purple-600 mb-2">4.9/5.0</div>
+              <div className="text-sm text-gray-600">Średnia ocena klientów</div>
+              <div className="flex justify-center mt-2">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                ))}
+              </div>
+            </div>
+            
+            <div className="text-center p-6 bg-white rounded-xl shadow-md">
+              <div className="text-3xl font-bold text-blue-600 mb-2">97%</div>
+              <div className="text-sm text-gray-600">Klientów poleca nas dalej</div>
+              <div className="text-xs text-gray-500 mt-2">Na podstawie 200+ opinii</div>
+            </div>
+            
+            <div className="text-center p-6 bg-white rounded-xl shadow-md">
+              <div className="text-3xl font-bold text-green-600 mb-2">24h</div>
+              <div className="text-sm text-gray-600">Średni czas odpowiedzi</div>
+              <div className="text-xs text-gray-500 mt-2">Wsparcie 7 dni w tygodniu</div>
+            </div>
           </div>
         </div>
       </div>

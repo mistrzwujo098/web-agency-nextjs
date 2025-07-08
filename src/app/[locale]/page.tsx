@@ -13,6 +13,7 @@ import { InteractiveQuiz } from '@/components/sections/interactive-quiz'
 import { GuaranteeSection } from '@/components/sections/guarantee-section'
 import { TeamSection } from '@/components/sections/team-section'
 import { FAQSection } from '@/components/sections/faq-section'
+import { ContactForm } from '@/components/sections/contact-form'
 import { FinalCTASection } from '@/components/sections/final-cta-section'
 import { ExitIntentPopup } from '@/components/exit-intent-popup'
 import { generateMetadata } from './metadata'
@@ -37,6 +38,7 @@ export default function Home() {
       <InteractiveQuiz />
       <TeamSection />
       <FAQSection />
+      <ContactForm />
       <FinalCTASection />
       <ExitIntentPopup />
     </>

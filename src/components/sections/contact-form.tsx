@@ -1,0 +1,364 @@
+'use client'
+
+import { useState } from 'react'
+import { useTranslations } from 'next-intl'
+import { motion } from 'framer-motion'
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Clock,
+  Send,
+  CheckCircle,
+  AlertCircle
+} from 'lucide-react'
+import { Button } from '@/components/ui/button'
+
+interface FormData {
+  name: string
+  email: string
+  phone: string
+  company: string
+  service: string
+  message: string
+}
+
+export function ContactForm() {
+  const t = useTranslations('contact')
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    service: '',
+    message: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const services = [
+    'Strona internetowa',
+    'Sklep e-commerce',
+    'Optymalizacja SEO',
+    'Marketing automation',
+    'Redesign istniejącej strony',
+    'Konsultacja'
+  ]
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    
+    try {
+      const response = await fetch('/api/forms/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form')
+      }
+      
+      setSubmitStatus('success')
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        service: '',
+        message: ''
+      })
+      
+      // Redirect to thank you page after 2 seconds
+      setTimeout(() => {
+        window.location.href = '/pl/thank-you/contact'
+      }, 2000)
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  return (
+    <section id="contact" className="py-16 md:py-24 bg-gradient-to-b from-gray-900 to-gray-950">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Rozpocznij swoją transformację cyfrową
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Skontaktuj się z nami już dziś i otrzymaj darmową analizę swojej obecnej strony oraz plan działania
+          </p>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-1 space-y-6"
+          >
+            <div className="glass-dark rounded-2xl p-8 space-y-6">
+              <h3 className="text-2xl font-bold text-white mb-6">
+                Dane kontaktowe
+              </h3>
+              
+              <div className="space-y-4">
+                <a href="tel:+48123456789" className="flex items-start gap-4 group">
+                  <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-purple-500/30 transition-colors">
+                    <Phone className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <div>
+                    <p className="text-gray-400 text-sm">Zadzwoń do nas</p>
+                    <p className="text-white font-medium">+48 123 456 789</p>
+                  </div>
+                </a>
+                
+                <a href="mailto:kontakt@webcraftai.pl" className="flex items-start gap-4 group">
+                  <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500/30 transition-colors">
+                    <Mail className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <div>
+                    <p className="text-gray-400 text-sm">Napisz do nas</p>
+                    <p className="text-white font-medium">kontakt@webcraftai.pl</p>
+                  </div>
+                </a>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-green-400" />
+                  </div>
+                  <div>
+                    <p className="text-gray-400 text-sm">Nasze biuro</p>
+                    <p className="text-white font-medium">ul. Innowacyjna 10<br />00-001 Warszawa</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <p className="text-gray-400 text-sm">Godziny pracy</p>
+                    <p className="text-white font-medium">Pon-Pt: 9:00 - 17:00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Quick Benefits */}
+            <div className="glass-dark rounded-2xl p-8">
+              <h4 className="text-lg font-semibold text-white mb-4">
+                Dlaczego warto z nami współpracować?
+              </h4>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Gwarancja wzrostu konwersji o 30%</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Darmowa analiza i wycena</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Wsparcie 24/7 po wdrożeniu</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Bez ukrytych kosztów</span>
+                </li>
+              </ul>
+            </div>
+          </motion.div>
+
+          {/* Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-2"
+          >
+            <form onSubmit={handleSubmit} className="glass-dark rounded-2xl p-8 space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                    Imię i nazwisko *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
+                    placeholder="Jan Kowalski"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
+                    placeholder="jan@firma.pl"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                    Telefon
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
+                    placeholder="+48 123 456 789"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                    Nazwa firmy
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
+                    placeholder="Nazwa Twojej firmy"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                  Interesująca usługa *
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:border-purple-500 transition-colors"
+                >
+                  <option value="" className="bg-gray-900">Wybierz usługę...</option>
+                  {services.map(service => (
+                    <option key={service} value={service} className="bg-gray-900">
+                      {service}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  Wiadomość *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={4}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-purple-500 transition-colors resize-none"
+                  placeholder="Opisz swój projekt lub zadaj pytanie..."
+                />
+              </div>
+              
+              {/* Submit Status Messages */}
+              {submitStatus === 'success' && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex items-center gap-2 p-4 bg-green-500/20 border border-green-500/50 rounded-xl text-green-400"
+                >
+                  <CheckCircle className="w-5 h-5" />
+                  <span>Wiadomość została wysłana! Przekierowujemy...</span>
+                </motion.div>
+              )}
+              
+              {submitStatus === 'error' && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex items-center gap-2 p-4 bg-red-500/20 border border-red-500/50 rounded-xl text-red-400"
+                >
+                  <AlertCircle className="w-5 h-5" />
+                  <span>Wystąpił błąd. Spróbuj ponownie.</span>
+                </motion.div>
+              )}
+              
+              <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
+                <p className="text-sm text-gray-400">
+                  * Pola wymagane
+                </p>
+                
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? (
+                    <span className="flex items-center gap-2">
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      Wysyłanie...
+                    </span>
+                  ) : (
+                    <span className="flex items-center gap-2">
+                      Wyślij wiadomość
+                      <Send className="w-4 h-4" />
+                    </span>
+                  )}
+                </Button>
+              </div>
+              
+              <p className="text-xs text-gray-500 text-center">
+                Wysyłając formularz zgadzasz się na przetwarzanie danych osobowych zgodnie z naszą{' '}
+                <a href="/privacy-policy" className="text-purple-400 hover:text-purple-300 underline">
+                  polityką prywatności
+                </a>
+              </p>
+            </form>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  )
+}

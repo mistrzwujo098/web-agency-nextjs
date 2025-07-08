@@ -2,9 +2,28 @@ import { MetadataRoute } from 'next'
 import { locales } from '@/i18n/config'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://yourwebsite.com'
+  const baseUrl = 'https://webcraftai.pl'
   
-  const routes = [''] // Dodaj tutaj więcej ścieżek gdy będziesz mieć więcej stron
+  const routes = [
+    '',
+    '/services/web-development',
+    '/services/ecommerce',
+    '/services/seo',
+    '/services/automation',
+    '/services/hosting',
+    '/about',
+    '/portfolio',
+    '/blog',
+    '/contact',
+    '/free-analysis',
+    '/case-studies',
+    '/guides',
+    '/faq',
+    '/privacy-policy',
+    '/terms-of-service',
+    '/cookie-policy',
+    '/gdpr',
+  ]
   
   const sitemap: MetadataRoute.Sitemap = []
   
@@ -13,8 +32,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       sitemap.push({
         url: `${baseUrl}/${locale}${route}`,
         lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: route === '' ? 1 : 0.8,
+        changeFrequency: route === '' ? 'daily' : route.includes('blog') ? 'daily' : 'weekly',
+        priority: route === '' ? 1 : route.includes('services') ? 0.9 : 0.8,
       })
     })
   })

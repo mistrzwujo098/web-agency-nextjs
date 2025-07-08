@@ -27,7 +27,7 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Neural Network Background */}
       <div className="absolute inset-0 z-0">
         <NeuralBackground />
@@ -80,7 +80,7 @@ export function Hero() {
             {t('title')}
           </motion.h1>
           <motion.p 
-            className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto"
+            className="text-lg md:text-xl text-gray-100 mb-8 max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 1, delay: 0.4 }}
@@ -110,7 +110,7 @@ export function Hero() {
           </motion.div>
 
           <motion.div 
-            className="flex items-center justify-center gap-2 text-sm text-gray-300"
+            className="flex items-center justify-center gap-2 text-sm text-gray-200"
             initial={{ opacity: 0 }}
             animate={{ opacity: isVisible ? 1 : 0 }}
             transition={{ delay: 1.2 }}
