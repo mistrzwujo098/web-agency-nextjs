@@ -13,6 +13,8 @@ import { generateMetadata } from './metadata'
 
 export { generateMetadata }
 
+export const dynamic = 'force-static'
+
 export default function Home() {
   return (
     <>
