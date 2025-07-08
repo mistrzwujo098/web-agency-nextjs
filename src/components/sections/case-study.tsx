@@ -228,7 +228,7 @@ export function CaseStudy() {
                   <Users className="w-8 h-8 text-purple-400 mb-3" />
                   <p className="text-sm text-gray-300 mb-1">Ruch miesięczny</p>
                   <p className="text-3xl font-bold text-white mb-2">
-                    <span ref={el => countUpRefs.current[0] = el} data-value={caseStudyData.results.traffic.after} data-decimals="0">0</span>
+                    <span ref={el => {countUpRefs.current[0] = el}} data-value={caseStudyData.results.traffic.after} data-decimals="0">0</span>
                   </p>
                   <p className="text-sm text-green-400 flex items-center">
                     <ArrowUp className="w-4 h-4 mr-1" />
@@ -244,7 +244,7 @@ export function CaseStudy() {
                   <ShoppingCart className="w-8 h-8 text-green-400 mb-3" />
                   <p className="text-sm text-gray-300 mb-1">Konwersja</p>
                   <p className="text-3xl font-bold text-white mb-2">
-                    <span ref={el => countUpRefs.current[1] = el} data-value={caseStudyData.results.conversion.after} data-decimals="1">0</span>%
+                    <span ref={el => {countUpRefs.current[1] = el}} data-value={caseStudyData.results.conversion.after} data-decimals="1">0</span>%
                   </p>
                   <p className="text-sm text-green-400 flex items-center">
                     <ArrowUp className="w-4 h-4 mr-1" />
@@ -260,7 +260,7 @@ export function CaseStudy() {
                   <TrendingUp className="w-8 h-8 text-yellow-400 mb-3" />
                   <p className="text-sm text-gray-300 mb-1">Przychód online</p>
                   <p className="text-3xl font-bold text-white mb-2">
-                    <span ref={el => countUpRefs.current[2] = el} data-value={caseStudyData.results.revenue.after} data-decimals="0">0</span> zł
+                    <span ref={el => {countUpRefs.current[2] = el}} data-value={caseStudyData.results.revenue.after} data-decimals="0">0</span> zł
                   </p>
                   <p className="text-sm text-green-400 flex items-center">
                     <ArrowUp className="w-4 h-4 mr-1" />
@@ -276,7 +276,7 @@ export function CaseStudy() {
                   <Smartphone className="w-8 h-8 text-blue-400 mb-3" />
                   <p className="text-sm text-gray-300 mb-1">Ruch mobilny</p>
                   <p className="text-3xl font-bold text-white mb-2">
-                    <span ref={el => countUpRefs.current[3] = el} data-value={caseStudyData.results.mobileTraffic.after} data-decimals="0">0</span>%
+                    <span ref={el => {countUpRefs.current[3] = el}} data-value={caseStudyData.results.mobileTraffic.after} data-decimals="0">0</span>%
                   </p>
                   <p className="text-sm text-green-400 flex items-center">
                     <ArrowUp className="w-4 h-4 mr-1" />
@@ -292,7 +292,7 @@ export function CaseStudy() {
                   <Clock className="w-8 h-8 text-cyan-400 mb-3" />
                   <p className="text-sm text-gray-300 mb-1">Czas ładowania</p>
                   <p className="text-3xl font-bold text-white mb-2">
-                    <span ref={el => countUpRefs.current[4] = el} data-value={caseStudyData.results.pageSpeed.after} data-decimals="1">0</span>s
+                    <span ref={el => {countUpRefs.current[4] = el}} data-value={caseStudyData.results.pageSpeed.after} data-decimals="1">0</span>s
                   </p>
                   <p className="text-sm text-green-400 flex items-center">
                     <ArrowDown className="w-4 h-4 mr-1" />
@@ -308,7 +308,7 @@ export function CaseStudy() {
                   <Globe className="w-8 h-8 text-pink-400 mb-3" />
                   <p className="text-sm text-gray-300 mb-1">Pozycja Google</p>
                   <p className="text-3xl font-bold text-white mb-2">
-                    TOP <span ref={el => countUpRefs.current[5] = el} data-value={caseStudyData.results.searchRanking.after} data-decimals="0">0</span>
+                    TOP <span ref={el => {countUpRefs.current[5] = el}} data-value={caseStudyData.results.searchRanking.after} data-decimals="0">0</span>
                   </p>
                   <p className="text-sm text-green-400 flex items-center">
                     <ArrowUp className="w-4 h-4 mr-1" />

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useMemo } from 'react'
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { gsap } from 'gsap'
@@ -24,7 +24,7 @@ export function ProcessTimeline() {
   const timelineRef = useRef<HTMLDivElement>(null)
   const progressRef = useRef<HTMLDivElement>(null)
 
-  const steps = [
+  const steps = useMemo(() => [
     {
       icon: MessageSquare,
       title: 'Konsultacja',
@@ -67,7 +67,7 @@ export function ProcessTimeline() {
       description: 'Monitorowanie wyników i ciągłe ulepszanie',
       deliverables: ['Raporty miesięczne', 'A/B testy', 'Optymalizacja']
     }
-  ]
+  ], [])
 
   useEffect(() => {
     if (!timelineRef.current || !progressRef.current) return

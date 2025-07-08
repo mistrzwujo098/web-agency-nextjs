@@ -158,13 +158,13 @@ export function ROICalculator() {
                 <div>
                   <p className="text-gray-300 text-sm">Leady/miesiąc</p>
                   <p className="text-2xl font-bold text-white">
-                    <span ref={el => numberRefs.current[0] = el} data-value={currentLeads}>0</span>
+                    <span ref={el => {numberRefs.current[0] = el}} data-value={currentLeads}>0</span>
                   </p>
                 </div>
                 <div>
                   <p className="text-gray-300 text-sm">Przychód/miesiąc</p>
                   <p className="text-2xl font-bold text-white">
-                    <span ref={el => numberRefs.current[1] = el} data-value={currentRevenue}>0</span> zł
+                    <span ref={el => {numberRefs.current[1] = el}} data-value={currentRevenue}>0</span> zł
                   </p>
                 </div>
               </div>
@@ -180,13 +180,13 @@ export function ROICalculator() {
                 <div>
                   <p className="text-gray-300 text-sm">Leady/miesiąc</p>
                   <p className="text-2xl font-bold text-white">
-                    <span ref={el => numberRefs.current[2] = el} data-value={improvedLeads}>0</span>
+                    <span ref={el => {numberRefs.current[2] = el}} data-value={improvedLeads}>0</span>
                   </p>
                 </div>
                 <div>
                   <p className="text-gray-300 text-sm">Przychód/miesiąc</p>
                   <p className="text-2xl font-bold text-white">
-                    <span ref={el => numberRefs.current[3] = el} data-value={improvedRevenue}>0</span> zł
+                    <span ref={el => {numberRefs.current[3] = el}} data-value={improvedRevenue}>0</span> zł
                   </p>
                 </div>
               </div>
@@ -202,13 +202,13 @@ export function ROICalculator() {
                 <div className="flex justify-between items-center">
                   <span>Dodatkowy przychód/miesiąc:</span>
                   <span className="text-2xl font-bold">
-                    +<span ref={el => numberRefs.current[4] = el} data-value={additionalRevenue}>0</span> zł
+                    +<span ref={el => {numberRefs.current[4] = el}} data-value={additionalRevenue}>0</span> zł
                   </span>
                 </div>
                 <div className="flex justify-between items-center pt-3 border-t border-white/20">
                   <span>Dodatkowy przychód/rok:</span>
                   <span className="text-3xl font-bold">
-                    +<span ref={el => numberRefs.current[5] = el} data-value={yearlyAdditional}>0</span> zł
+                    +<span ref={el => {numberRefs.current[5] = el}} data-value={yearlyAdditional}>0</span> zł
                   </span>
                 </div>
               </div>
