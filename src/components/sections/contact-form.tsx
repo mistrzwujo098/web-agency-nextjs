@@ -13,6 +13,7 @@ import {
   AlertCircle
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 interface FormData {
   name: string
@@ -37,12 +38,12 @@ export function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   const services = [
-    'Strona internetowa',
-    'Sklep e-commerce',
-    'Optymalizacja SEO',
-    'Marketing automation',
-    'Redesign istniejącej strony',
-    'Konsultacja'
+    'Strona www',
+    'Sklep online',
+    'SEO lokalne',
+    'Automatyzacja',
+    'Naprawa strony',
+    'Audyt'
   ]
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -102,10 +103,10 @@ export function ContactForm() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Rozpocznij swoją transformację cyfrową
+            {t('title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Skontaktuj się z nami już dziś i otrzymaj darmową analizę swojej obecnej strony oraz plan działania
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -129,7 +130,7 @@ export function ContactForm() {
                     <Phone className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Zadzwoń do nas (WhatsApp)</p>
+                    <p className="text-gray-400 text-sm">{t('info.phone')}</p>
                     <p className="text-white font-medium">+48 662 508 780</p>
                   </div>
                 </a>
@@ -139,7 +140,7 @@ export function ContactForm() {
                     <Mail className="w-6 h-6 text-blue-400" />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Napisz do nas</p>
+                    <p className="text-gray-400 text-sm">{t('info.email')}</p>
                     <p className="text-white font-medium">kontakt@kacperczaczyk.com</p>
                   </div>
                 </a>
@@ -149,7 +150,7 @@ export function ContactForm() {
                     <MapPin className="w-6 h-6 text-green-400" />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Nasze biuro</p>
+                    <p className="text-gray-400 text-sm">{t('info.office')}</p>
                     <p className="text-white font-medium">ul. Innowacyjna 10<br />00-001 Warszawa</p>
                   </div>
                 </div>
@@ -159,8 +160,8 @@ export function ContactForm() {
                     <Clock className="w-6 h-6 text-orange-400" />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Godziny pracy</p>
-                    <p className="text-white font-medium">Pon-Pt: 9:00 - 17:00</p>
+                    <p className="text-gray-400 text-sm">{t('info.hours')}</p>
+                    <p className="text-white font-medium">Pon-Pt: 9-17</p>
                   </div>
                 </div>
               </div>
@@ -169,25 +170,15 @@ export function ContactForm() {
             {/* Quick Benefits */}
             <div className="glass-dark rounded-2xl p-8">
               <h4 className="text-lg font-semibold text-white mb-4">
-                Dlaczego warto z nami współpracować?
+                {t('benefits.title')}
               </h4>
               <ul className="space-y-3 text-gray-300">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                  <span>Gwarancja wzrostu konwersji o 30%</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                  <span>Darmowa analiza i wycena</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                  <span>Wsparcie 24/7 po wdrożeniu</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                  <span>Bez ukrytych kosztów</span>
-                </li>
+                {t.raw('benefits.items').map((item: string, index: number) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </motion.div>
@@ -204,7 +195,7 @@ export function ContactForm() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                    Imię i nazwisko *
+                    {t('form.name')} *
                   </label>
                   <input
                     type="text"
@@ -220,7 +211,7 @@ export function ContactForm() {
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    Email *
+                    {t('form.email')} *
                   </label>
                   <input
                     type="email"
@@ -236,7 +227,7 @@ export function ContactForm() {
                 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                    Telefon
+                    {t('form.phone')}
                   </label>
                   <input
                     type="tel"
@@ -251,7 +242,7 @@ export function ContactForm() {
                 
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                    Nazwa firmy
+                    {t('form.company')}
                   </label>
                   <input
                     type="text"
@@ -267,7 +258,7 @@ export function ContactForm() {
               
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                  Interesująca usługa *
+                  {t('form.service')} *
                 </label>
                 <select
                   id="service"
@@ -288,7 +279,7 @@ export function ContactForm() {
               
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  Wiadomość *
+                  {t('form.message')} *
                 </label>
                 <textarea
                   id="message"
@@ -298,7 +289,7 @@ export function ContactForm() {
                   required
                   rows={4}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-purple-500 transition-colors resize-none"
-                  placeholder="Opisz swój projekt lub zadaj pytanie..."
+                  placeholder="Napisz o co chodzi"
                 />
               </div>
               
@@ -338,11 +329,11 @@ export function ContactForm() {
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">
                       <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Wysyłanie...
+                      {t('form.submitting')}
                     </span>
                   ) : (
                     <span className="flex items-center gap-2">
-                      Wyślij wiadomość
+                      {t('form.submit')}
                       <Send className="w-4 h-4" />
                     </span>
                   )}
@@ -351,9 +342,9 @@ export function ContactForm() {
               
               <p className="text-xs text-gray-500 text-center">
                 Wysyłając formularz zgadzasz się na przetwarzanie danych osobowych zgodnie z naszą{' '}
-                <a href="/privacy-policy" className="text-purple-400 hover:text-purple-300 underline">
+                <Link href="/privacy-policy" className="text-purple-400 hover:text-purple-300 underline">
                   polityką prywatności
-                </a>
+                </Link>
               </p>
             </form>
           </motion.div>

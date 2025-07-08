@@ -1,135 +1,211 @@
 {
   "hero": {
-    "title": "Twoja strona traci 97% odwiedzających. Pokażemy Ci dokładnie dlaczego – za darmo.",
-    "subtitle": "Przeprowadziliśmy 237 audytów stron. Średni wynik? Firmy tracą 12-47 leadów miesięcznie przez podstawowe błędy UX. Sprawdź swoją stratę w 48h.",
-    "cta_primary": "SPRAWDŹ SWOJĄ STRATĘ (DARMOWY AUDYT)",
-    "cta_secondary": "Zobacz przykładowy raport →",
-    "testimonial": "\"Pokazali mi, że tracę 34 leady/msc. Po wdrożeniu +42% konwersji\" - Anna K., CEO"
+    "title": "Gubisz 70% klientów. Wiem gdzie.",
+    "subtitle": "Sprawdziłem 237 stron lokalnych firm. Większość traci 12-47 leadów miesięcznie przez głupie błędy. Pokażę ci które - za darmo.",
+    "cta_primary": "Sprawdź gdzie gubisz kasę",
+    "cta_secondary": "Zobacz przykład analizy →",
+    "testimonial": "\"Myślałam że mam dobrą stronę. Okazało się że tracę 34 leady miesięcznie. Teraz mam +42% konwersji\" - Anna, salon kosmetyczny"
   },
   "trust": {
-    "title": "Dlaczego 237 firm nam zaufało?",
+    "title": "Liczby nie kłamią:",
     "stats": {
       "revenue": {
         "value": "2,7 mln zł",
-        "label": "dodatkowych przychodów dla klientów w 2024"
+        "label": "więcej kasy dla klientów w 2024"
       },
       "time": {
         "value": "14 dni",
-        "label": "średni czas wdrożenia"
+        "label": "i już widzisz efekty"
       },
       "retention": {
         "value": "92%",
-        "label": "klientów przedłuża współpracę"
+        "label": "zostaje na dłużej"
       }
     }
   },
   "education": {
-    "title": "3 powody, dla których Twoja strona nie generuje leadów:",
+    "title": "3 rzeczy które psują ci biznes:",
     "reasons": [
       {
-        "title": "Ładuje się 5,7 sekund",
-        "subtitle": "(śr. w Polsce)",
-        "description": "68% użytkowników odchodzi przed załadowaniem"
+        "title": "Strona mularska",
+        "subtitle": "(5,7 sek ładowania)",
+        "description": "Ludzie wychodzą zanim zobaczą co sprzedajesz"
       },
       {
-        "title": "Ma 17 elementów rozpraszających",
-        "description": "Zasada Hicka: więcej opcji = mniej decyzji"
+        "title": "Chaos na stronie",
+        "description": "17 przycisków = klient nie wie co kliknąć"
       },
       {
-        "title": "Nie ma dowodów społecznych",
-        "description": "88% kupujących czyta opinie przed kontaktem"
+        "title": "Zero opinii",
+        "description": "88% najpierw czyta recenzje. Ty ich nie masz."
       }
     ],
-    "cta": "POBIERZ CHECKLIST 21 BŁĘDÓW (PDF)"
+    "cta": "Weź darmową checklistę błędów"
   },
   "testimonials": {
-    "title": "Co mówią klienci po 30 dniach:",
-    "cta": "Zobacz wszystkie opinie"
+    "title": "Co mówią po miesiącu:",
+    "cta": "Więcej opinii →"
   },
   "pricing": {
-    "title": "Zacznij od tego, co bezpieczne:",
+    "title": "Ile to kosztuje? Mniej niż myślisz:",
     "plans": [
       {
         "name": "Darmowy Audyt",
         "price": "0 zł",
         "features": [
-          "Video-analiza 12 punktów krytycznych",
-          "Benchmark konkurencji",
-          "Plan naprawczy z priorytetami"
+          "Nagranie wideo z analizą",
+          "Porównanie z konkurencją",
+          "Lista co naprawić najpierw"
         ],
-        "cta": "ZAMÓW AUDYT"
+        "cta": "Weź audyt"
       },
       {
-        "name": "Test A/B Mini",
+        "name": "Szybki Test",
         "price": "990 zł",
-        "badge": "Najpopularniejsze",
+        "badge": "Najczęściej biorą",
         "features": [
-          "1 zmiana o największym potencjale",
-          "Test przez 14 dni",
-          "Raport z wynikami"
+          "Naprawiam 1 największy problem",
+          "Testujesz 14 dni",
+          "Dostajesz raport z wynikami"
         ],
-        "cta": "Zacznij test"
+        "cta": "Testuj za 990 zł"
       },
       {
-        "name": "Pełny Redesign",
+        "name": "Cała Strona",
         "price": "4900 zł",
         "features": [
-          "Kompletna przebudowa",
-          "Gwarancja +30% leadów",
-          "Wsparcie 90 dni"
+          "Robię wszystko od nowa",
+          "Gwarantuję +30% leadów",
+          "Pomagam 90 dni po starcie"
         ],
-        "cta": "Dla ambitnych"
+        "cta": "Zróbmy to"
       }
     ]
   },
   "portfolio": {
-    "title": "Ostatnie 5 wdrożeń:",
-    "cta": "Zobacz wszystkie 48 projektów →"
+    "title": "Co zrobiłem w tym miesiącu:",
+    "cta": "Zobacz wszystkie →"
   },
   "guarantee": {
-    "title": "Zero ryzyka. Dosłownie.",
+    "title": "Bojesz się że cię oszukam? Spokojnie:",
     "features": [
       {
-        "title": "Audyt gratis",
-        "description": "płacisz tylko za wdrożenie"
+        "title": "Audyt za darmo",
+        "description": "płacisz dopiero jak zobaczysz plan"
       },
       {
-        "title": "Płatność po efektach",
-        "description": "50% zaliczki, 50% po wynikach"
+        "title": "Połowa po efektach",
+        "description": "50% na start, 50% jak zadziała"
       },
       {
-        "title": "Gwarancja +30%",
-        "description": "lub zwrot 100% kosztów"
+        "title": "+30% albo zwrot",
+        "description": "nie wyjdzie = oddaję kasę"
       },
       {
-        "title": "Miesięczny test",
-        "description": "nie musisz decydować dziś"
+        "title": "Miesiąc na decyzję",
+        "description": "testujesz, potem decydujesz"
       }
     ]
   },
   "team": {
-    "title": "Stoimy za naszą pracą twarzą i nazwiskiem",
-    "story": "Po 8 latach w agencjach zauważyliśmy...",
-    "cta": "Czytaj więcej →"
+    "title": "Kim jestem?",
+    "story": "Kacper. 10 lat w branży, widziałem już wszystko. Teraz pomagam lokalnym firmom zatykać dziury w stronach.",
+    "cta": "Więcej o mnie →"
   },
   "faq": {
-    "title": "Najpierw odpowiedzi na Twoje wątpliwości:"
+    "title": "Pewnie się zastanawiasz:"
   },
   "finalCta": {
-    "title": "Decyzja należy do Ciebie. Fakty masz tutaj:",
+    "title": "No to co? Sprawdzamy gdzie ci ucieka kasa?",
     "facts": [
-      "Średnia strona traci 23-71 leadów miesięcznie",
-      "Koszt pozyskania leadu spada średnio o 43%",
-      "ROI w 6-12 tygodni"
+      "Średnio znajduję 23-71 straconych leadów/msc",
+      "Koszt leada spada o ~43%",
+      "Zwrot w 6-12 tygodni"
     ],
-    "primary": "CHCĘ DARMOWY AUDYT",
-    "secondary": "MAM PYTANIA - ZADZWOŃ",
-    "ps": "Robimy max 8 audytów miesięcznie. Obecnie zostało 3 miejsca na lipiec."
+    "primary": "TAK, SPRAWDŹ MOJĄ STRONĘ",
+    "secondary": "Wolę najpierw pogadać",
+    "ps": "PS. Robię max 8 audytów miesięcznie. Zostały 3 wolne terminy."
   },
   "popup": {
-    "title": "Moment! Zanim wyjdziesz...",
-    "subtitle": "Pobierz nasz \"Kalkulator Straconych Leadów\"",
-    "description": "Sprawdź ile tracisz miesięcznie w 2 minuty.",
-    "cta": "WYŚLIJ KALKULATOR"
+    "title": "Czekaj!",
+    "subtitle": "Weź kalkulator strat",
+    "description": "Policzysz ile tracisz w 2 minuty.",
+    "cta": "Wyślij mi"
+  },
+  "navigation": {
+    "home": "Start",
+    "services": "Co robię",
+    "portfolio": "Moje projekty",
+    "about": "O mnie",
+    "pricing": "Ceny",
+    "blog": "Blog",
+    "contact": "Gadajmy",
+    "resources": "Darmowe materiały"
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Chcesz wiedzieć jak nie tracić klientów?",
+      "description": "Co tydzień wysyłam 1 konkretną poradę. Bez spamu.",
+      "placeholder": "Twój email",
+      "button": "Zapisz mnie",
+      "disclaimer": "Zero spamu. Wypisujesz się jednym klikiem."
+    },
+    "company": {
+      "description": "Pomagam lokalnym firmom przestać tracić klientów przez słabe strony. Robię to od 10 lat.",
+      "phone": "Dzwoń/WhatsApp",
+      "email": "Napisz",
+      "hours": "Pon-Pt: 9-17"
+    },
+    "links": {
+      "services": "Usługi",
+      "company": "Firma",
+      "resources": "Materiały",
+      "legal": "Prawne"
+    },
+    "stats": {
+      "satisfaction": "Zadowolonych",
+      "projects": "Zrobionych stron",
+      "conversion": "Średni wzrost",
+      "support": "Wsparcie"
+    },
+    "copyright": "Wszystkie prawa zastrzeżone.",
+    "vat": "NIP",
+    "regon": "REGON"
+  },
+  "services": {
+    "web": "Strony www",
+    "ecommerce": "Sklepy online",
+    "seo": "SEO lokalne",
+    "automation": "Automatyzacja"
+  },
+  "contact": {
+    "title": "Pogadajmy o twojej stronie",
+    "subtitle": "Odpiszę w ciągu 24h. Możesz też dzwonić.",
+    "form": {
+      "name": "Imię i nazwisko",
+      "email": "Email",
+      "phone": "Telefon (opcjonalnie)",
+      "company": "Firma (opcjonalnie)",
+      "service": "W czym pomóc?",
+      "message": "Napisz o co chodzi",
+      "submit": "Wyślij",
+      "submitting": "Wysyłam...",
+      "privacy": "Przeczytałem politykę prywatności"
+    },
+    "info": {
+      "phone": "Dzwoń/WhatsApp",
+      "email": "Email",
+      "office": "Biuro",
+      "hours": "Kiedy działam"
+    },
+    "benefits": {
+      "title": "Czemu warto?",
+      "items": [
+        "Gwarancja +30% więcej leadów",
+        "Darmowa analiza na start",
+        "Pomoc 24/7 po wdrożeniu",
+        "Żadnych ukrytych kosztów"
+      ]
+    }
   }
 }

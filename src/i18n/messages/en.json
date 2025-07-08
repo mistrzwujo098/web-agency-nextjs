@@ -1,135 +1,211 @@
 {
   "hero": {
-    "title": "Your website loses 97% of visitors. We'll show you exactly why – for free.",
-    "subtitle": "We've audited 237 websites. Average result? Companies lose 12-47 leads monthly due to basic UX mistakes. Check your loss in 48h.",
-    "cta_primary": "GET YOUR FREE AUDIT",
-    "cta_secondary": "See sample report →",
-    "testimonial": "\"They showed me I was losing 34 leads/month. After implementation +42% conversion\" - Anna K., CEO"
+    "title": "You're losing 70% of customers. I know where.",
+    "subtitle": "I checked 237 local business websites. Most lose 12-47 leads monthly on stupid mistakes. I'll show you which ones - for free.",
+    "cta_primary": "Check where you're losing money",
+    "cta_secondary": "See analysis example →",
+    "testimonial": "\"I thought my site was good. Turns out I was losing 34 leads monthly. Now +42% conversion\" - Anna, beauty salon"
   },
   "trust": {
-    "title": "Why 237 companies trust us",
+    "title": "Numbers don't lie:",
     "stats": {
       "revenue": {
         "value": "$635K",
-        "label": "additional revenue for clients in 2024"
+        "label": "more cash for clients in 2024"
       },
       "time": {
         "value": "14 days",
-        "label": "average implementation time"
+        "label": "and you see results"
       },
       "retention": {
         "value": "92%",
-        "label": "of clients extend cooperation"
+        "label": "stay longer"
       }
     }
   },
   "education": {
-    "title": "3 reasons why your website doesn't generate leads:",
+    "title": "3 things killing your business:",
     "reasons": [
       {
-        "title": "Takes 5.7 seconds to load",
-        "subtitle": "(industry average)",
-        "description": "68% of users leave before loading completes"
+        "title": "Slow site",
+        "subtitle": "(5.7 sec loading)",
+        "description": "People leave before seeing what you sell"
       },
       {
-        "title": "Has 17 distracting elements",
-        "description": "Hick's Law: more options = fewer decisions"
+        "title": "Site chaos",
+        "description": "17 buttons = customer doesn't know what to click"
       },
       {
-        "title": "No social proof",
-        "description": "88% of buyers read reviews before contacting"
+        "title": "Zero reviews",
+        "description": "88% check reviews first. You have none."
       }
     ],
-    "cta": "DOWNLOAD 21 MISTAKES CHECKLIST (PDF)"
+    "cta": "Get free mistakes checklist"
   },
   "testimonials": {
-    "title": "What clients say after 30 days:",
-    "cta": "See all testimonials"
+    "title": "What they say after a month:",
+    "cta": "More reviews →"
   },
   "pricing": {
-    "title": "Start with what's safe:",
+    "title": "How much? Less than you think:",
     "plans": [
       {
         "name": "Free Audit",
         "price": "$0",
         "features": [
-          "Video analysis of 12 critical points",
-          "Competitor benchmark",
-          "Priority fix roadmap"
+          "Video analysis recording",
+          "Competition comparison",
+          "List of what to fix first"
         ],
-        "cta": "GET AUDIT"
+        "cta": "Get audit"
       },
       {
-        "name": "A/B Test Mini",
+        "name": "Quick Test",
         "price": "$249",
-        "badge": "Most Popular",
+        "badge": "Most popular",
         "features": [
-          "1 high-impact change",
-          "14-day test period",
-          "Results report"
+          "Fix 1 biggest problem",
+          "Test for 14 days",
+          "Get results report"
         ],
-        "cta": "Start Test"
+        "cta": "Test for $249"
       },
       {
-        "name": "Full Redesign",
+        "name": "Full Site",
         "price": "$1,249",
         "features": [
-          "Complete rebuild",
-          "+30% leads guarantee",
-          "90-day support"
+          "Rebuild everything",
+          "Guarantee +30% leads",
+          "Help for 90 days"
         ],
-        "cta": "For Ambitious"
+        "cta": "Let's do it"
       }
     ]
   },
   "portfolio": {
-    "title": "Last 5 implementations:",
-    "cta": "See all 48 projects →"
+    "title": "What I did this month:",
+    "cta": "See all →"
   },
   "guarantee": {
-    "title": "Zero risk. Literally.",
+    "title": "Afraid I'll scam you? Relax:",
     "features": [
       {
         "title": "Free audit",
-        "description": "pay only for implementation"
+        "description": "pay only when you see the plan"
       },
       {
-        "title": "Pay after results",
-        "description": "50% deposit, 50% after results"
+        "title": "Half after results",
+        "description": "50% to start, 50% when it works"
       },
       {
-        "title": "+30% guarantee",
-        "description": "or 100% money back"
+        "title": "+30% or refund",
+        "description": "doesn't work = money back"
       },
       {
-        "title": "Monthly test",
-        "description": "no commitment today"
+        "title": "Month to decide",
+        "description": "test, then decide"
       }
     ]
   },
   "team": {
-    "title": "We stand behind our work with face and name",
-    "story": "After 8 years in agencies we noticed...",
-    "cta": "Read more →"
+    "title": "Who am I?",
+    "story": "Kacper. 10 years in business, seen it all. Now I help local businesses fix leaky websites.",
+    "cta": "More about me →"
   },
   "faq": {
-    "title": "First, answers to your doubts:"
+    "title": "You're probably wondering:"
   },
   "finalCta": {
-    "title": "The decision is yours. The facts are here:",
+    "title": "So what? Check where your money is leaking?",
     "facts": [
-      "Average website loses 23-71 leads monthly",
-      "Lead acquisition cost drops by 43% on average",
+      "I usually find 23-71 lost leads/month",
+      "Lead cost drops by ~43%",
       "ROI in 6-12 weeks"
     ],
-    "primary": "GET FREE AUDIT",
-    "secondary": "HAVE QUESTIONS - CALL",
-    "ps": "We do max 8 audits per month. Currently 3 spots left for July."
+    "primary": "YES, CHECK MY SITE",
+    "secondary": "Rather talk first",
+    "ps": "PS. I do max 8 audits monthly. 3 spots left."
   },
   "popup": {
-    "title": "Wait! Before you leave...",
-    "subtitle": "Download our \"Lost Leads Calculator\"",
-    "description": "Check how much you're losing monthly in 2 minutes.",
-    "cta": "SEND CALCULATOR"
+    "title": "Wait!",
+    "subtitle": "Get loss calculator",
+    "description": "Calculate what you lose in 2 minutes.",
+    "cta": "Send me"
+  },
+  "navigation": {
+    "home": "Home",
+    "services": "What I do",
+    "portfolio": "My projects",
+    "about": "About me",
+    "pricing": "Prices",
+    "blog": "Blog",
+    "contact": "Let's talk",
+    "resources": "Free stuff"
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Want to know how to stop losing customers?",
+      "description": "Every week I send 1 specific tip. No spam.",
+      "placeholder": "Your email",
+      "button": "Sign me up",
+      "disclaimer": "Zero spam. Unsubscribe with one click."
+    },
+    "company": {
+      "description": "I help local businesses stop losing customers through bad websites. Been doing this for 10 years.",
+      "phone": "Call/WhatsApp",
+      "email": "Write",
+      "hours": "Mon-Fri: 9-5"
+    },
+    "links": {
+      "services": "Services",
+      "company": "Company",
+      "resources": "Resources",
+      "legal": "Legal"
+    },
+    "stats": {
+      "satisfaction": "Satisfied",
+      "projects": "Sites done",
+      "conversion": "Average growth",
+      "support": "Support"
+    },
+    "copyright": "All rights reserved.",
+    "vat": "VAT",
+    "regon": "REGON"
+  },
+  "services": {
+    "web": "Websites",
+    "ecommerce": "Online stores",
+    "seo": "Local SEO",
+    "automation": "Automation"
+  },
+  "contact": {
+    "title": "Let's talk about your site",
+    "subtitle": "I'll reply within 24h. You can also call.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "company": "Company (optional)",
+      "service": "How can I help?",
+      "message": "Tell me what's up",
+      "submit": "Send",
+      "submitting": "Sending...",
+      "privacy": "I read the privacy policy"
+    },
+    "info": {
+      "phone": "Call/WhatsApp",
+      "email": "Email",
+      "office": "Office",
+      "hours": "When I work"
+    },
+    "benefits": {
+      "title": "Why bother?",
+      "items": [
+        "Guarantee +30% more leads",
+        "Free analysis to start",
+        "24/7 help after launch",
+        "No hidden costs"
+      ]
+    }
   }
 }

@@ -25,11 +25,11 @@ export function Footer() {
 
   const footerLinks = {
     services: [
-      { name: 'Strony internetowe', href: '/services/web-development' },
-      { name: 'Sklepy e-commerce', href: '/services/ecommerce' },
-      { name: 'Optymalizacja SEO', href: '/services/seo' },
-      { name: 'Marketing automation', href: '/services/automation' },
-      { name: 'Hosting i wsparcie', href: '/services/hosting' }
+      { name: 'Strony www', href: '/services/web-development' },
+      { name: 'Sklepy online', href: '/services/ecommerce' },
+      { name: 'SEO lokalne', href: '/services/seo' },
+      { name: 'Automatyzacja', href: '/services/automation' },
+      { name: 'Pomoc techniczna', href: '/services/hosting' }
     ],
     company: [
       { name: 'O nas', href: '/about' },
@@ -67,10 +67,10 @@ export function Footer() {
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Dołącz do 500+ firm, które zwiększyły swoje przychody
+              {t('newsletter.title')}
             </h3>
             <p className="text-gray-400 mb-8">
-              Otrzymuj ekskluzywne porady i case studies prosto na swoją skrzynkę
+              {t('newsletter.description')}
             </p>
             
             <form 
@@ -99,7 +99,7 @@ export function Footer() {
             >
               <input
                 type="email"
-                placeholder="Twój email..."
+                placeholder={t('newsletter.placeholder')}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-1 px-6 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
@@ -110,12 +110,12 @@ export function Footer() {
                 disabled={isSubmitting}
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 disabled:opacity-50"
               >
-                {isSubmitting ? 'Wysyłanie...' : 'Dołącz teraz'}
+                {isSubmitting ? 'Wysyłam...' : t('newsletter.button')}
               </Button>
             </form>
             
             <p className="text-sm text-gray-500 mt-4">
-              Dołączając zgadzasz się na otrzymywanie newslettera. Możesz wypisać się w każdej chwili.
+              {t('newsletter.disclaimer')}
             </p>
           </div>
         </div>
@@ -136,8 +136,7 @@ export function Footer() {
             </Link>
             
             <p className="text-gray-400 mb-6 max-w-xs">
-              Tworzymy strony internetowe, które konwertują odwiedzających w klientów. 
-              Gwarantujemy wzrost przychodów o minimum 30%.
+              {t('company.description')}
             </p>
 
             {/* Contact Info */}
@@ -156,7 +155,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3 text-gray-400">
                 <Clock className="w-5 h-5 text-purple-500" />
-                <span>Pon-Pt: 9:00 - 17:00</span>
+                <span>{t('company.hours')}</span>
               </div>
             </div>
 
@@ -179,7 +178,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Usługi</h4>
+            <h4 className="text-white font-semibold mb-4">{t('links.services')}</h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
@@ -197,7 +196,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Firma</h4>
+            <h4 className="text-white font-semibold mb-4">{t('links.company')}</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -215,7 +214,7 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Zasoby</h4>
+            <h4 className="text-white font-semibold mb-4">{t('links.resources')}</h4>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
@@ -233,7 +232,7 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Prawne</h4>
+            <h4 className="text-white font-semibold mb-4">{t('links.legal')}</h4>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
@@ -254,20 +253,20 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-wrap items-center justify-center gap-8 mb-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">98%</div>
-              <div className="text-sm text-gray-400">Zadowolonych klientów</div>
+              <div className="text-3xl font-bold text-white">92%</div>
+              <div className="text-sm text-gray-400">{t('stats.satisfaction')}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">500+</div>
-              <div className="text-sm text-gray-400">Zrealizowanych projektów</div>
+              <div className="text-3xl font-bold text-white">237</div>
+              <div className="text-sm text-gray-400">{t('stats.projects')}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">30%+</div>
-              <div className="text-sm text-gray-400">Wzrost konwersji</div>
+              <div className="text-3xl font-bold text-white">+34%</div>
+              <div className="text-sm text-gray-400">{t('stats.conversion')}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">24/7</div>
-              <div className="text-sm text-gray-400">Wsparcie techniczne</div>
+              <div className="text-3xl font-bold text-white">24h</div>
+              <div className="text-sm text-gray-400">{t('stats.support')}</div>
             </div>
           </div>
         </div>
@@ -276,11 +275,11 @@ export function Footer() {
         <div className="mt-8 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400 text-center md:text-left">
-              © {currentYear} WebCraftAI. Wszystkie prawa zastrzeżone.
+              © {currentYear} WebCraftAI. {t('copyright')}
             </p>
             <div className="flex items-center gap-6 text-sm text-gray-400">
-              <span>NIP: 123-456-78-90</span>
-              <span>REGON: 123456789</span>
+              <span>{t('vat')}: 123-456-78-90</span>
+              <span>{t('regon')}: 123456789</span>
             </div>
           </div>
         </div>

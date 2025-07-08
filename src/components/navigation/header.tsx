@@ -26,19 +26,19 @@ export function Header() {
   }, [])
 
   const navigation = locale === 'pl' ? [
-    { name: 'Start', href: '#hero' },
+    { name: t('home'), href: '#hero' },
     { 
-      name: 'Usługi', 
+      name: t('services'), 
       href: '#services',
       submenu: [
-        { name: 'Strony internetowe', href: '#web-development' },
-        { name: 'E-commerce', href: '#ecommerce' },
-        { name: 'Optymalizacja SEO', href: '#seo' },
-        { name: 'Marketing automation', href: '#automation' }
+        { name: 'Strony www', href: '#web-development' },
+        { name: 'Sklepy online', href: '#ecommerce' },
+        { name: 'SEO lokalne', href: '#seo' },
+        { name: 'Automatyzacja', href: '#automation' }
       ]
     },
     { 
-      name: 'Darmowe materiały', 
+      name: t('resources'), 
       href: '#',
       submenu: [
         { name: '10 błędów które kosztują klientów', href: `/${locale}/download/10-bledow-poradnik` },
@@ -48,11 +48,11 @@ export function Header() {
         { name: 'Kalkulator ROI', href: `/${locale}/download/roi-calculator` }
       ]
     },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'O nas', href: '#about' },
-    { name: 'Cennik', href: '#pricing' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Kontakt', href: '#contact' }
+    { name: t('portfolio'), href: '#portfolio' },
+    { name: t('about'), href: '#about' },
+    { name: t('pricing'), href: '#pricing' },
+    { name: t('blog'), href: '/blog' },
+    { name: t('contact'), href: '#contact' }
   ] : [
     { name: 'Home', href: '#hero' },
     { 
@@ -173,7 +173,7 @@ export function Header() {
             <Button
               className="hidden sm:inline-flex bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              {locale === 'pl' ? 'Darmowa konsultacja' : 'Free consultation'}
+              {locale === 'pl' ? 'Sprawdź gdzie gubisz kasę' : 'Check where you lose money'}
             </Button>
 
             {/* Mobile Menu Toggle */}
@@ -268,7 +268,7 @@ export function Header() {
                   
                   <div className="px-4">
                     <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg">
-                      {locale === 'pl' ? 'Darmowa konsultacja' : 'Free consultation'}
+                      {locale === 'pl' ? 'Sprawdź gdzie gubisz kasę' : 'Check where you lose money'}
                     </Button>
                   </div>
                 </div>
