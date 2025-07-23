@@ -16,6 +16,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [focusedIndex, setFocusedIndex] = useState<number>(-1)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,7 +86,21 @@ export function Header() {
                     onMouseEnter={() => setActiveDropdown(item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    <button className="px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-1 group">
+                    <button 
+                      className="px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-1 group focus-visible-ring"
+                      onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault()
+                          setActiveDropdown(activeDropdown === item.name ? null : item.name)
+                          setFocusedIndex(0)
+                        } else if (e.key === 'Escape') {
+                          setActiveDropdown(null)
+                        }
+                      }}
+                      aria-expanded={activeDropdown === item.name}
+                      aria-haspopup="true"
+                    >
                       {item.name}
                       <ChevronDown className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" />
                     </button>
@@ -103,7 +118,13 @@ export function Header() {
                             <Link
                               key={subitem.name}
                               href={subitem.href}
-                              className="block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-200"
+                              className="block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-200 focus-visible-ring"
+                              onKeyDown={(e) => {
+                                if (e.key === 'Escape') {
+                                  setActiveDropdown(null)
+                                }
+                              }}
+                              onClick={() => setActiveDropdown(null)}
                             >
                               {subitem.name}
                             </Link>
@@ -115,7 +136,7 @@ export function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors duration-200"
+                    className="px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors duration-200 focus-visible-ring"
                   >
                     {item.name}
                   </Link>

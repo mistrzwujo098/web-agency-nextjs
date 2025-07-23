@@ -165,6 +165,37 @@
 
 /* Utility classes for modern effects */
 @layer utilities {
+  /* WCAG AA compliant text colors */
+  .text-accessible-gray {
+    color: #9CA3AF; /* gray-400 replacement - AA compliant on dark backgrounds */
+  }
+  
+  .text-accessible-gray-dark {
+    color: #6B7280; /* gray-500 - for lighter backgrounds */
+  }
+  
+  /* Focus visible styles for keyboard navigation */
+  .focus-visible-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900;
+  }
+  
+  /* Minimum touch target size */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+    @apply flex items-center justify-center;
+  }
+  
+  /* Loading states */
+  .skeleton {
+    @apply animate-pulse bg-gray-800 rounded;
+  }
+  
+  .skeleton-text {
+    @apply h-4 bg-gray-800 rounded w-full animate-pulse;
+  }
+  
+  @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500;
   }
