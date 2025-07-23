@@ -4,8 +4,14 @@ import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Star } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react'
-import { NeuralBackground } from '@/components/neural-background'
+import { useState, useEffect, lazy, Suspense } from 'react'
+import dynamic from 'next/dynamic'
+
+// Lazy load heavy background component
+const NeuralBackground = dynamic(() => import('@/components/neural-background').then(mod => ({ default: mod.NeuralBackground })), {
+  ssr: false,
+  loading: () => <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-purple-950/20 to-blue-950/20" />
+})
 
 export function Hero() {
   const t = useTranslations('hero')
@@ -15,38 +21,48 @@ export function Hero() {
   useEffect(() => {
     setIsVisible(true)
     
+    // Throttled mouse movement for performance
+    let rafId: number | null = null
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: (e.clientX / window.innerWidth) * 100,
-        y: (e.clientY / window.innerHeight) * 100
+      if (rafId) return
+      rafId = requestAnimationFrame(() => {
+        setMousePosition({
+          x: (e.clientX / window.innerWidth) * 100,
+          y: (e.clientY / window.innerHeight) * 100
+        })
+        rafId = null
       })
     }
     
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
+    window.addEventListener('mousemove', handleMouseMove, { passive: true })
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove)
+      if (rafId) cancelAnimationFrame(rafId)
+    }
   }, [])
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-20">
+    <section id="hero" className="relative min-h-[100dvh] flex items-center overflow-hidden pt-20">
       {/* Neural Network Background */}
       <div className="absolute inset-0 z-0">
         <NeuralBackground />
         
-        {/* Animated Gradient Overlay */}
+        {/* Animated Gradient Overlay - Desktop Only */}
         <div 
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-30 hidden lg:block will-change-transform"
           style={{
-            background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)`
+            background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)`,
+            transform: 'translateZ(0)' // Force GPU acceleration
           }}
         />
       </div>
       
-      {/* Particle Effect Container */}
-      <div className="absolute inset-0 z-10 pointer-events-none">
-        {typeof window !== 'undefined' && [...Array(30)].map((_, i) => (
+      {/* Reduced Particle Effect for Performance */}
+      <div className="absolute inset-0 z-10 pointer-events-none hidden md:block">
+        {isVisible && typeof window !== 'undefined' && [...Array(10)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-white/20 rounded-full"
+            className="absolute w-1 h-1 bg-white/10 rounded-full will-change-transform"
             initial={{
               x: Math.random() * window.innerWidth,
               y: Math.random() * window.innerHeight,
@@ -56,7 +72,7 @@ export function Hero() {
               y: Math.random() * window.innerHeight,
             }}
             transition={{
-              duration: Math.random() * 20 + 10,
+              duration: Math.random() * 30 + 20,
               repeat: Infinity,
               ease: "linear"
             }}

@@ -42,12 +42,12 @@ export function NeuralBackground() {
     resizeCanvas()
     window.addEventListener('resize', resizeCanvas)
 
-    // Create particles (neurons) - optimized for readability
+    // Create particles (neurons) - optimized for performance
     const createParticles = () => {
       const particles: Particle[] = []
       const particleCount = isMobile() 
-        ? Math.min(8, Math.floor((canvas.width * canvas.height) / 80000))
-        : Math.min(15, Math.floor((canvas.width * canvas.height) / 60000))
+        ? Math.min(5, Math.floor((canvas.width * canvas.height) / 100000))
+        : Math.min(10, Math.floor((canvas.width * canvas.height) / 80000))
       
       for (let i = 0; i < particleCount; i++) {
         const x = Math.random() * canvas.width
@@ -99,9 +99,9 @@ export function NeuralBackground() {
     let pulseTime = 0
     const pulses: { start: number; end: number; progress: number; speed: number }[] = []
     
-    // Create random pulses
-    setInterval(() => {
-      if (particlesRef.current.length > 0 && pulses.length < 5) {
+    // Create random pulses with cleanup
+    const pulseInterval = setInterval(() => {
+      if (particlesRef.current.length > 0 && pulses.length < 3) {
         const start = Math.floor(Math.random() * particlesRef.current.length)
         const connections = particlesRef.current[start].connections
         if (connections.length > 0) {
@@ -114,7 +114,7 @@ export function NeuralBackground() {
           })
         }
       }
-    }, 800)
+    }, 1200)
 
     // Render function
     const render = () => {
@@ -122,33 +122,20 @@ export function NeuralBackground() {
       ctx.fillStyle = 'rgba(5, 5, 5, 0.05)'
       ctx.fillRect(0, 0, canvas.width, canvas.height)
       
-      // Add multi-layer noise texture for depth
-      if (timeRef.current % 2 === 0) {
+      // Add minimal noise texture for depth - reduced for performance
+      if (timeRef.current % 4 === 0 && !isMobile()) {
         ctx.save()
         
-        // Large ambient particles
+        // Fewer ambient particles
         ctx.globalAlpha = 0.008
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < 8; i++) {
           const x = Math.random() * canvas.width
           const y = Math.random() * canvas.height
           const radius = Math.random() * 3 + 1
-          const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius)
-          gradient.addColorStop(0, '#8b5cf6')
-          gradient.addColorStop(1, 'transparent')
-          ctx.fillStyle = gradient
+          ctx.fillStyle = '#8b5cf6'
           ctx.beginPath()
           ctx.arc(x, y, radius, 0, Math.PI * 2)
           ctx.fill()
-        }
-        
-        // Small detail particles
-        ctx.globalAlpha = 0.015
-        for (let i = 0; i < 50; i++) {
-          const x = Math.random() * canvas.width
-          const y = Math.random() * canvas.height
-          const size = Math.random() * 1.5
-          ctx.fillStyle = Math.random() > 0.5 ? '#8b5cf6' : '#3b82f6'
-          ctx.fillRect(x, y, size, size)
         }
         
         ctx.restore()
@@ -182,38 +169,14 @@ export function NeuralBackground() {
           const connectionDistance = Math.sqrt(connectionDx * connectionDx + connectionDy * connectionDy)
           
           if (connectionDistance < 250) {
-            // Draw multiple connection layers for depth
-            const opacity = (1 - connectionDistance / 250) * 0.2
+            // Single optimized connection line
+            const opacity = (1 - connectionDistance / 250) * 0.15
             
-            // Glow layer
             ctx.beginPath()
             ctx.moveTo(particle.x, particle.y)
             ctx.lineTo(connectedParticle.x, connectedParticle.y)
-            ctx.strokeStyle = `rgba(139, 92, 246, ${opacity * 0.1})`
-            ctx.lineWidth = 4
-            ctx.stroke()
-            
-            // Mid layer
-            ctx.beginPath()
-            ctx.moveTo(particle.x, particle.y)
-            ctx.lineTo(connectedParticle.x, connectedParticle.y)
-            const gradient = ctx.createLinearGradient(
-              particle.x, particle.y,
-              connectedParticle.x, connectedParticle.y
-            )
-            gradient.addColorStop(0, `rgba(139, 92, 246, ${opacity})`)
-            gradient.addColorStop(0.5, `rgba(59, 130, 246, ${opacity})`)
-            gradient.addColorStop(1, `rgba(139, 92, 246, ${opacity})`)
-            ctx.strokeStyle = gradient
+            ctx.strokeStyle = `rgba(139, 92, 246, ${opacity})`
             ctx.lineWidth = 1
-            ctx.stroke()
-            
-            // Core layer
-            ctx.beginPath()
-            ctx.moveTo(particle.x, particle.y)
-            ctx.lineTo(connectedParticle.x, connectedParticle.y)
-            ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.15})`
-            ctx.lineWidth = 0.5
             ctx.stroke()
           }
         })
@@ -356,6 +319,7 @@ export function NeuralBackground() {
     return () => {
       window.removeEventListener('resize', resizeCanvas)
       window.removeEventListener('mousemove', handleMouseMove)
+      clearInterval(pulseInterval)
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
       }

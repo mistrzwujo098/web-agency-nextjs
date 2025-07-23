@@ -1,0 +1,111 @@
+/* Critical CSS for above-the-fold content */
+
+/* Base reset and performance optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Preload critical fonts */
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+}
+
+/* Hero section critical styles */
+#hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 5rem;
+  background: linear-gradient(to bottom right, #111827, rgba(88, 28, 135, 0.2), rgba(29, 78, 216, 0.2));
+}
+
+/* Prevent layout shift for header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  height: 80px;
+  transition: all 0.3s ease;
+}
+
+/* Hero content container */
+#hero .container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 72rem;
+  position: relative;
+  z-index: 20;
+}
+
+/* Hero text styles to prevent FOUT */
+#hero h1 {
+  font-size: clamp(1.875rem, 5vw, 3.75rem);
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#hero p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #f3f4f6;
+  margin-bottom: 2rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Button styles to prevent layout shift */
+#hero button {
+  min-height: 48px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  will-change: transform;
+}
+
+/* Optimize animations for performance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  #hero {
+    padding-top: 4rem;
+  }
+  
+  header {
+    height: 64px;
+  }
+  
+  /* Disable heavy animations on mobile */
+  .particle-effect,
+  .neural-background canvas {
+    display: none !important;
+  }
+}
+
+/* Force GPU acceleration for smooth animations */
+.will-change-transform {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
