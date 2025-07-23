@@ -46,9 +46,9 @@ export default function ReportSEOLokalnyPage() {
   }))
 
   const monthlyPlan = Array.from({ length: 3 }, (_, i) => ({
-    month: t(`monthlyPlan.${i + 1}.month`),
-    tasks: t.raw(`monthlyPlan.${i + 1}.tasks`),
-    expectedResult: t(`monthlyPlan.${i + 1}.expectedResult`)
+    month: t(`actionPlan.months.${i + 1}.title`),
+    tasks: t.raw(`actionPlan.months.${i + 1}.tasks`),
+    expectedResult: t(`actionPlan.months.${i + 1}.expectedResult`)
   }))
 
   return (
