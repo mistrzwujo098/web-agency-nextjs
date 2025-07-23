@@ -6,6 +6,11 @@ import { ArrowRight, Star } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useState, useEffect, lazy, Suspense } from 'react'
 import dynamic from 'next/dynamic'
+import { TypingEffect } from '@/components/ui/typing-effect'
+import { LiveVisitors } from '@/components/ui/live-visitors'
+import { TimeGreeting } from '@/components/ui/time-greeting'
+import { AnimatedCounter } from '@/components/ui/animated-counter'
+import { ExitIntentPopup } from '@/components/ui/exit-intent-popup'
 
 // Lazy load heavy background component
 const NeuralBackground = dynamic(() => import('@/components/neural-background').then(mod => ({ default: mod.NeuralBackground })), {
@@ -17,6 +22,7 @@ export function Hero() {
   const t = useTranslations('hero')
   const [isVisible, setIsVisible] = useState(false)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [showExitIntent, setShowExitIntent] = useState(false)
 
   useEffect(() => {
     setIsVisible(true)
@@ -93,7 +99,11 @@ export function Hero() {
             animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.9 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            {t('title')}
+            <TimeGreeting className="text-purple-400 block mb-2 text-2xl md:text-3xl" />
+            Tworzymy <TypingEffect 
+              words={['strony internetowe', 'sklepy online', 'aplikacje webowe']} 
+              className="text-gradient"
+            /> które zarabiają
           </motion.h1>
           <motion.p 
             className="text-lg md:text-xl text-gray-100 mb-8 max-w-3xl mx-auto"
@@ -111,7 +121,7 @@ export function Hero() {
           >
             <Button 
               size="lg" 
-              className="text-base px-8 py-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="text-base px-8 py-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-breathe"
               onClick={() => {
                 const contactSection = document.getElementById('contact');
                 if (contactSection) {
@@ -149,6 +159,43 @@ export function Hero() {
               ))}
             </div>
             <p className="italic">{t('testimonial')}</p>
+          </motion.div>
+          
+          {/* Live visitors counter */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isVisible ? 1 : 0 }}
+            transition={{ delay: 1.5 }}
+            className="mt-8 flex justify-center"
+          >
+            <LiveVisitors />
+          </motion.div>
+          
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ delay: 1.8 }}
+            className="mt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
+          >
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white">
+                <AnimatedCounter end={127} suffix="+" />
+              </div>
+              <p className="text-sm text-gray-400 mt-1">Zadowolonych firm</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white">
+                <AnimatedCounter end={30} suffix="%" prefix="+" />
+              </div>
+              <p className="text-sm text-gray-400 mt-1">Więcej leadów</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white">
+                <AnimatedCounter end={14} suffix=" dni" />
+              </div>
+              <p className="text-sm text-gray-400 mt-1">Do rezultatów</p>
+            </div>
           </motion.div>
         </motion.div>
       </div>
