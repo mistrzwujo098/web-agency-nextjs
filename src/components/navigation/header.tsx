@@ -40,21 +40,15 @@ export function Header() {
       name: t('resources'), 
       href: '#',
       submenu: [
-        { name: t('submenu.10mistakes'), href: `/${locale}/download/10-bledow-poradnik` },
-        { name: t('submenu.50elements'), href: `/${locale}/download/50-elementow-checklist` },
-        { name: t('submenu.localSeo'), href: `/${locale}/download/seo-local-guide` },
-        { name: t('submenu.marketingAutomation'), href: `/${locale}/download/marketing-automation-guide` },
-        { name: t('submenu.launchChecklist'), href: `/${locale}/download/website-launch-checklist` },
-        { name: t('submenu.roiCalculator'), href: `/${locale}/download/roi-calculator` }
-      ]
-    },
-    {
-      name: t('reports'),
-      href: '#',
-      submenu: [
-        { name: t('submenu.report10mistakes'), href: `/${locale}/reports/10-bledow-strony` },
-        { name: t('submenu.reportMarketing'), href: `/${locale}/reports/marketing-autopilot` },
-        { name: t('submenu.reportSeo'), href: `/${locale}/reports/seo-lokalny` }
+        { name: '📊 ' + t('submenu.report10mistakes'), href: `/${locale}/reports/10-bledow-strony` },
+        { name: '📊 ' + t('submenu.reportMarketing'), href: `/${locale}/reports/marketing-autopilot` },
+        { name: '📊 ' + t('submenu.reportSeo'), href: `/${locale}/reports/seo-lokalny` },
+        { name: '📥 ' + t('submenu.10mistakes'), href: `/${locale}/download/10-bledow-poradnik` },
+        { name: '📥 ' + t('submenu.50elements'), href: `/${locale}/download/50-elementow-checklist` },
+        { name: '📥 ' + t('submenu.localSeo'), href: `/${locale}/download/seo-local-guide` },
+        { name: '📥 ' + t('submenu.marketingAutomation'), href: `/${locale}/download/marketing-automation-guide` },
+        { name: '📥 ' + t('submenu.launchChecklist'), href: `/${locale}/download/website-launch-checklist` },
+        { name: '🧮 ' + t('submenu.roiCalculator'), href: `/${locale}/tools/roi-calculator` }
       ]
     },
     { name: t('portfolio'), href: '#portfolio' },
@@ -70,8 +64,8 @@ export function Header() {
           : 'bg-transparent'
       }`}
     >
-      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+      <nav className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 md:h-20 max-w-[1920px] mx-auto">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-purple-500/25 transition-all duration-300">
@@ -83,7 +77,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="hidden lg:flex items-center space-x-0">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.submenu ? (
@@ -91,9 +85,9 @@ export function Header() {
                     onMouseEnter={() => setActiveDropdown(item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    <button className="px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-1 group">
+                    <button className="px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-1 group">
                       {item.name}
-                      <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                      <ChevronDown className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" />
                     </button>
                     
                     <AnimatePresence>
@@ -103,13 +97,13 @@ export function Header() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-64 glass-dark rounded-2xl shadow-2xl border border-white/10 overflow-hidden"
+                          className="absolute top-full left-0 mt-2 w-72 glass-dark rounded-xl shadow-2xl border border-white/10 overflow-hidden max-h-[80vh] overflow-y-auto"
                         >
                           {item.submenu.map((subitem) => (
                             <Link
                               key={subitem.name}
                               href={subitem.href}
-                              className="block px-6 py-3 text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-200"
+                              className="block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-200"
                             >
                               {subitem.name}
                             </Link>
@@ -121,7 +115,7 @@ export function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200"
+                    className="px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors duration-200"
                   >
                     {item.name}
                   </Link>
@@ -131,13 +125,13 @@ export function Header() {
           </div>
 
           {/* Right Side Actions */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             {/* Phone Number - Desktop Only */}
             <a
               href="https://wa.me/48662508780"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden lg:flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+              className="hidden xl:flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
             >
               <Phone className="w-4 h-4" />
               <span className="text-sm">+48 662 508 780</span>
@@ -150,7 +144,8 @@ export function Header() {
 
             {/* CTA Button */}
             <Button
-              className="hidden sm:inline-flex bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+              size="sm"
+              className="hidden sm:inline-flex bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 text-sm px-4 py-2"
               onClick={() => {
                 const contactSection = document.getElementById('contact');
                 if (contactSection) {
