@@ -3,7 +3,7 @@
 @import "tailwindcss/utilities";
 
 /* Import modern fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 @layer base {
   :root {
@@ -28,7 +28,7 @@
     --input: 240 3.7% 15.9%;
     --ring: 263 90% 51%;
     --radius: 0.75rem;
-    
+
     /* Custom properties for gradients and effects */
     --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
     --gradient-secondary: linear-gradient(135deg, #f97316 0%, #ec4899 100%);
@@ -36,7 +36,7 @@
     --glow-primary: 0 0 40px rgba(139, 92, 246, 0.5);
     --glow-secondary: 0 0 40px rgba(59, 130, 246, 0.5);
   }
- 
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -64,60 +64,77 @@
   * {
     border-color: hsl(var(--border));
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family:
+      "Inter",
+      system-ui,
+      -apple-system,
+      sans-serif;
     background: #050505;
-    background-image: 
+    background-image:
       radial-gradient(at 50% 0%, rgba(139, 92, 246, 0.1) 0px, transparent 50%),
-      radial-gradient(at 80% 50%, rgba(59, 130, 246, 0.05) 0px, transparent 50%),
+      radial-gradient(
+        at 80% 50%,
+        rgba(59, 130, 246, 0.05) 0px,
+        transparent 50%
+      ),
       radial-gradient(at 20% 80%, rgba(139, 92, 246, 0.05) 0px, transparent 50%);
     min-height: 100vh;
     font-size: 16px;
     line-height: 1.6;
   }
-  
+
   @media (max-width: 640px) {
     body {
       font-size: 15px;
       line-height: 1.7;
     }
   }
-  
+
   /* Typography */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family:
+      "Space Grotesk",
+      system-ui,
+      -apple-system,
+      sans-serif;
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -0.02em;
   }
-  
+
   /* Selection */
   ::selection {
     background: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
   }
-  
+
   /* Scrollbar */
   ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
   }
-  
+
   ::-webkit-scrollbar-track {
     background: hsl(var(--secondary));
   }
-  
+
   ::-webkit-scrollbar-thumb {
     background: hsl(var(--primary));
     border-radius: 5px;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
     background: hsl(var(--primary) / 0.8);
   }
@@ -127,39 +144,54 @@
 @layer base {
   /* Ensure clickable elements are at least 44px tall on mobile */
   @media (max-width: 768px) {
-    button, a, input, select, textarea {
+    button,
+    a,
+    input,
+    select,
+    textarea {
       min-height: 44px;
     }
-    
+
     /* Better tap targets for links in navigation */
     nav a {
       padding: 0.75rem 1rem;
     }
-    
+
     /* Reduce heavy animations on mobile for performance */
     .animate-blob {
       animation: none;
     }
-    
+
     /* Simplify gradients on mobile */
     body {
-      background-image: 
-        radial-gradient(at 50% 0%, rgba(139, 92, 246, 0.08) 0px, transparent 50%);
+      background-image: radial-gradient(
+        at 50% 0%,
+        rgba(139, 92, 246, 0.08) 0px,
+        transparent 50%
+      );
     }
   }
-  
+
   /* Improve text readability on small screens */
   @media (max-width: 640px) {
     p {
       font-size: 1rem;
       line-height: 1.75;
     }
-    
+
     /* Smaller headings on mobile */
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.75rem; }
-    h3 { font-size: 1.5rem; }
-    h4 { font-size: 1.25rem; }
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    h4 {
+      font-size: 1.25rem;
+    }
   }
 }
 
@@ -167,111 +199,124 @@
 @layer utilities {
   /* WCAG AA compliant text colors */
   .text-accessible-gray {
-    color: #9CA3AF; /* gray-400 replacement - AA compliant on dark backgrounds */
+    color: #9ca3af; /* gray-400 replacement - AA compliant on dark backgrounds */
   }
-  
+
   .text-accessible-gray-dark {
-    color: #6B7280; /* gray-500 - for lighter backgrounds */
+    color: #6b7280; /* gray-500 - for lighter backgrounds */
   }
-  
+
   /* Focus visible styles for keyboard navigation */
   .focus-visible-ring {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900;
   }
-  
+
   /* Minimum touch target size */
   .touch-target {
     min-height: 44px;
     min-width: 44px;
     @apply flex items-center justify-center;
   }
-  
+
   /* Loading states */
   .skeleton {
     @apply animate-pulse bg-gray-800 rounded;
   }
-  
+
   .skeleton-text {
     @apply h-4 bg-gray-800 rounded w-full animate-pulse;
   }
-  
+
   /* Breath animation for CTA buttons */
   @keyframes breathe {
-    0%, 100% { 
+    0%,
+    100% {
       transform: scale(1);
       box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
     }
-    50% { 
+    50% {
       transform: scale(1.05);
       box-shadow: 0 0 20px 5px rgba(139, 92, 246, 0.3);
     }
   }
-  
+
   .animate-breathe {
     animation: breathe 3s ease-in-out infinite;
   }
-  
+
   /* Micro bounce for icons */
   @keyframes micro-bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
   }
-  
+
   .hover\:animate-micro-bounce:hover {
     animation: micro-bounce 0.3s ease-in-out;
   }
-  
+
   /* Smooth counter animation */
   @keyframes count-up {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  
+
   .animate-count {
     animation: count-up 0.5s ease-out forwards;
   }
-  
-  @layer utilities {
+
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500;
   }
-  
+
   .glass {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
-  
+
   .glass-dark {
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
-  
+
   .glow {
     box-shadow: var(--glow-primary);
   }
-  
+
   .glow-hover:hover {
     box-shadow: var(--glow-primary);
     transition: box-shadow 0.3s ease;
   }
-  
+
   .animate-glow {
     animation: glow 2s ease-in-out infinite alternate;
   }
-  
+
   @keyframes glow {
     from {
       box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
     }
     to {
-      box-shadow: 0 0 30px rgba(139, 92, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.6);
+      box-shadow:
+        0 0 30px rgba(139, 92, 246, 0.8),
+        0 0 40px rgba(59, 130, 246, 0.6);
     }
   }
-  
+
   @keyframes blob {
     0% {
       transform: translate(0px, 0px) scale(1);
@@ -286,22 +331,24 @@
       transform: translate(0px, 0px) scale(1);
     }
   }
-  
+
   .animate-blob {
     animation: blob 7s infinite;
   }
-  
+
   .animation-delay-2000 {
     animation-delay: 2s;
   }
-  
+
   .animation-delay-4000 {
     animation-delay: 4s;
   }
-  
+
   .border-gradient {
-    background: linear-gradient(hsl(var(--background)), hsl(var(--background))) padding-box,
-                var(--gradient-primary) border-box;
+    background:
+      linear-gradient(hsl(var(--background)), hsl(var(--background)))
+        padding-box,
+      var(--gradient-primary) border-box;
     border: 2px solid transparent;
   }
 }
