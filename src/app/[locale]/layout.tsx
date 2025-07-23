@@ -6,7 +6,7 @@ import { Inter } from "next/font/google";
 // import { AnalyticsWrapper } from '@/components/analytics';
 import { Header } from '@/components/navigation/header';
 import { Footer } from '@/components/navigation/footer';
-import { ExitIntentPopup } from '@/components/ui/exit-intent-popup';
+import { ExitIntentPopupWrapper } from '@/components/ui/exit-intent-popup-wrapper';
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -52,16 +52,7 @@ export default async function LocaleLayout({
           </main>
           <Footer />
           {/* <AnalyticsWrapper /> */}
-          <ExitIntentPopup 
-            onAction={() => {
-              if (typeof window !== 'undefined') {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }
-            }}
-          />
+          <ExitIntentPopupWrapper />
         </NextIntlClientProvider>
       </body>
     </html>

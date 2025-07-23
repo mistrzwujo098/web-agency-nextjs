@@ -1373,6 +1373,239 @@
       }
     }
   },
+  "processTimeline": {
+    "title": "Process that delivers results",
+    "subtitle": "From first contact to working website in 14 days",
+    "steps": {
+      "consultation": {
+        "title": "Consultation",
+        "duration": "1 day",
+        "description": "We learn your business goals and analyze competition",
+        "deliverables": ["Needs analysis", "Goal setting", "Initial quote"]
+      },
+      "audit": {
+        "title": "Audit & Strategy",
+        "duration": "2-3 days",
+        "description": "Comprehensive website audit and action plan",
+        "deliverables": ["UX/UI report", "Competition analysis", "Conversion strategy"]
+      },
+      "design": {
+        "title": "Design",
+        "duration": "5-7 days",
+        "description": "Creating mockups and prototypes of new website",
+        "deliverables": ["Wireframe", "Graphic design", "Interactive prototype"]
+      },
+      "implementation": {
+        "title": "Implementation",
+        "duration": "7-10 days",
+        "description": "Coding and implementing all functionalities",
+        "deliverables": ["Responsive website", "Integrations", "CMS panel"]
+      },
+      "launch": {
+        "title": "Launch",
+        "duration": "1 day",
+        "description": "Publishing website and configuring all tools",
+        "deliverables": ["Hosting", "SSL", "Domain configuration"]
+      },
+      "optimization": {
+        "title": "Optimization",
+        "duration": "Ongoing",
+        "description": "Monitoring results and continuous improvement",
+        "deliverables": ["Monthly reports", "A/B tests", "Optimization"]
+      }
+    },
+    "summary": {
+      "title": "Ready website in 14 working days",
+      "description": "You don't have to wait months for your new website. Our proven process guarantees timely delivery without compromising quality.",
+      "stats": {
+        "onTime": "On-time delivery",
+        "averageTime": "Average time",
+        "checkpoints": "Checkpoints"
+      }
+    }
+  },
+  "caseStudy": {
+    "title": "Case Study: 300% growth",
+    "subtitle": "See how we helped a local restaurant become an online leader in their industry",
+    "tabs": {
+      "overview": "Overview",
+      "results": "Results",
+      "testimonial": "Testimonial"
+    },
+    "overview": {
+      "client": "E-commerce Fashion Store",
+      "industry": "Industry: E-commerce / Fashion",
+      "timeline": "Timeline: 21 days",
+      "challenge": {
+        "title": "Challenge",
+        "description": "Low conversion, slow website, no mobile optimization",
+        "items": [
+          "Position 47 on Google for key phrases",
+          "80% of customers couldn't book online",
+          "Website loaded in over 6 seconds"
+        ]
+      },
+      "solution": {
+        "title": "Solution",
+        "description": "Complete rebuild on modern stack, UX/UI and SEO optimization",
+        "items": [
+          "Online booking system integrated with calendar",
+          "SEO optimization and content marketing",
+          "Responsive design with loading time under 2s"
+        ]
+      }
+    },
+    "results": {
+      "metrics": {
+        "traffic": {
+          "label": "Monthly traffic",
+          "increase": "+300%"
+        },
+        "conversion": {
+          "label": "Conversion",
+          "increase": "+217%"
+        },
+        "revenue": {
+          "label": "Online revenue",
+          "increase": "+1100%"
+        },
+        "mobileTraffic": {
+          "label": "Mobile traffic",
+          "increase": "+82%"
+        },
+        "pageSpeed": {
+          "label": "Loading time",
+          "decrease": "-76%"
+        },
+        "ranking": {
+          "label": "Google position",
+          "improvement": "44 positions up"
+        }
+      },
+      "chartTitle": "Sales growth over time",
+      "progressBars": {
+        "trafficGrowth": "Organic traffic growth",
+        "conversionGrowth": "Conversion growth"
+      }
+    },
+    "testimonial": {
+      "author": "Anna Kowalska",
+      "position": "CEO, Fashion Store",
+      "quote": "Professionalism at the highest level. Within 3 months, online sales increased by 1100%! The new website loads lightning fast, looks great on any device, and the management system is intuitive. Most importantly - conversion increased from 1.2% to 3.8%. Customers praise the ease of shopping. ROI returned after just 6 weeks. I recommend to anyone serious about e-commerce.",
+      "stats": {
+        "googleRating": "Google rating",
+        "newReviews": "New reviews",
+        "onlineBookings": "Online bookings"
+      }
+    },
+    "cta": {
+      "question": "Want similar results for your business?",
+      "button": "Start your transformation"
+    }
+  },
+  "beforeAfter": {
+    "title": "Before and after our work",
+    "subtitle": "See the real difference a professional website can make",
+    "instruction": "Drag the slider to see the difference",
+    "metrics": {
+      "loadTime": {
+        "label": "Loading time",
+        "before": "5.7s",
+        "after": "1.2s"
+      },
+      "mobileScore": {
+        "label": "Mobile Score",
+        "before": "45/100",
+        "after": "95/100"
+      },
+      "bounceRate": {
+        "label": "Bounce Rate",
+        "before": "68%",
+        "after": "32%"
+      },
+      "conversion": {
+        "label": "Conversion",
+        "before": "1.2%",
+        "after": "3.8%"
+      }
+    },
+    "features": {
+      "before": {
+        "title": "BEFORE",
+        "items": [
+          "Outdated design from 2015",
+          "No mobile responsiveness",
+          "Slow loading (5.7s)",
+          "Complicated navigation",
+          "No SSL and security",
+          "Zero SEO optimization"
+        ]
+      },
+      "after": {
+        "title": "AFTER",
+        "items": [
+          "Modern, clean design",
+          "Perfect responsiveness",
+          "Lightning fast loading (1.2s)",
+          "Intuitive UX navigation",
+          "SSL and full security",
+          "Comprehensive SEO optimization"
+        ]
+      }
+    },
+    "impact": {
+      "title": "Business impact",
+      "stats": [
+        { "label": "Traffic increase", "value": "+247%" },
+        { "label": "More leads", "value": "+312%" },
+        { "label": "ROI in", "value": "6 weeks" }
+      ]
+    }
+  },
+  "mythsFacts": {
+    "title": "Myths vs Facts about websites",
+    "subtitle": "Debunking popular myths that might be hurting your business",
+    "instruction": "Click card to reveal the truth",
+    "mythLabel": "MYTH",
+    "factLabel": "FACT",
+    "myths": [
+      {
+        "myth": "A nice looking website is enough to attract customers",
+        "fact": "Aesthetics alone aren't enough. A website must be fast, intuitive, and optimized for conversions. 94% of first impressions relate to design, but 88% of users won't return after a bad experience.",
+        "icon": "🎨"
+      },
+      {
+        "myth": "Cheaper website = bigger profit",
+        "fact": "A cheap website often means no optimization, slow loading, and low conversion. A professional website is an investment that pays off in 3-6 months through more leads.",
+        "icon": "💰"
+      },
+      {
+        "myth": "A 'business card' website is enough for small business",
+        "fact": "Even small businesses need websites that actively acquire customers. A business card website is a missed opportunity - 75% of users judge company credibility by its website.",
+        "icon": "🏢"
+      },
+      {
+        "myth": "SEO is a scam, it doesn't work",
+        "fact": "SEO is a long-term strategy. 68% of online experiences start with a search engine. Companies on Google's first page receive 91.5% of all traffic.",
+        "icon": "🔍"
+      },
+      {
+        "myth": "Responsiveness is extra, not necessary",
+        "fact": "60% of searches come from mobile devices. Google penalizes non-responsive sites with lower rankings. Mobile users are 5x more likely to leave a site not adapted to their device.",
+        "icon": "📱"
+      },
+      {
+        "myth": "Once made, a website lasts for years",
+        "fact": "Technologies and user expectations constantly change. A website not updated for 2-3 years loses an average of 40% of potential customers due to outdated solutions.",
+        "icon": "🔄"
+      }
+    ],
+    "summary": {
+      "title": "Don't fall for myths",
+      "description": "A professional website is an investment in your business's future",
+      "cta": "Check your website"
+    }
+  },
   "quiz": {
     "title": "Check your website's condition",
     "subtitle": "Answer 6 quick questions and get a personalized analysis",

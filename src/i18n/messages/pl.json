@@ -1373,6 +1373,239 @@
       }
     }
   },
+  "processTimeline": {
+    "title": "Proces, który przynosi rezultaty",
+    "subtitle": "Od pierwszego kontaktu do działającej strony w 14 dni",
+    "steps": {
+      "consultation": {
+        "title": "Konsultacja",
+        "duration": "1 dzień",
+        "description": "Poznajemy Twoje cele biznesowe i analizujemy konkurencję",
+        "deliverables": ["Analiza potrzeb", "Określenie celów", "Wstępna wycena"]
+      },
+      "audit": {
+        "title": "Audyt & Strategia",
+        "duration": "2-3 dni",
+        "description": "Kompleksowy audyt obecnej strony i plan działania",
+        "deliverables": ["Raport UX/UI", "Analiza konkurencji", "Strategia konwersji"]
+      },
+      "design": {
+        "title": "Projekt",
+        "duration": "5-7 dni",
+        "description": "Tworzenie mockupów i prototypów nowej strony",
+        "deliverables": ["Wireframe", "Projekt graficzny", "Prototyp interaktywny"]
+      },
+      "implementation": {
+        "title": "Wdrożenie",
+        "duration": "7-10 dni",
+        "description": "Kodowanie i implementacja wszystkich funkcjonalności",
+        "deliverables": ["Responsywna strona", "Integracje", "Panel CMS"]
+      },
+      "launch": {
+        "title": "Launch",
+        "duration": "1 dzień",
+        "description": "Publikacja strony i konfiguracja wszystkich narzędzi",
+        "deliverables": ["Hosting", "SSL", "Konfiguracja domen"]
+      },
+      "optimization": {
+        "title": "Optymalizacja",
+        "duration": "Ciągła",
+        "description": "Monitorowanie wyników i ciągłe ulepszanie",
+        "deliverables": ["Raporty miesięczne", "A/B testy", "Optymalizacja"]
+      }
+    },
+    "summary": {
+      "title": "Gotowa strona w 14 dni roboczych",
+      "description": "Nie musisz czekać miesiącami na swoją nową stronę. Nasz sprawdzony proces gwarantuje terminową realizację bez kompromisów w jakości.",
+      "stats": {
+        "onTime": "Terminowość",
+        "averageTime": "Średni czas",
+        "checkpoints": "Checkpointów"
+      }
+    }
+  },
+  "caseStudy": {
+    "title": "Case Study: 300% wzrost",
+    "subtitle": "Zobacz, jak pomogliśmy lokalnej restauracji stać się liderem online w swojej branży",
+    "tabs": {
+      "overview": "Przegląd",
+      "results": "Wyniki",
+      "testimonial": "Opinia"
+    },
+    "overview": {
+      "client": "E-commerce Fashion Store",
+      "industry": "Branża: E-commerce / Moda",
+      "timeline": "Czas realizacji: 21 dni",
+      "challenge": {
+        "title": "Wyzwanie",
+        "description": "Niska konwersja, wolna strona, brak optymalizacji mobilnej",
+        "items": [
+          "Pozycja 47 w Google na kluczowe frazy",
+          "80% klientów nie mogło złożyć rezerwacji online",
+          "Strona ładowała się ponad 6 sekund"
+        ]
+      },
+      "solution": {
+        "title": "Rozwiązanie",
+        "description": "Kompletna przebudowa na nowoczesny stack, optymalizacja UX/UI i SEO",
+        "items": [
+          "System rezerwacji online zintegrowany z kalendarzem",
+          "Optymalizacja SEO i content marketing",
+          "Responsywny design z czasem ładowania poniżej 2s"
+        ]
+      }
+    },
+    "results": {
+      "metrics": {
+        "traffic": {
+          "label": "Ruch miesięczny",
+          "increase": "+300%"
+        },
+        "conversion": {
+          "label": "Konwersja",
+          "increase": "+217%"
+        },
+        "revenue": {
+          "label": "Przychód online",
+          "increase": "+1100%"
+        },
+        "mobileTraffic": {
+          "label": "Ruch mobilny",
+          "increase": "+82%"
+        },
+        "pageSpeed": {
+          "label": "Czas ładowania",
+          "decrease": "-76%"
+        },
+        "ranking": {
+          "label": "Pozycja Google",
+          "improvement": "44 pozycje"
+        }
+      },
+      "chartTitle": "Wzrost sprzedaży w czasie",
+      "progressBars": {
+        "trafficGrowth": "Wzrost ruchu organicznego",
+        "conversionGrowth": "Wzrost konwersji"
+      }
+    },
+    "testimonial": {
+      "author": "Anna Kowalska",
+      "position": "CEO, Fashion Store",
+      "quote": "Profesjonalizm na najwyższym poziomie. W ciągu 3 miesięcy sprzedaż online wzrosła o 1100%! Nowa strona ładuje się błyskawicznie, wygląda świetnie na każdym urządzeniu, a system zarządzania jest intuicyjny. Najważniejsze - konwersja wzrosła z 1.2% do 3.8%. Klienci chwalą łatwość zakupów. ROI zwrócił się już po 6 tygodniach. Polecam każdemu, kto myśli poważnie o e-commerce.",
+      "stats": {
+        "googleRating": "Ocena Google",
+        "newReviews": "Nowych opinii",
+        "onlineBookings": "Rezerwacji online"
+      }
+    },
+    "cta": {
+      "question": "Chcesz podobnych rezultatów dla swojej firmy?",
+      "button": "Zacznij swoją transformację"
+    }
+  },
+  "beforeAfter": {
+    "title": "Przed i po naszej pracy",
+    "subtitle": "Zobacz rzeczywistą różnicę, jaką może zrobić profesjonalna strona",
+    "instruction": "Przeciągnij suwak, aby zobaczyć różnicę",
+    "metrics": {
+      "loadTime": {
+        "label": "Czas ładowania",
+        "before": "5.7s",
+        "after": "1.2s"
+      },
+      "mobileScore": {
+        "label": "Mobile Score",
+        "before": "45/100",
+        "after": "95/100"
+      },
+      "bounceRate": {
+        "label": "Bounce Rate",
+        "before": "68%",
+        "after": "32%"
+      },
+      "conversion": {
+        "label": "Konwersja",
+        "before": "1.2%",
+        "after": "3.8%"
+      }
+    },
+    "features": {
+      "before": {
+        "title": "PRZED",
+        "items": [
+          "Przestarzały design z 2015 roku",
+          "Brak responsywności mobilnej",
+          "Wolne ładowanie (5.7s)",
+          "Skomplikowana nawigacja",
+          "Brak SSL i zabezpieczeń",
+          "Zero optymalizacji SEO"
+        ]
+      },
+      "after": {
+        "title": "PO",
+        "items": [
+          "Nowoczesny, czysty design",
+          "Perfekcyjna responsywność",
+          "Błyskawiczne ładowanie (1.2s)",
+          "Intuicyjna nawigacja UX",
+          "SSL i pełne zabezpieczenia",
+          "Kompleksowa optymalizacja SEO"
+        ]
+      }
+    },
+    "impact": {
+      "title": "Wpływ na biznes",
+      "stats": [
+        { "label": "Wzrost ruchu", "value": "+247%" },
+        { "label": "Więcej leadów", "value": "+312%" },
+        { "label": "ROI w", "value": "6 tyg." }
+      ]
+    }
+  },
+  "mythsFacts": {
+    "title": "Mity vs Fakty o stronach internetowych",
+    "subtitle": "Obalamy najpopularniejsze mity, które mogą szkodzić Twojemu biznesowi",
+    "instruction": "Kliknij kartę, aby odkryć prawdę",
+    "mythLabel": "MIT",
+    "factLabel": "FAKT",
+    "myths": [
+      {
+        "myth": "Wystarczy ładna strona, żeby przyciągnąć klientów",
+        "fact": "Sama estetyka to za mało. Strona musi być szybka, intuicyjna i zoptymalizowana pod kątem konwersji. 94% pierwszych wrażeń dotyczy designu, ale 88% użytkowników nie wraca na stronę po złym doświadczeniu.",
+        "icon": "🎨"
+      },
+      {
+        "myth": "Tańsza strona = większy zysk",
+        "fact": "Tania strona często oznacza brak optymalizacji, wolne ładowanie i niską konwersję. Profesjonalna strona to inwestycja, która zwraca się średnio w 3-6 miesięcy dzięki większej liczbie leadów.",
+        "icon": "💰"
+      },
+      {
+        "myth": "Wystarczy strona 'wizytówka' dla małej firmy",
+        "fact": "Nawet mała firma potrzebuje strony, która aktywnie pozyskuje klientów. Strona wizytówka to stracona szansa - 75% użytkowników ocenia wiarygodność firmy po jej stronie internetowej.",
+        "icon": "🏢"
+      },
+      {
+        "myth": "SEO to oszustwo, nie działa",
+        "fact": "SEO to długoterminowa strategia. 68% doświadczeń online zaczyna się od wyszukiwarki. Firmy na pierwszej stronie Google otrzymują 91.5% całego ruchu.",
+        "icon": "🔍"
+      },
+      {
+        "myth": "Responsywność to dodatek, nie konieczność",
+        "fact": "60% wyszukiwań pochodzi z urządzeń mobilnych. Google karze strony nieresponsywne niższymi pozycjami. Mobilni użytkownicy 5x częściej opuszczają stronę niedostosowaną do ich urządzenia.",
+        "icon": "📱"
+      },
+      {
+        "myth": "Raz zrobiona strona wystarczy na lata",
+        "fact": "Technologie i oczekiwania użytkowników ciągle się zmieniają. Strona nieaktualizowana od 2-3 lat traci średnio 40% potencjalnych klientów przez przestarzałe rozwiązania.",
+        "icon": "🔄"
+      }
+    ],
+    "summary": {
+      "title": "Nie daj się zwieść mitom",
+      "description": "Profesjonalna strona internetowa to inwestycja w przyszłość Twojego biznesu",
+      "cta": "Sprawdź swoją stronę"
+    }
+  },
   "quiz": {
     "title": "Sprawdź kondycję swojej strony",
     "subtitle": "Odpowiedz na 6 krótkich pytań i otrzymaj spersonalizowaną analizę",
