@@ -3,16 +3,22 @@
 import { useRef, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
-interface MagneticButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface MagneticButtonProps {
   children: React.ReactNode
   strength?: number
+  className?: string
+  onClick?: () => void
+  type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
 }
 
 export function MagneticButton({ 
   children, 
   strength = 20,
   className = '',
-  ...props 
+  onClick,
+  type = 'button',
+  disabled
 }: MagneticButtonProps) {
   const ref = useRef<HTMLButtonElement>(null)
   const [position, setPosition] = useState({ x: 0, y: 0 })
@@ -61,7 +67,9 @@ export function MagneticButton({
       animate={{ x: position.x, y: position.y }}
       transition={{ type: 'spring', stiffness: 150, damping: 15 }}
       className={className}
-      {...props}
+      onClick={onClick}
+      type={type}
+      disabled={disabled}
     >
       {children}
     </motion.button>

@@ -58,8 +58,8 @@ export function ContactForm() {
   }
 
   // Debounced submit handler to prevent multiple submissions
-  const debouncedSubmit = useCallback(
-    debounce(async () => {
+  const debouncedSubmit = useCallback(() => {
+    const handler = debounce(async () => {
       if (isSubmitting) return
       
       setIsSubmitting(true)
@@ -98,9 +98,10 @@ export function ContactForm() {
     } finally {
       setIsSubmitting(false)
     }
-    }, 1000),
-    [formData, isSubmitting, locale]
-  )
+    }, 1000)
+    
+    return handler()
+  }, [formData, isSubmitting, locale])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()

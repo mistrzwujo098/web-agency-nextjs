@@ -18,9 +18,10 @@ interface Particle {
   scale: number
 }
 
+const colors = ['#8B5CF6', '#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#EC4899']
+
 export function Confetti({ trigger, duration = 3000, particleCount = 50 }: ConfettiProps) {
   const [particles, setParticles] = useState<Particle[]>([])
-  const colors = ['#8B5CF6', '#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#EC4899']
 
   useEffect(() => {
     if (!trigger) return
